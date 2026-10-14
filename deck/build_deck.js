@@ -236,8 +236,33 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   text(s, "Assumptions: annualised from 10 months of history; win-rate gap compares only deals that reached Negotiation; cycle-time gains not counted; half of the gap closed.", { x: 0.6, y: 6.2, w: 12.1, h: 0.5, fontSize: 11, italic: true, color: C.accent6, objectName: "Assumptions" });
   s.addNotes("This follows my value framing format: challenge, root cause, solution, then a multiplicative value chain. The customer owns the improvement assumption; we own the evidence. Root cause is labelled 'to capture' because it needs reason codes the CRM doesn't hold yet.");
 
-  // ---------- Value: proof ----------
-  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Value" });
+  // ---------- Tech setup: key steps, in pictures ----------
+  pres.addSection({ title: "Tech setup" });
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
+  s.addText("Tech setup: the key steps, as they ran", { placeholder: "title" });
+  const keySteps = [
+    ["Connect", "Salesforce CLI allowed under Connected Apps OAuth Usage; the CLI session signs every API call.", "connected-apps.png", 1340 / 896],
+    ["Seed", `seed.py loads ${LIVE.kpis.cases} [Demo] deals and walks them through the org's own stages.`, "opportunities.jpg", 1200 / 807],
+    ["Extract", "OpportunityHistory and Task become events, one case per Opportunity. Shown: a re-quote loop.", "stage-history.png", 1512 / 807],
+    ["Mine and publish", "The event log (CSV / XES) feeds the hosted dashboard and value case.", "dashboard-top.png", 1160 / 780],
+  ];
+  keySteps.forEach(([head, body, file, ratio], i) => {
+    const cx = 0.6 + (i % 2) * 6.15, cy = 1.4 + Math.floor(i / 2) * 2.75;
+    card(s, cx, cy, 5.95, 2.55, `Key step ${i + 1} card`);
+    const imgW = 3.2, imgH = Math.min(imgW / ratio, 2.25);
+    const w = imgH * ratio, ix = cx + 0.15 + (imgW - w) / 2, iy = cy + (2.55 - imgH) / 2;
+    s.addShape(pres.shapes.RECTANGLE, { x: ix - 0.03, y: iy - 0.03, w: w + 0.06, h: imgH + 0.06, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: `Key step ${i + 1} frame` });
+    s.addImage({ path: path.join(ROOT, "docs/img/org", file), x: ix, y: iy, w, h: imgH, objectName: `Key step ${i + 1} image`, altText: body });
+    const tx = cx + 3.55;
+    s.addShape(pres.shapes.OVAL, { x: tx, y: cy + 0.25, w: 0.45, h: 0.45, fill: { color: C.accent1 }, line: { type: "none" }, objectName: `Key step ${i + 1} marker` });
+    text(s, String(i + 1), { x: tx, y: cy + 0.25, w: 0.45, h: 0.45, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Key step ${i + 1} number` });
+    text(s, head, { x: tx, y: cy + 0.8, w: 2.25, h: 0.4, fontSize: 16, bold: true, color: C.text2, objectName: `Key step ${i + 1} title` });
+    text(s, body, { x: tx, y: cy + 1.2, w: 2.25, h: 1.25, fontSize: 14, color: C.text1, objectName: `Key step ${i + 1} body` });
+  });
+  s.addNotes("Every step is real: the CLI fix in Setup, the seeded deals, the raw stage history the extract reads, and the published output. Opportunity is the case; leads join via ConvertedOpportunityId and tasks via WhatId. Trial orgs can't backdate history, so the 10-month dataset is simulated in the same object shape.");
+
+  // ---------- Tech setup: everything is live ----------
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
   s.addText("Everything is live and open to inspect", { placeholder: "title" });
   const proof = [
     ["Process dashboard", SITE, `https://${SITE}`],
@@ -277,123 +302,6 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   text(s, `${SITE}  ·  Luke Audie`, { x: 0.8, y: 6.5, w: 8, h: 0.4, fontSize: 14, color: C.accent3, objectName: "Closing contact" });
   logo(s, 10.35, 6.35, 0.55);
   s.addNotes("Close on the decision: validate on production data, pilot one policy change, then monitor value realised in Apromore.");
-
-  // ---------- Tech setup: divider ----------
-  pres.addSection({ title: "Tech setup" });
-  s = pres.addSlide({ masterName: "SECTION_DARK", sectionTitle: "Tech setup" });
-  circle(s, 9.4, 3.4, 6.6, C.accent1, 70, "Decor circle large");
-  circle(s, 10.6, 2.6, 0.75, C.accent3, 0, "Decor circle small");
-  s.addText("Tech setup", { placeholder: "title" });
-  s.addText("How the data gets from a Salesforce org into an Apromore-ready event log", { placeholder: "body" });
-  s.addNotes("For the technical audience: the pipeline, the data model, and what it took to run it against a brand-new trial org.");
-
-  // ---------- Tech setup: pipeline ----------
-  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("From Salesforce to Process Intelligence in four steps", { placeholder: "title" });
-  const steps = [
-    ["Extract", "SOQL over REST", "Lead, Opportunity, OpportunityHistory and Task, signed by the Salesforce CLI session. No stored credentials."],
-    ["Correlate", "One case per deal", "Case ID = Opportunity Id. Tasks join on WhatId, Leads on ConvertedOpportunityId."],
-    ["Load", "Event log", "CSV and IEEE XES with activity, timestamps, resource and case attributes, ready for Apromore."],
-    ["Mine and size", "Map and value", "Directly-follows graph, variant analysis, cohort win rates and a driver-based value model."],
-  ];
-  steps.forEach(([eyebrow, head, body], i) => {
-    const x = 0.6 + i * 3.12;
-    card(s, x, 1.5, 2.75, 3.6, `Step ${i + 1} card`);
-    s.addShape(pres.shapes.OVAL, { x: x + 0.25, y: 1.75, w: 0.55, h: 0.55, fill: { color: C.accent1 }, line: { type: "none" }, objectName: `Step ${i + 1} marker` });
-    text(s, String(i + 1), { x: x + 0.25, y: 1.75, w: 0.55, h: 0.55, fontSize: 18, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Step ${i + 1} number` });
-    text(s, eyebrow, { x: x + 0.25, y: 2.5, w: 2.3, h: 0.3, fontSize: 12, bold: true, color: C.accent6, objectName: `Step ${i + 1} label` });
-    text(s, head, { x: x + 0.25, y: 2.82, w: 2.3, h: 0.45, fontSize: 18, bold: true, color: C.text2, objectName: `Step ${i + 1} title` });
-    text(s, body, { x: x + 0.25, y: 3.35, w: 2.3, h: 1.65, fontSize: 14, color: C.text1, objectName: `Step ${i + 1} body` });
-    if (i < steps.length - 1) {
-      s.addShape(pres.shapes.RIGHT_ARROW, { x: x + 2.82, y: 3.12, w: 0.24, h: 0.36, fill: { color: C.accent2 }, line: { type: "none" }, objectName: `Step ${i + 1} arrow` });
-    }
-  });
-  card(s, 0.6, 5.45, 12.1, 1.15, "Live run band", C.text2);
-  text(s, [
-    { text: "Live run on a Salesforce trial org:  ", options: { bold: true, color: C.accent3 } },
-    { text: `${LIVE.kpis.cases} opportunities  ·  ${LIVE.kpis.events} events  ·  ${Object.keys(LIVE.kpis.events_by_object).length} objects joined  ·  CSV + XES for Apromore`, options: { color: C.background1 } },
-  ], { x: 0.9, y: 5.45, w: 11.5, h: 1.15, fontSize: 16, valign: "middle", objectName: "Live run text" });
-  s.addNotes("Opportunity is the case. Trial orgs can't backdate history, so the 10-month dataset is simulated in the exact Salesforce shape; the extractor runs unchanged against the live org, as the band at the bottom shows.");
-
-  // ---------- Tech setup: data model ----------
-  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("Data model: Salesforce objects to an event log", { placeholder: "title" });
-  const head = (t) => ({ text: t, options: { bold: true, color: C.background1, fill: { color: C.text2 } } });
-  const row = (a, b, i) => [a, b].map(t => ({ text: t, options: { fill: { color: i % 2 ? C.background1 : C.background2 } } }));
-  const model = [
-    ["Case ID", "Opportunity.Id"],
-    ["Lead Created", "Lead.CreatedDate, joined on Lead.ConvertedOpportunityId"],
-    ["Stage activities", "OpportunityHistory.StageName and CreatedDate; repeated rows collapse to real stage changes"],
-    ["Task activities", "Task.Subject, CreatedDate → CompletedDateTime, joined on Task.WhatId"],
-    ["Resource", "CreatedBy.Name (stage changes), Owner.Name (tasks)"],
-    ["Case attributes", "Opportunity.Amount, LeadSource, IsWon; Account.Industry, BillingCountry → region"],
-  ];
-  s.addTable([[head("Event log field"), head("Salesforce source")], ...model.map(([a, b], i) => row(a, b, i))], {
-    x: 0.6, y: 1.5, w: 7.6, colW: [2.1, 5.5], fontSize: 14, color: C.text1, valign: "middle",
-    border: { type: "solid", pt: 0.75, color: HEX.accent3 }, margin: [0.06, 0.12, 0.06, 0.12], objectName: "Data model table",
-  });
-  card(s, 8.6, 1.5, 4.1, 3.35, "Output card");
-  text(s, "Output: one row per event", { x: 8.85, y: 1.7, w: 3.6, h: 0.4, fontSize: 16, bold: true, color: C.text2, objectName: "Output heading" });
-  text(s, "case_id, activity, start_time, end_time, resource, source_object, region, industry, lead_source, amount, outcome", { x: 8.85, y: 2.15, w: 3.6, h: 1.0, fontSize: 12, color: C.accent6, objectName: "Output columns" });
-  text(s, [
-    { text: "006WV…YAB  Qualify", options: { breakLine: true } },
-    { text: "006WV…YAB  Discovery Call", options: { breakLine: true } },
-    { text: "006WV…YAB  Closed Lost" },
-  ], { x: 8.85, y: 3.05, w: 3.6, h: 0.85, fontSize: 12, fontFace: "Courier New", color: C.text2, objectName: "Output sample" });
-  text(s, "Written as CSV for Apromore's import and as IEEE XES with start/complete lifecycle events.", { x: 8.85, y: 4.0, w: 3.6, h: 0.75, fontSize: 14, color: C.text1, objectName: "Output formats" });
-  s.addNotes("Opportunity is the case notion. Leads join through the converted opportunity, tasks through WhatId. History tables write a row on any field change, so the transform keeps only real stage transitions.");
-
-  // ---------- Tech setup: trial org ----------
-  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("Running it against a brand-new trial org", { placeholder: "title" });
-  text(s, "Steps", { x: 0.6, y: 1.45, w: 5.6, h: 0.4, fontSize: 16, bold: true, color: C.accent6, objectName: "Steps heading" });
-  const runSteps = [
-    ["Authenticate", "sf org login web: the CLI session signs every API call; no stored passwords."],
-    ["Seed", `seed.py loads ${LIVE.kpis.cases} [Demo] deals and walks them through stages via the Composite API.`],
-    ["Extract and mine", "extract.py → transform.py → mine.py write the event log and insights."],
-    ["Publish", "build_site.py renders the dashboard and value case; deployed to Vercel."],
-  ];
-  runSteps.forEach(([h, b], i) => {
-    const y = 1.95 + i * 1.15;
-    s.addShape(pres.shapes.OVAL, { x: 0.6, y: y + 0.05, w: 0.5, h: 0.5, fill: { color: C.accent1 }, line: { type: "none" }, objectName: `Run step ${i + 1} marker` });
-    text(s, String(i + 1), { x: 0.6, y: y + 0.05, w: 0.5, h: 0.5, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Run step ${i + 1} number` });
-    text(s, h, { x: 1.3, y, w: 4.9, h: 0.35, fontSize: 16, bold: true, color: C.text2, objectName: `Run step ${i + 1} title` });
-    text(s, b, { x: 1.3, y: y + 0.38, w: 4.9, h: 0.65, fontSize: 14, color: C.text1, objectName: `Run step ${i + 1} body` });
-  });
-  text(s, "Problems solved along the way", { x: 6.9, y: 1.45, w: 5.8, h: 0.4, fontSize: 16, bold: true, color: C.accent6, objectName: "Gotchas heading" });
-  const gotchas = [
-    ["New orgs block uninstalled connected apps", "Installed Salesforce CLI under Connected Apps OAuth Usage."],
-    ["Starter orgs use a shorter sales process", "Stages auto-map to Qualify → Propose → Negotiate."],
-    ["The CLI redacts access tokens", "Calls go through sf api request rest instead."],
-    ["History can't be backdated", "The 10-month dataset is simulated in the same object shape."],
-  ];
-  gotchas.forEach(([h, b], i) => {
-    const y = 1.95 + i * 1.15;
-    card(s, 6.9, y, 5.8, 1.0, `Gotcha ${i + 1}`);
-    text(s, h, { x: 7.15, y: y + 0.1, w: 5.35, h: 0.35, fontSize: 14, bold: true, color: C.text2, objectName: `Gotcha ${i + 1} title` });
-    text(s, b, { x: 7.15, y: y + 0.5, w: 5.35, h: 0.4, fontSize: 14, color: C.text1, objectName: `Gotcha ${i + 1} fix` });
-  });
-  s.addNotes("These are the things that would trip up a customer's first technical session; each one is solved in the repo and written up in the README.");
-
-  // ---------- Tech setup: evidence from the org ----------
-  const shot = (slide, file, x, y, h, ratio, caption, name) => {
-    const w = h * ratio;
-    slide.addShape(pres.shapes.RECTANGLE, { x: x - 0.04, y: y - 0.04, w: w + 0.08, h: h + 0.08, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: `${name} frame` });
-    slide.addImage({ path: path.join(ROOT, "docs/img/org", file), x, y, w, h, objectName: name, altText: caption });
-    text(slide, caption, { x, y: y + h + 0.2, w, h: 0.75, fontSize: 14, color: C.text2, objectName: `${name} caption` });
-    return w;
-  };
-  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("Evidence: the seeded deals live in Salesforce", { placeholder: "title" });
-  const accW = shot(s, "accounts.jpg", 0.6, 1.5, 3.65, 1438 / 840, `${LIVE.kpis.cases} [Demo] accounts created through the Composite API, each with an industry and country.`, "Accounts list");
-  shot(s, "opportunities.jpg", 0.6 + accW + 0.3, 1.5, 3.65, 1200 / 807, `${LIVE.kpis.cases} opportunities walked through the org's own sales stages.`, "Opportunities list");
-  s.addNotes("Screenshots from the trial org. Every record is tagged [Demo] and can be removed with seed.py --cleanup.");
-
-  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("Evidence: what the extract reads", { placeholder: "title" });
-  const histW = shot(s, "stage-history.png", 0.6, 1.5, 3.4, 1512 / 807, "OpportunityHistory for one deal: Propose → Negotiate twice before Closed Won. This is the re-quote loop the dashboard measures.", "Stage history");
-  shot(s, "connected-apps.png", 0.6 + histW + 0.3, 1.5, 3.4, 1340 / 896, "Setup: Salesforce CLI installed and allowed, which unblocked API access on the new org.", "Connected apps");
-  s.addNotes("The stage history is the raw material for the event log: each row becomes an event. The setup screen is the one-click fix for new orgs that block uninstalled connected apps.");
 
   await pres.writeFile({ fileName: OUT });
   await applyTheme(OUT, THEME);
