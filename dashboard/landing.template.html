@@ -1,0 +1,342 @@
+<title>Salesforce Process Intelligence</title>
+<meta name="description" content="Lead-to-close process mining on Salesforce data: three value items, a framed business case, and the pipeline behind it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Brand: matches the deck (navy, cloud blue, light-blue panels, orange for the problem cohort).
+   Layout: navy hero with the deck's circle motif, then a single column of chapters:
+   headline numbers -> value items -> approach -> how it's built -> resources. */
+:root {
+  --bg: #f3f8fd;
+  --surface: #ffffff;
+  --panel: #eaf5fe;
+  --ink: #032d60;
+  --ink-2: #3e5b80;
+  --ink-3: #6f86a3;
+  --line: #d6e6f5;
+  --accent: #0176d3;
+  --cloud: #0b9de0;
+  --cloud-soft: #cfe9fe;
+  --hot: #fe9339;
+  --hot-ink: #b5560a;
+  --hot-soft: #ffeedd;
+  --navy: #032d60;
+  --on-navy: #ffffff;
+  --on-navy-2: #cfe9fe;
+  --display: "Figtree", "Avenir Next", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #071a33; --surface: #0d2747; --panel: #102f55; --ink: #eaf3fd; --ink-2: #a9c3e0; --ink-3: #7894b5;
+    --line: #1f3d63; --accent: #4fb3f0; --cloud: #4fb3f0; --cloud-soft: #12365e;
+    --hot: #f08a35; --hot-ink: #ffb37a; --hot-soft: #3a2512; --navy: #041b38; --on-navy: #ffffff; --on-navy-2: #a9d4fb;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #071a33; --surface: #0d2747; --panel: #102f55; --ink: #eaf3fd; --ink-2: #a9c3e0; --ink-3: #7894b5;
+  --line: #1f3d63; --accent: #4fb3f0; --cloud: #4fb3f0; --cloud-soft: #12365e;
+  --hot: #f08a35; --hot-ink: #ffb37a; --hot-soft: #3a2512; --navy: #041b38; --on-navy: #ffffff; --on-navy-2: #a9d4fb;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55; }
+a { color: var(--accent); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--cloud); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.015em; }
+p { margin: 0; }
+.inner { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+.eyebrow { font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* hero */
+.hero { position: relative; overflow: hidden; background: var(--navy); color: var(--on-navy); padding-block: 22px 120px; }
+.hero::before, .hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+.hero::before { width: 620px; height: 620px; right: -170px; top: 120px; background: var(--cloud); opacity: 0.28; }
+.hero::after { width: 64px; height: 64px; right: 330px; top: 92px; background: var(--cloud-soft); }
+.topbar { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between; }
+.brand { display: flex; gap: 10px; align-items: center; font-weight: 700; letter-spacing: -0.01em; }
+.brand-mark { width: 30px; height: 30px; border-radius: 50%; background: var(--cloud); display: grid; place-items: center; font-family: var(--mono); font-size: 0.72rem; font-weight: 500; color: var(--navy); }
+.topnav { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.92rem; }
+.topnav a { color: var(--on-navy-2); text-decoration: none; }
+.topnav a:hover { color: var(--on-navy); text-decoration: underline; }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 40px; align-items: end; margin-top: 72px; }
+.hero .eyebrow { color: var(--on-navy-2); }
+.hero h1 { font-size: clamp(2.4rem, 5.6vw, 4.2rem); line-height: 1.02; font-weight: 800; margin-top: 14px; }
+.hero h1 em { font-style: normal; color: var(--cloud); }
+.hero .lede { color: var(--on-navy-2); font-size: 1.12rem; max-width: 56ch; margin-top: 18px; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 0.98rem; transition: transform .15s ease, background .15s ease; }
+.btn-primary { background: var(--cloud); color: var(--navy); }
+.btn-ghost { color: var(--on-navy); box-shadow: inset 0 0 0 1.5px var(--on-navy-2); }
+.btn:hover { transform: translateY(-1px); }
+.hero-card { background: var(--on-navy); color: var(--navy); border-radius: var(--radius); padding: 26px 26px 22px; display: grid; gap: 6px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25); }
+.hero-card .big { font-family: var(--display); font-weight: 800; font-size: clamp(3rem, 7vw, 4.6rem); line-height: 1; color: #0176d3; }
+.hero-card .cap { color: #3e5b80; font-size: 0.95rem; }
+.hero-card .full { margin-top: 8px; padding-top: 12px; border-top: 1px solid #d6e6f5; display: flex; justify-content: space-between; gap: 12px; font-size: 0.92rem; color: #3e5b80; }
+.hero-card .full b { color: #032d60; }
+
+/* kpi strip overlaps hero */
+.kpis { position: relative; z-index: 2; margin-top: -64px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); background: var(--surface); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(3, 45, 96, 0.12); overflow: hidden; }
+.kpi { padding: 20px 22px; display: grid; gap: 2px; border-right: 1px solid var(--line); }
+.kpi:last-child { border-right: 0; }
+.kpi b { font-family: var(--display); font-size: 1.9rem; font-weight: 800; color: var(--ink); }
+.kpi span { font-size: 0.86rem; color: var(--ink-2); }
+
+main { display: grid; gap: 88px; padding-block: 72px 40px; }
+section { display: grid; gap: 26px; }
+.head { display: grid; gap: 10px; max-width: 70ch; }
+.head h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 800; line-height: 1.1; }
+.head p { color: var(--ink-2); font-size: 1.05rem; }
+
+/* value items */
+.values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.vcard { background: var(--surface); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 1px 0 var(--line), 0 0 0 1px var(--line); position: relative; min-width: 0; }
+.vcard.focus { box-shadow: 0 0 0 2px var(--accent), 0 16px 34px rgba(1, 118, 211, 0.16); }
+.vtop { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.badge { width: 36px; height: 36px; border-radius: 50%; background: var(--cloud); color: var(--on-navy); display: grid; place-items: center; font-weight: 800; }
+.vcard.focus .badge { background: var(--hot); }
+.chip { font-family: var(--mono); font-size: 0.72rem; padding: 4px 10px; border-radius: 999px; background: var(--panel); color: var(--accent); white-space: nowrap; }
+.chip.hot { background: var(--hot-soft); color: var(--hot-ink); }
+.vcard h3 { font-size: 1.35rem; font-weight: 800; line-height: 1.2; }
+.vcard .evidence { color: var(--ink-2); font-size: 0.97rem; }
+.compare { display: grid; gap: 8px; }
+.cmp { display: grid; grid-template-columns: 96px minmax(0, 1fr) 54px; gap: 10px; align-items: center; font-size: 0.86rem; color: var(--ink-2); }
+.cmp .track { height: 10px; border-radius: 999px; background: var(--panel); overflow: hidden; }
+.cmp .fill { height: 100%; border-radius: 999px; background: var(--cloud); }
+.cmp .fill.hot { background: var(--hot); }
+.cmp b { text-align: right; color: var(--ink); font-variant-numeric: tabular-nums; }
+.vfoot { display: flex; justify-content: space-between; align-items: end; gap: 12px; padding-top: 14px; border-top: 1px solid var(--line); margin-top: auto; }
+.framed b { display: block; font-family: var(--display); font-size: 2rem; font-weight: 800; line-height: 1; color: var(--ink); }
+.framed span, .meta { font-size: 0.82rem; color: var(--ink-3); }
+.meta { text-align: right; }
+.deep { font-weight: 700; text-decoration: none; }
+.total { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; justify-content: space-between; padding: 20px 24px; border-radius: var(--radius); background: var(--panel); }
+.total b { font-family: var(--display); font-size: 1.6rem; font-weight: 800; }
+.total p { color: var(--ink-2); font-size: 0.95rem; max-width: 64ch; }
+
+/* approach */
+.journey { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.stage { border-radius: var(--radius); padding: 22px; display: grid; gap: 8px; align-content: start; background: var(--surface); box-shadow: 0 0 0 1px var(--line); position: relative; min-width: 0; }
+.stage.done { background: var(--navy); color: var(--on-navy); box-shadow: none; }
+.stage .n { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-3); }
+.stage.done .n, .stage.done p { color: var(--on-navy-2); }
+.stage h3 { font-size: 1.3rem; font-weight: 800; }
+.stage p { font-size: 0.93rem; color: var(--ink-2); }
+.today { position: absolute; top: -12px; right: 16px; background: var(--hot); color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 3px 12px; border-radius: 999px; }
+
+/* build */
+.build { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 20px; }
+.steps { display: grid; gap: 12px; padding: 0; margin: 0; list-style: none; counter-reset: step; }
+.steps li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; align-items: start; background: var(--surface); border-radius: 14px; padding: 16px 18px; box-shadow: 0 0 0 1px var(--line); }
+.steps li::before { counter-increment: step; content: counter(step); width: 34px; height: 34px; border-radius: 50%; background: var(--cloud); color: var(--on-navy); display: grid; place-items: center; font-weight: 800; }
+.steps b { display: block; }
+.steps span { color: var(--ink-2); font-size: 0.93rem; }
+.steps code, .live code { font-family: var(--mono); font-size: 0.82rem; background: var(--panel); padding: 1px 6px; border-radius: 5px; overflow-wrap: anywhere; }
+.live { background: var(--navy); color: var(--on-navy); border-radius: var(--radius); padding: 26px; display: grid; gap: 14px; align-content: start; }
+.live .eyebrow { color: var(--on-navy-2); }
+.live h3 { font-size: 1.4rem; font-weight: 800; }
+.live .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.live .stats div { background: rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 12px 14px; }
+.live .stats b { display: block; font-family: var(--display); font-size: 1.7rem; font-weight: 800; }
+.live .stats span { font-size: 0.82rem; color: var(--on-navy-2); }
+.live p { color: var(--on-navy-2); font-size: 0.93rem; }
+.live code { background: rgba(255, 255, 255, 0.12); color: var(--on-navy); }
+.live a { color: var(--on-navy); font-weight: 700; }
+
+/* resources */
+.resources { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.res { display: grid; gap: 6px; padding: 20px 22px; border-radius: 14px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); text-decoration: none; color: var(--ink); transition: box-shadow .15s ease, transform .15s ease; }
+.res:hover { box-shadow: 0 0 0 2px var(--accent); transform: translateY(-2px); }
+.res b { font-size: 1.08rem; }
+.res span { font-size: 0.9rem; color: var(--ink-2); }
+.res em { font-style: normal; font-family: var(--mono); font-size: 0.76rem; color: var(--accent); }
+
+footer { border-top: 1px solid var(--line); padding-block: 24px 40px; color: var(--ink-3); font-size: 0.86rem; }
+footer .inner { display: grid; gap: 6px; }
+
+@media (max-width: 900px) {
+  .hero-grid, .build { grid-template-columns: minmax(0, 1fr); }
+  .values, .resources { grid-template-columns: minmax(0, 1fr); }
+  .journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi:nth-child(3) { border-right: 0; }
+  .hero::before { width: 420px; height: 420px; right: -220px; top: 260px; }
+}
+@media (max-width: 520px) {
+  .journey, .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpi { border-right: 0; border-bottom: 1px solid var(--line); }
+  .hero::after { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .btn, .res { transition: none; } .btn:hover, .res:hover { transform: none; } }
+</style>
+
+<div class="hero">
+  <div class="inner">
+    <div class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">PI</span>Salesforce Process Intelligence</div>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./dashboard.html">Process dashboard</a>
+        <a href="./value-case.html">Value case</a>
+        <a href="./live.html">Live extract</a>
+        <a href="https://github.com/ch-lukas/salesforce-process-intelligence">GitHub</a>
+      </nav>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Lead-to-close · Salesforce → event log → value</div>
+        <h1>From Salesforce data to a <em>framed value case</em></h1>
+        <p class="lede" id="lede"></p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="./dashboard.html">Open the process dashboard →</a>
+          <a class="btn btn-ghost" href="./value-case.html">Read the value case</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Headline value">
+        <div class="big num" id="headline"></div>
+        <div class="cap">annual revenue upside if half of the gap is closed on three process issues</div>
+        <div class="full"><span>Full gap</span><b class="num" id="fullgap"></b></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="inner">
+  <div class="kpis" id="kpis"></div>
+</div>
+
+<main class="inner">
+  <section aria-labelledby="s-values">
+    <div class="head">
+      <div class="eyebrow">Value items</div>
+      <h2 id="s-values">Three process issues, each with a number attached</h2>
+      <p>Each item ties a business objective to a KPI measured in the CRM data and a framed annual value. Re-quotes get the deep-dive.</p>
+    </div>
+    <div class="values" id="values"></div>
+    <div class="total">
+      <div><span class="eyebrow">Total framed</span><br><b class="num" id="total"></b></div>
+      <p>Framed = the full gap, sized from the data. Committed value is agreed with each owner after validation; realized value is tracked against the baseline. Items can overlap on a deal, so treat the sum as an upper bound.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-approach">
+    <div class="head">
+      <div class="eyebrow">Approach</div>
+      <h2 id="s-approach">From finding value to realising it</h2>
+      <p>This demo covers Identify and Frame. Commit and Realize run with the customer's process owners.</p>
+    </div>
+    <div class="journey">
+      <div class="stage done"><div class="n">01</div><h3>Identify</h3><p>Mine the CRM event log: process map, variants and bottlenecks.</p></div>
+      <div class="stage done"><span class="today">Today</span><div class="n">02</div><h3>Frame</h3><p>Size each opportunity from its KPI baseline and customer-owned assumptions.</p></div>
+      <div class="stage"><div class="n">03</div><h3>Commit</h3><p>Validate KPI definitions and values with each opportunity owner.</p></div>
+      <div class="stage"><div class="n">04</div><h3>Realize</h3><p>Act on the root cause, then track the KPI against its baseline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-build">
+    <div class="head">
+      <div class="eyebrow">How it's built</div>
+      <h2 id="s-build">Real Salesforce plumbing, Apromore-ready output</h2>
+    </div>
+    <div class="build">
+      <ol class="steps">
+        <li><div><b>Extract</b><span>SOQL over the REST API for Lead, Opportunity, OpportunityHistory and Task, signed by the Salesforce CLI session. <code>extract.py</code></span></div></li>
+        <li><div><b>Correlate</b><span>One case per deal: Opportunity Id. Tasks join on WhatId, leads on ConvertedOpportunityId. <code>transform.py</code></span></div></li>
+        <li><div><b>Load</b><span>CSV and IEEE XES with activity, timestamps, resource and case attributes, ready to import into Apromore.</span></div></li>
+        <li><div><b>Mine and size</b><span>Directly-follows graph, variants, cohort win rates and a driver-based value model. <code>mine.py</code></span></div></li>
+      </ol>
+      <div class="live">
+        <div class="eyebrow">Live run</div>
+        <h3>Proven against a real Salesforce trial org</h3>
+        <div class="stats">
+          <div><b class="num" id="live-cases"></b><span>opportunities extracted</span></div>
+          <div><b class="num" id="live-events"></b><span>events in the log</span></div>
+        </div>
+        <p><code>seed.py</code> loaded demo deals and walked them through real stage changes, standing in for a client's CRM. Trial orgs can't backdate history, so the 10-month analysis uses a simulated dataset in the same object shape.</p>
+        <p><a href="./live.html">See the live extract →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-res">
+    <div class="head">
+      <div class="eyebrow">Open to inspect</div>
+      <h2 id="s-res">Everything behind the numbers</h2>
+    </div>
+    <div class="resources">
+      <a class="res" href="./dashboard.html"><em>Interactive</em><b>Process dashboard</b><span>Map, variants, bottlenecks and the value model.</span></a>
+      <a class="res" href="./value-case.html"><em>One-pager</em><b>Value case</b><span>Reduce re-quotes in quote-to-close.</span></a>
+      <a class="res" href="./live.html"><em>Live</em><b>Salesforce extract</b><span>The pipeline run against a trial org.</span></a>
+      <a class="res" href="./decks/salesforce-process-intelligence.pdf"><em>PDF</em><b>Story deck</b><span>Eight slides: answer, evidence, value, next steps.</span></a>
+      <a class="res" href="./decks/salesforce-process-intelligence-tech-setup.pdf"><em>PDF</em><b>Tech setup deck</b><span>From a Salesforce org to an event log.</span></a>
+      <a class="res" href="https://github.com/ch-lukas/salesforce-process-intelligence"><em>Source</em><b>GitHub repository</b><span>Pipeline, event logs and deck generator.</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <span>Luke Audie · Lead-to-close process intelligence demo</span>
+    <span id="foot"></span>
+  </div>
+</footer>
+
+<script>
+const DATA = /*__DATA__*/null;
+const LIVE = /*__LIVE__*/null;
+const $ = id => document.getElementById(id);
+const usd = v => v >= 1e6 ? `$${(v / 1e6).toFixed(1)}M` : `$${Math.round(v / 1e3)}k`;
+const pct = v => `${Math.round(v * 100)}%`;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const K = DATA.kpis;
+const D = Object.fromEntries(DATA.value_drivers.map(d => [d.id, d]));
+const headline = DATA.value_drivers.reduce((s, d) => s + d.annual_value * d.default_capture, 0);
+const win = d => d.evidence.match(/win (\d+)% vs (\d+)%/).slice(1).map(Number);
+
+$("lede").textContent = `${K.cases} opportunities and ${K.events.toLocaleString()} events from the CRM, mined into a process map. Three issues stand out, and each one comes with a measurable KPI and a framed annual value.`;
+$("headline").textContent = usd(headline);
+$("fullgap").textContent = usd(DATA.total_annual_value);
+$("total").textContent = usd(DATA.total_annual_value);
+$("live-cases").textContent = LIVE.kpis.cases;
+$("live-events").textContent = LIVE.kpis.events;
+$("foot").textContent = `Analysis period ${DATA.period.from} to ${DATA.period.to}, simulated in Salesforce's object shape; live extract from a seeded trial org.`;
+
+$("kpis").innerHTML = [
+  [K.cases.toLocaleString(), "deals analysed"],
+  [pct(K.win_rate), "win rate"],
+  [`${K.median_cycle_days}d`, "median cycle time"],
+  [K.variants, "distinct paths"],
+  [pct(K.happy_path_conformance), "follow the happy path"],
+].map(([v, l]) => `<div class="kpi"><b class="num">${v}</b><span>${l}</span></div>`).join("");
+
+const [rwBad, rwGood] = win(D.rework), [qBad, qGood] = win(D.qualification);
+const items = [
+  { n: 1, d: D.approval, chip: "Accelerate revenue", title: "EMEA discount approvals", owner: "Deal desk lead", ttv: "Short",
+    evidence: `Approvals take ${Number(D.approval.baseline).toFixed(1)} days in EMEA against ${Number(D.approval.target).toFixed(1)} in the fastest region.`,
+    rows: [["Fastest region", D.approval.target, false], ["EMEA", D.approval.baseline, true]], max: D.approval.baseline, fmt: v => `${Number(v).toFixed(1)}d` },
+  { n: 2, d: D.rework, chip: "Improve win rate", title: "Re-quotes in negotiation", owner: "VP Revenue Ops", ttv: "Medium", focus: true,
+    evidence: `${pct(D.rework.baseline)} of negotiated deals loop back for a new quote, and those deals win far less often.`,
+    rows: [["Clean path", rwGood / 100, false], ["Re-quoted", rwBad / 100, true]], max: 0.6, fmt: pct },
+  { n: 3, d: D.qualification, chip: "Sales productivity", title: "Skipped qualification", owner: "Sales operations", ttv: "Short",
+    evidence: `${pct(D.qualification.baseline)} of deals skip the Qualification stage and win less than half as often.`,
+    rows: [["Qualified", qGood / 100, false], ["Skipped", qBad / 100, true]], max: 0.6, fmt: pct },
+];
+$("values").innerHTML = items.map(it => `
+  <article class="vcard${it.focus ? " focus" : ""}">
+    <div class="vtop"><span class="badge">${it.n}</span><span class="chip${it.focus ? " hot" : ""}">${it.focus ? "Deep-dive" : esc(it.chip)}</span></div>
+    <h3>${esc(it.title)}</h3>
+    <p class="evidence">${esc(it.evidence)}</p>
+    <div class="compare">${it.rows.map(([l, v, hot]) =>
+      `<div class="cmp"><span>${esc(l)}</span><div class="track"><div class="fill${hot ? " hot" : ""}" style="width:${Math.min(v / it.max, 1) * 100}%"></div></div><b>${it.fmt(v)}</b></div>`).join("")}</div>
+    <div class="vfoot">
+      <div class="framed"><b class="num">${usd(it.d.annual_value)}</b><span>framed p.a. (full gap)</span></div>
+      <div class="meta">${esc(it.owner)}<br>Time to value: ${it.ttv}${it.focus ? `<br><a class="deep" href="./value-case.html">Read the deep-dive →</a>` : ""}</div>
+    </div>
+  </article>`).join("");
+</script>

@@ -4,9 +4,9 @@ Takes lead-to-close data out of Salesforce, turns it into a process-mining event
 (Apromore-ready CSV and XES), mines it for bottlenecks and deviations, and sizes the
 dollar value of fixing them in an interactive dashboard.
 
-**Live site: https://salesforce-process-intelligence.vercel.app** (process dashboard, value case, live extract)
+**Live site: https://salesforce-process-intelligence.vercel.app** (landing page with the value items, [process dashboard](https://salesforce-process-intelligence.vercel.app/dashboard.html), [value case](https://salesforce-process-intelligence.vercel.app/value-case.html), [live extract](https://salesforce-process-intelligence.vercel.app/live.html))
 
-![Value case one-pager](docs/img/value-case.png)
+![Landing page](docs/img/landing.png)
 
 Pure Python standard library: no `pip install` needed.
 
@@ -14,7 +14,8 @@ Pure Python standard library: no `pip install` needed.
 
 | | |
 |---|---|
-| Process dashboard | `site/index.html`: process map, variants, bottlenecks, interactive value model (10-month dataset) |
+| Landing page | `site/index.html`: headline value, the three value items, approach and resources |
+| Process dashboard | `site/dashboard.html`: process map, variants, bottlenecks, interactive value model (10-month dataset) |
 | Value case | `site/value-case.html`: one-page value framing for "Reduce re-quotes in quote-to-close" |
 | Live extract | `site/live.html` and `data/live/event_log.csv`: pulled from a real Salesforce trial org |
 | Event logs | `data/event_log.csv` / `.xes` (10-month dataset), `data/live/event_log.csv` / `.xes` (live org) |

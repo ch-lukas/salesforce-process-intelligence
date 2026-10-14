@@ -196,8 +196,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   text(s, "Approval steps and re-quote loops show up as detours from the designed path.", { x: 0.6, y: 5.35, w: 6.9, h: 0.45, fontSize: 14, italic: true, color: C.accent6, objectName: "Discover note" });
   // Highlighted, clickable link to the live dashboard.
   s.addText([
-    { text: "Live process map:  ", options: { bold: true, color: C.text2 } },
-    { text: SITE, options: { bold: true, hyperlink: { url: `https://${SITE}`, tooltip: "Open the live dashboard" } } },
+    { text: "Open the live process map  →", options: { bold: true, hyperlink: { url: `https://${SITE}/dashboard.html`, tooltip: "Open the live dashboard" } } },
   ], { shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.15, x: 0.6, y: 6.0, w: 6.9, h: 0.6, fill: { color: C.accent3 }, line: { color: C.accent1, width: 1.5 },
     fontSize: 14, align: "center", valign: "middle", margin: 0.08, objectName: "Dashboard link" });
   const mapH = 5.25, mapW = mapH * (1080 / 1250);
@@ -394,18 +393,19 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
   s.addText("Everything is live and open to inspect", { placeholder: "title" });
   const proof = [
-    ["Process dashboard", SITE, `https://${SITE}`],
+    ["Landing page and value items", SITE, `https://${SITE}`],
+    ["Process dashboard", `${SITE}/dashboard.html`, `https://${SITE}/dashboard.html`],
     ["Value case one-pager", `${SITE}/value-case.html`, `https://${SITE}/value-case.html`],
     ["Live Salesforce extract", `${SITE}/live.html`, `https://${SITE}/live.html`],
     ["Source code and event logs", REPO, `https://${REPO}`],
   ];
   proof.forEach(([label, shown, url], i) => {
-    const y = 1.55 + i * 1.22;
-    card(s, 0.6, y, 6.6, 1.05, `Proof ${i + 1}`);
-    s.addShape(pres.shapes.OVAL, { x: 0.82, y: y + 0.3, w: 0.45, h: 0.45, fill: { color: C.accent1 }, line: { type: "none" }, objectName: `Proof ${i + 1} marker` });
-    text(s, "→", { x: 0.82, y: y + 0.3, w: 0.45, h: 0.45, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Proof ${i + 1} glyph` });
-    text(s, label, { x: 1.45, y: y + 0.14, w: 5.6, h: 0.38, fontSize: 16, bold: true, color: C.text2, objectName: `Proof ${i + 1} label` });
-    text(s, url ? [{ text: shown, options: { hyperlink: { url } } }] : shown, { x: 1.45, y: y + 0.54, w: 5.6, h: 0.38, fontSize: 14, color: C.accent6, objectName: `Proof ${i + 1} link` });
+    const y = 1.5 + i * 1.0;
+    card(s, 0.6, y, 6.6, 0.88, `Proof ${i + 1}`);
+    s.addShape(pres.shapes.OVAL, { x: 0.82, y: y + 0.2, w: 0.45, h: 0.45, fill: { color: C.accent1 }, line: { type: "none" }, objectName: `Proof ${i + 1} marker` });
+    text(s, "→", { x: 0.82, y: y + 0.2, w: 0.45, h: 0.45, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Proof ${i + 1} glyph` });
+    text(s, label, { x: 1.45, y: y + 0.08, w: 5.6, h: 0.36, fontSize: 16, bold: true, color: C.text2, objectName: `Proof ${i + 1} label` });
+    text(s, url ? [{ text: shown, options: { hyperlink: { url } } }] : shown, { x: 1.45, y: y + 0.46, w: 5.6, h: 0.34, fontSize: 14, color: C.accent6, objectName: `Proof ${i + 1} link` });
   });
   const shotH = 4.75, shotW = shotH * (1280 / 1180);
   s.addShape(pres.shapes.RECTANGLE, { x: 7.6 - 0.05, y: 1.5, w: shotW + 0.1, h: shotH + 0.1, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: "Screenshot frame" });

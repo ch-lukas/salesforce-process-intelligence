@@ -7,27 +7,27 @@
 <meta name="description" content="Value framing one-pager: reduce re-quotes in quote-to-close, sized from Salesforce process data.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: a single printed-style card, the value-framing one-pager: header + filter bar,
    2x2 narrative quadrants, then the multiplicative value chain ending in the framed value. */
 :root {
-  --bg: #f6f8f8; --surface: #ffffff; --ink: #12262b; --ink-2: #4b6268; --ink-3: #7d9196;
-  --line: #dbe4e5; --accent: #0b6e72; --accent-soft: #e0f0ef; --flag: #9a5b0a; --flag-soft: #fbefd9;
-  --display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
-  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bg: #f3f8fd; --surface: #ffffff; --ink: #032d60; --ink-2: #3e5b80; --ink-3: #6f86a3;
+  --line: #d6e6f5; --accent: #0176d3; --accent-soft: #e5f2fd; --flag: #b5560a; --flag-soft: #ffeedd;
+  --display: "Figtree", "Avenir Next", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0d1719; --surface: #142225; --ink: #e4eeef; --ink-2: #a9bcbf; --ink-3: #74898d;
-    --line: #26393c; --accent: #4fc1bf; --accent-soft: #173638; --flag: #f3b860; --flag-soft: #3a2a12;
+    --bg: #071a33; --surface: #0d2747; --ink: #eaf3fd; --ink-2: #a9c3e0; --ink-3: #7894b5;
+    --line: #1f3d63; --accent: #4fb3f0; --accent-soft: #12365e; --flag: #ffb37a; --flag-soft: #3a2512;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0d1719; --surface: #142225; --ink: #e4eeef; --ink-2: #a9bcbf; --ink-3: #74898d;
-  --line: #26393c; --accent: #4fc1bf; --accent-soft: #173638; --flag: #f3b860; --flag-soft: #3a2a12;
+  --bg: #071a33; --surface: #0d2747; --ink: #eaf3fd; --ink-2: #a9c3e0; --ink-3: #7894b5;
+    --line: #1f3d63; --accent: #4fb3f0; --accent-soft: #12365e; --flag: #ffb37a; --flag-soft: #3a2512;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -78,7 +78,8 @@ ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 <body>
 <div class="wrap">
   <nav class="nav" aria-label="Pages">
-    <a href="./">Process dashboard</a>
+    <a href="./">Home</a>
+    <a href="./dashboard.html">Process dashboard</a>
     <a href="./value-case.html" aria-current="page">Value case</a>
     <a href="./live.html">Live Salesforce extract</a>
     <a href="https://github.com/ch-lukas/salesforce-process-intelligence">Source on GitHub</a>
@@ -136,7 +137,7 @@ ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 
     <div class="assume">
       <span><b>Assumptions:</b> <span id="assumptions"></span></span>
-      <a href="./">Open the process dashboard →</a>
+      <a href="./dashboard.html">Open the process dashboard →</a>
     </div>
   </article>
 </div>
