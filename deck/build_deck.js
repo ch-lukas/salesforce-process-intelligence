@@ -247,7 +247,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
 
   // ---------- Tech setup: pipeline ----------
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("From Salesforce to an event log in four steps", { placeholder: "title" });
+  s.addText("From Salesforce to Process Intelligence in four steps", { placeholder: "title" });
   const steps = [
     ["Extract", "SOQL over REST", "Lead, Opportunity, OpportunityHistory and Task, signed by the Salesforce CLI session. No stored credentials."],
     ["Correlate", "One case per deal", "Case ID = Opportunity Id. Tasks join on WhatId, Leads on ConvertedOpportunityId."],
