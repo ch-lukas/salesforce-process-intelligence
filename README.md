@@ -138,7 +138,7 @@ pipeline/            Python, standard library only
 dashboard/           page templates (overview and process analysis)
 data/                simulated dataset; data/live/ holds the trial-org extract
 deck/                deck generator (pptxgenjs) and the built decks
-docs/                screenshots and presenter notes (talk-track.md)
+docs/                screenshots used in this README
 site/                static build, deployed to Vercel as-is
 ```
 
