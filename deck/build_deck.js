@@ -12,7 +12,9 @@ const ROOT = path.join(__dirname, "..");
 const I = JSON.parse(fs.readFileSync(path.join(ROOT, "data/insights.json"), "utf8"));
 const LIVE = JSON.parse(fs.readFileSync(path.join(ROOT, "data/live/insights.json"), "utf8"));
 // DECK_LOGO is optional: the shared repo version is built without a logo.
-const OUT = process.env.DECK_OUT || path.join(__dirname, "salesforce-process-intelligence.pptx");
+// DECK_KIND=tech builds the separate Tech setup deck; anything else builds the main story deck.
+const KIND = process.env.DECK_KIND === "tech" ? "tech" : "main";
+const OUT = process.env.DECK_OUT || path.join(__dirname, KIND === "tech" ? "salesforce-process-intelligence-tech-setup.pptx" : "salesforce-process-intelligence.pptx");
 const LOGO = process.env.DECK_LOGO || "";
 const REPO = "github.com/ch-lukas/salesforce-process-intelligence";
 const SITE = "salesforce-process-intelligence.vercel.app";
@@ -47,7 +49,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
 (async () => {
   const pres = new pptxgen();
   pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5
-  pres.title = "From Salesforce data to a framed value case";
+  pres.title = KIND === "tech" ? "Tech setup: from a Salesforce org to Process Intelligence" : "From Salesforce data to a framed value case";
   pres.author = "Luke Audie";
   pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
   const C = pres.SchemeColor;
@@ -104,9 +106,11 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
 
   const text = (slide, value, opts) => slide.addText(value, { isTextBox: true, margin: 0, color: C.text1, fontSize: 14, valign: "top", ...opts });
 
+  let s;
+  if (KIND === "main") {
   // ---------- Opening: title ----------
   pres.addSection({ title: "Opening" });
-  let s = pres.addSlide({ masterName: "TITLE_DARK", sectionTitle: "Opening" });
+  s = pres.addSlide({ masterName: "TITLE_DARK", sectionTitle: "Opening" });
   circle(s, 9.4, 3.4, 6.6, C.accent1, 70, "Decor circle large");
   circle(s, 10.6, 2.6, 0.75, C.accent3, 0, "Decor circle small");
   s.addText("From Salesforce data to a framed value case", { placeholder: "title" });
@@ -236,8 +240,20 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   text(s, "Assumptions: annualised from 10 months of history; win-rate gap compares only deals that reached Negotiation; cycle-time gains not counted; half of the gap closed.", { x: 0.6, y: 6.2, w: 12.1, h: 0.5, fontSize: 11, italic: true, color: C.accent6, objectName: "Assumptions" });
   s.addNotes("This follows my value framing format: challenge, root cause, solution, then a multiplicative value chain. The customer owns the improvement assumption; we own the evidence. Root cause is labelled 'to capture' because it needs reason codes the CRM doesn't hold yet.");
 
-  // ---------- Tech setup: evidence ----------
+  }
+
+  if (KIND === "tech") {
+  // ---------- Tech setup: title ----------
   pres.addSection({ title: "Tech setup" });
+  s = pres.addSlide({ masterName: "TITLE_DARK", sectionTitle: "Tech setup" });
+  circle(s, 9.4, 3.4, 6.6, C.accent1, 70, "Decor circle large");
+  circle(s, 10.6, 2.6, 0.75, C.accent3, 0, "Decor circle small");
+  s.addText("Tech setup", { placeholder: "title" });
+  s.addText("From a Salesforce org to Process Intelligence: the pipeline behind the demo", { placeholder: "body" });
+  text(s, "Luke Audie  ·  October 2026", { x: 0.8, y: 6.4, w: 6, h: 0.4, fontSize: 14, color: C.accent3, objectName: "Byline" });
+  s.addNotes("Companion to the main deck for a technical audience: how the data gets out of Salesforce and where to see it running.");
+
+  // ---------- Tech setup: evidence ----------
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
   s.addText("Tech setup: from a Salesforce org to an event log", { placeholder: "title" });
 
@@ -279,6 +295,21 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
     { text: "extract.py: ", options: { bold: true } },
     { text: "four SOQL queries over the REST API, signed by the Salesforce CLI session. Opportunity Id becomes the case ID." },
   ], { x: px, y: 6.2, w: pw, h: 0.75, fontSize: 14, color: C.text2, objectName: "Code caption" });
+  // Numbered popups walk the viewer through the flow, left to right.
+  const popup = (n, x, y, w, label) => {
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h: 0.4, rectRadius: 0.08, fill: { color: C.background1 }, line: { color: C.accent1, width: 1.5 },
+      shadow: { type: "outer", color: "000000", opacity: 0.25, blur: 4, offset: 2, angle: 90 }, objectName: `Popup ${n} box` });
+    s.addShape(pres.shapes.OVAL, { x: x + 0.06, y: y + 0.05, w: 0.3, h: 0.3, fill: { color: C.accent4 }, line: { type: "none" }, objectName: `Popup ${n} badge` });
+    text(s, String(n), { x: x + 0.06, y: y + 0.05, w: 0.3, h: 0.3, fontSize: 12, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Popup ${n} number` });
+    text(s, label, { x: x + 0.44, y, w: w - 0.5, h: 0.4, fontSize: 12, bold: true, color: C.text2, valign: "middle", objectName: `Popup ${n} label` });
+  };
+  const lineY = i => 1.89 + i * 0.1667; // centre of code line i in the panel
+  const lineOf = re => codeLines.findIndex(l => re.test(l));
+  popup(1, 3.15, 1.6, 2.85, "Trial org = the client's CRM");
+  popup(2, 3.3, 3.85, 2.7, `seed.py: ${LIVE.kpis.cases} [Demo] records`);
+  popup(3, px + pw - 2.95, 1.43, 2.85, "SOQL over REST via CLI");
+  popup(4, px + pw - 2.2, lineY(lineOf(/FROM OpportunityHistory/)) - 0.2, 2.1, "History → events");
+  popup(5, px + pw - 2.45, lineY(lineOf(/FROM Task/)) - 0.2, 2.35, "Tasks join on WhatId");
   s.addNotes("Left: the trial org standing in for a client's CRM, seeded by seed.py so there's real OpportunityHistory to read. Right: the exact SOQL the extractor runs. Opportunity is the case; leads join via ConvertedOpportunityId and tasks via WhatId. Trial orgs can't backdate history, so the 10-month dataset is simulated in the same object shape.");
 
   // ---------- Tech setup: everything is live ----------
@@ -303,6 +334,9 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   s.addImage({ path: path.join(ROOT, "docs/img/value-case.png"), x: 7.6, y: 1.55, w: shotW, h: shotH, objectName: "Value case screenshot", altText: "Value case one-pager on the hosted site" });
   s.addNotes("All of this is hosted. The repo has the pipeline, the seeding script and the README with the setup gotchas I hit on a new trial org.");
 
+  }
+
+  if (KIND === "main") {
   // ---------- Close: next steps ----------
   pres.addSection({ title: "Close" });
   s = pres.addSlide({ masterName: "CLOSING_DARK", sectionTitle: "Close" });
@@ -322,6 +356,8 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   text(s, `${SITE}  ·  Luke Audie`, { x: 0.8, y: 6.5, w: 8, h: 0.4, fontSize: 14, color: C.accent3, objectName: "Closing contact" });
   logo(s, 10.35, 6.35, 0.55);
   s.addNotes("Close on the decision: validate on production data, pilot one policy change, then monitor value realised in Apromore.");
+
+  }
 
   await pres.writeFile({ fileName: OUT });
   await applyTheme(OUT, THEME);
