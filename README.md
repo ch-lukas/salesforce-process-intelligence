@@ -1,7 +1,7 @@
 # Salesforce → Process Intelligence → Value Case
 
 Takes lead-to-close data out of Salesforce, turns it into a process-mining event log
-(Apromore-ready CSV and XES), mines it for bottlenecks and deviations, and sizes the
+(CSV and XES, ready for process mining tools), mines it for bottlenecks and deviations, and sizes the
 dollar value of fixing them in an interactive dashboard.
 
 **Live site: https://salesforce-process-intelligence.vercel.app** (landing page with the value items, [process dashboard](https://salesforce-process-intelligence.vercel.app/dashboard.html), [value case](https://salesforce-process-intelligence.vercel.app/value-case.html), [live extract](https://salesforce-process-intelligence.vercel.app/live.html))
@@ -74,11 +74,11 @@ Notes from setting up a new trial org:
 - Newer Starter orgs use a shorter sales process (Qualify → Meet & Present → Propose → Negotiate). `seed.py` and `mine.py` detect it and map stages.
 - The CLI redacts access tokens in its output, so `sf_client.py` sends requests through `sf api request rest` and never handles the token.
 
-## Load into Apromore
+## Load into a process mining tool
 
-Upload `data/event_log.csv` (or the `.xes`). Map the columns:
+Upload `data/event_log.csv` (or the `.xes`) to a process mining tool such as Apromore. Map the columns:
 
-| Column | Apromore role |
+| Column | Role |
 |---|---|
 | `case_id` | Case ID |
 | `activity` | Activity |

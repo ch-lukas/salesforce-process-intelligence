@@ -1,4 +1,4 @@
-<title>Salesforce Process Intelligence</title>
+<title>Lead-to-Close Process Intelligence</title>
 <meta name="description" content="Lead-to-close process mining on Salesforce data: three value items, a framed business case, and the pipeline behind it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,7 +180,7 @@ footer .inner { display: grid; gap: 6px; }
 <div class="hero">
   <div class="inner">
     <div class="topbar">
-      <div class="brand"><span class="brand-mark" aria-hidden="true">PI</span>Salesforce Process Intelligence</div>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">PI</span>Lead-to-Close Process Intelligence</div>
       <nav class="topnav" aria-label="Pages">
         <a href="./dashboard.html">Process dashboard</a>
         <a href="./value-case.html">Value case</a>
@@ -200,8 +200,8 @@ footer .inner { display: grid; gap: 6px; }
       </div>
       <div class="hero-card" aria-label="Headline value">
         <div class="big num" id="headline"></div>
-        <div class="cap">annual revenue upside if half of the gap is closed on three process issues</div>
-        <div class="full"><span>Full gap</span><b class="num" id="fullgap"></b></div>
+        <div class="cap">illustrative annual upside at 50% capture: gross, across three overlapping process issues</div>
+        <div class="full"><span>Full-gap scenario</span><b class="num" id="fullgap"></b></div>
       </div>
     </div>
   </div>
@@ -216,12 +216,12 @@ footer .inner { display: grid; gap: 6px; }
     <div class="head">
       <div class="eyebrow">Value items</div>
       <h2 id="s-values">Three process issues, each with a number attached</h2>
-      <p>Each item ties a business objective to a KPI measured in the CRM data and a framed annual value. Re-quotes get the deep-dive.</p>
+      <p>Each item ties a business objective to a KPI measured in the event log and an illustrative full-gap value. The gaps are associations to validate, not proven causes. Re-quotes get the deep-dive.</p>
     </div>
     <div class="values" id="values"></div>
     <div class="total">
-      <div><span class="eyebrow">Total framed</span><br><b class="num" id="total"></b></div>
-      <p>Framed = the full gap, sized from the data. Committed value is agreed with each owner after validation; realized value is tracked against the baseline. Items can overlap on a deal, so treat the sum as an upper bound.</p>
+      <div><span class="eyebrow">Total, gross</span><br><b class="num" id="total"></b></div>
+      <p id="overlap-note"></p>
     </div>
   </section>
 
@@ -233,7 +233,7 @@ footer .inner { display: grid; gap: 6px; }
     </div>
     <div class="journey">
       <div class="stage done"><div class="n">01</div><h3>Identify</h3><p>Mine the CRM event log: process map, variants and bottlenecks.</p></div>
-      <div class="stage done"><span class="today">Today</span><div class="n">02</div><h3>Frame</h3><p>Size each opportunity from its KPI baseline and customer-owned assumptions.</p></div>
+      <div class="stage done"><span class="today">Today</span><div class="n">02</div><h3>Frame</h3><p>Size each opportunity from its KPI baseline and illustrative assumptions to validate with process owners.</p></div>
       <div class="stage"><div class="n">03</div><h3>Commit</h3><p>Validate KPI definitions and values with each opportunity owner.</p></div>
       <div class="stage"><div class="n">04</div><h3>Realize</h3><p>Act on the root cause, then track the KPI against its baseline.</p></div>
     </div>
@@ -242,13 +242,13 @@ footer .inner { display: grid; gap: 6px; }
   <section aria-labelledby="s-build">
     <div class="head">
       <div class="eyebrow">How it's built</div>
-      <h2 id="s-build">Real Salesforce plumbing, Apromore-ready output</h2>
+      <h2 id="s-build">Salesforce data to Process Intelligence in four steps</h2>
     </div>
     <div class="build">
       <ol class="steps">
         <li><div><b>Extract</b><span>SOQL over the REST API for Lead, Opportunity, OpportunityHistory and Task, signed by the Salesforce CLI session. <code>extract.py</code></span></div></li>
         <li><div><b>Correlate</b><span>One case per deal: Opportunity Id. Tasks join on WhatId, leads on ConvertedOpportunityId. <code>transform.py</code></span></div></li>
-        <li><div><b>Load</b><span>CSV and IEEE XES with activity, timestamps, resource and case attributes, ready to import into Apromore.</span></div></li>
+        <li><div><b>Load</b><span>CSV and IEEE XES with activity, timestamps, resource and case attributes, ready to import into a process mining tool.</span></div></li>
         <li><div><b>Mine and size</b><span>Directly-follows graph, variants, cohort win rates and a driver-based value model. <code>mine.py</code></span></div></li>
       </ol>
       <div class="live">
@@ -299,7 +299,9 @@ const D = Object.fromEntries(DATA.value_drivers.map(d => [d.id, d]));
 const headline = DATA.value_drivers.reduce((s, d) => s + d.annual_value * d.default_capture, 0);
 const win = d => d.evidence.match(/win (\d+)% vs (\d+)%/).slice(1).map(Number);
 
-$("lede").textContent = `${K.cases} opportunities and ${K.events.toLocaleString()} events from the CRM, mined into a process map. Three issues stand out, and each one comes with a measurable KPI and a framed annual value.`;
+$("lede").textContent = `An illustrative value case: ${K.cases} simulated opportunities in Salesforce's object shape, mined into a process map, with the same pipeline proven live on a Salesforce trial org. Three patterns stand out, each with a measurable KPI and a framed annual value.`;
+const OV = DATA.overlaps;
+$("overlap-note").textContent = `Items overlap: ${OV.rework_and_qualification} deals are both re-quoted and unqualified, ${OV.rework_and_approval} re-quoted with slow approvals, ${OV.qualification_and_approval} unqualified with slow approvals. So the total is gross: count incremental wins once per deal before committing. Committed value is agreed with each owner and Finance; realized value is tracked against a frozen baseline.`;
 $("headline").textContent = usd(headline);
 $("fullgap").textContent = usd(DATA.total_annual_value);
 $("total").textContent = usd(DATA.total_annual_value);
@@ -312,7 +314,7 @@ $("kpis").innerHTML = [
   [pct(K.win_rate), "win rate"],
   [`${K.median_cycle_days}d`, "median cycle time"],
   [K.variants, "distinct paths"],
-  [pct(K.happy_path_conformance), "follow the happy path"],
+  [pct(K.happy_path_conformance), "match the winning trace"],
 ].map(([v, l]) => `<div class="kpi"><b class="num">${v}</b><span>${l}</span></div>`).join("");
 
 const [rwBad, rwGood] = win(D.rework), [qBad, qGood] = win(D.qualification);
@@ -321,10 +323,10 @@ const items = [
     evidence: `Approvals take ${Number(D.approval.baseline).toFixed(1)} days in EMEA against ${Number(D.approval.target).toFixed(1)} in the fastest region.`,
     rows: [["Fastest region", D.approval.target, false], ["EMEA", D.approval.baseline, true]], max: D.approval.baseline, fmt: v => `${Number(v).toFixed(1)}d` },
   { n: 2, d: D.rework, chip: "Improve win rate", title: "Re-quotes in negotiation", owner: "VP Revenue Ops", ttv: "Medium", focus: true,
-    evidence: `${pct(D.rework.baseline)} of negotiated deals loop back for a new quote, and those deals win far less often.`,
+    evidence: `${pct(D.rework.baseline)} of negotiated deals loop back for a new quote (n = ${D.rework.cohorts.problem}), and those deals win less often.`,
     rows: [["Clean path", rwGood / 100, false], ["Re-quoted", rwBad / 100, true]], max: 0.6, fmt: pct },
   { n: 3, d: D.qualification, chip: "Sales productivity", title: "Skipped qualification", owner: "Sales operations", ttv: "Short",
-    evidence: `${pct(D.qualification.baseline)} of deals skip the Qualification stage and win less than half as often.`,
+    evidence: `${pct(D.qualification.baseline)} of deals skip the Qualification stage (n = ${D.qualification.cohorts.problem}) and win less than half as often.`,
     rows: [["Qualified", qGood / 100, false], ["Skipped", qBad / 100, true]], max: 0.6, fmt: pct },
 ];
 $("values").innerHTML = items.map(it => `
@@ -335,8 +337,8 @@ $("values").innerHTML = items.map(it => `
     <div class="compare">${it.rows.map(([l, v, hot]) =>
       `<div class="cmp"><span>${esc(l)}</span><div class="track"><div class="fill${hot ? " hot" : ""}" style="width:${Math.min(v / it.max, 1) * 100}%"></div></div><b>${it.fmt(v)}</b></div>`).join("")}</div>
     <div class="vfoot">
-      <div class="framed"><b class="num">${usd(it.d.annual_value)}</b><span>framed p.a. (full gap)</span></div>
-      <div class="meta">${esc(it.owner)}<br>Time to value: ${it.ttv}${it.focus ? `<br><a class="deep" href="./value-case.html">Read the deep-dive →</a>` : ""}</div>
+      <div class="framed"><b class="num">${usd(it.d.annual_value)}</b><span>full-gap scenario p.a.</span></div>
+      <div class="meta">Proposed: ${esc(it.owner)}<br>Time to value: ${it.ttv}${it.focus ? `<br><a class="deep" href="./value-case.html">Read the deep-dive →</a>` : ""}</div>
     </div>
   </article>`).join("");
 </script>

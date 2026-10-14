@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T18:44:32",
+ "generated_at": "2026-10-14T20:47:06",
  "source": "synthetic",
  "period": {
   "from": "2025-10-23",
@@ -15,6 +15,7 @@
   "activities": 17,
   "variants": 67,
   "happy_path_conformance": 0.141,
+  "winning_trace_share_of_won": 0.384,
   "rework_rate": 0.192,
   "avg_won_deal": 53126,
   "annual_pipeline": 50287331,
@@ -771,7 +772,13 @@
    "deals_at_risk_per_year": 59,
    "default_capture": 0.5,
    "annual_value": 212833,
-   "days_saved_per_deal": 5.8
+   "days_saved_per_deal": 5.8,
+   "cohorts": {
+    "problem": 51,
+    "comparison": 52,
+    "problem_label": "EMEA deals waiting >7 days",
+    "comparison_label": "EMEA deals waiting \u22647 days"
+   }
   },
   {
    "id": "rework",
@@ -784,7 +791,14 @@
    "affected_deals_per_year": 144,
    "win_rate_lift": 0.175,
    "default_capture": 0.5,
-   "annual_value": 1333672
+   "annual_value": 1333672,
+   "negotiated_per_year": 746.5,
+   "cohorts": {
+    "problem": 124,
+    "comparison": 521,
+    "problem_label": "re-quoted",
+    "comparison_label": "clean path"
+   }
   },
   {
    "id": "qualification",
@@ -797,8 +811,19 @@
    "affected_deals_per_year": 115,
    "win_rate_lift": 0.212,
    "default_capture": 0.5,
-   "annual_value": 1289872
+   "annual_value": 1289872,
+   "cohorts": {
+    "problem": 99,
+    "comparison": 701,
+    "problem_label": "skipped Qualification",
+    "comparison_label": "qualified"
+   }
   }
  ],
- "total_annual_value": 2836377
+ "total_annual_value": 2836377,
+ "overlaps": {
+  "rework_and_qualification": 22,
+  "rework_and_approval": 7,
+  "qualification_and_approval": 5
+ }
 }

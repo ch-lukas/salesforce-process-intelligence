@@ -5,7 +5,7 @@ Activity  = stage name (OpportunityHistory) or task subject (Task)
 Timestamps= start/end; stage changes are instantaneous, tasks carry duration
 Resource  = who did it; case attributes = region, industry, amount, outcome...
 
-Outputs data/event_log.csv (Apromore CSV import) and data/event_log.xes (IEEE XES).
+Outputs data/event_log.csv (process mining CSV import) and data/event_log.xes (IEEE XES).
 
 Usage:
   python3 pipeline/transform.py

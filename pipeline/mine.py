@@ -166,6 +166,8 @@ def main():
             "default_capture": 0.5,
             "annual_value": round(approval_wins * avg_deal),
             "days_saved_per_deal": round(days_saved, 1),
+            "cohorts": {"problem": len(emea_slow), "comparison": len(emea_fast),
+                        "problem_label": "EMEA deals waiting >7 days", "comparison_label": "EMEA deals waiting ≤7 days"},
         },
         {
             "id": "rework",
@@ -180,6 +182,9 @@ def main():
             "win_rate_lift": round(rework_lift, 3),
             "default_capture": 0.5,
             "annual_value": round(len(rework) * annualize * rework_lift * avg_deal),
+            "negotiated_per_year": round(len(negotiated) * annualize, 1),
+            "cohorts": {"problem": len(rework), "comparison": len(clean),
+                        "problem_label": "re-quoted", "comparison_label": "clean path"},
         },
         {
             "id": "qualification",
@@ -193,8 +198,17 @@ def main():
             "win_rate_lift": round(qual_lift, 3),
             "default_capture": 0.5,
             "annual_value": round(len(skipped) * annualize * qual_lift * avg_deal),
+            "cohorts": {"problem": len(skipped), "comparison": len(qualified),
+                        "problem_label": "skipped Qualification", "comparison_label": "qualified"},
         },
     ]
+
+    ids = lambda cs: {c[0]["case_id"] for c in cs}
+    overlaps = {
+        "rework_and_qualification": len(ids(rework) & ids(skipped)),
+        "rework_and_approval": len(ids(rework) & ids(emea_slow)),
+        "qualification_and_approval": len(ids(skipped) & ids(emea_slow)),
+    }
 
     by_region = {}
     for region in sorted({c[0]["region"] for c in cases}):
@@ -219,6 +233,7 @@ def main():
             "activities": len({e["activity"] for e in all_events}),
             "variants": n_variants,
             "happy_path_conformance": round(conforming / len(cases), 3),
+            "winning_trace_share_of_won": round(conforming / len(won), 3) if won else 0,
             "rework_rate": round(len(rework) / len(negotiated), 3),
             "avg_won_deal": round(avg_deal),
             "annual_pipeline": round(pipeline_annual),
@@ -232,6 +247,7 @@ def main():
         "monthly": [{"month": m, **v} for m, v in sorted(monthly.items())],
         "value_drivers": drivers,
         "total_annual_value": sum(d["annual_value"] for d in drivers),
+        "overlaps": overlaps,
     }
     Path(f"{DATA_DIR}/insights.json").write_text(json.dumps(insights, indent=1))
     k = insights["kpis"]

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T18:44:32",
+ "generated_at": "2026-10-14T20:47:06",
  "source": "salesforce",
  "period": {
   "from": "2026-10-14",
@@ -15,6 +15,7 @@
   "activities": 15,
   "variants": 15,
   "happy_path_conformance": 0.225,
+  "winning_trace_share_of_won": 0.6,
   "rework_rate": 0.167,
   "avg_won_deal": 47233,
   "annual_pipeline": 27308400,
@@ -504,7 +505,13 @@
    "deals_at_risk_per_year": 0,
    "default_capture": 0.5,
    "annual_value": 0,
-   "days_saved_per_deal": 0.0
+   "days_saved_per_deal": 0.0,
+   "cohorts": {
+    "problem": 0,
+    "comparison": 3,
+    "problem_label": "EMEA deals waiting >7 days",
+    "comparison_label": "EMEA deals waiting \u22647 days"
+   }
   },
   {
    "id": "rework",
@@ -517,7 +524,14 @@
    "affected_deals_per_year": 60,
    "win_rate_lift": 0.36,
    "default_capture": 0.5,
-   "annual_value": 1020240
+   "annual_value": 1020240,
+   "negotiated_per_year": 360.0,
+   "cohorts": {
+    "problem": 5,
+    "comparison": 25,
+    "problem_label": "re-quoted",
+    "comparison_label": "clean path"
+   }
   },
   {
    "id": "qualification",
@@ -530,8 +544,19 @@
    "affected_deals_per_year": 24,
    "win_rate_lift": 0,
    "default_capture": 0.5,
-   "annual_value": 0
+   "annual_value": 0,
+   "cohorts": {
+    "problem": 2,
+    "comparison": 38,
+    "problem_label": "skipped Qualification",
+    "comparison_label": "qualified"
+   }
   }
  ],
- "total_annual_value": 1020240
+ "total_annual_value": 1020240,
+ "overlaps": {
+  "rework_and_qualification": 1,
+  "rework_and_approval": 0,
+  "qualification_and_approval": 0
+ }
 }

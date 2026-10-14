@@ -82,15 +82,15 @@ ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
     <div class="top">
       <div>
         <h1>Reduce re-quotes in quote-to-close</h1>
-        <div class="owner">Opportunity owner: VP Revenue Operations</div>
+        <div class="owner">Proposed opportunity owner: VP Revenue Operations</div>
       </div>
-      <div class="mark">Salesforce → event log → Apromore<br><span id="generated"></span></div>
+      <div class="mark">Salesforce data → event log → process intelligence<br><span id="generated"></span></div>
     </div>
 
     <div class="filters">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></svg>
       <span><b>Time frame:</b> <span id="timeframe"></span></span>
-      <span><b>Filter 2:</b> New business opportunities</span>
+      <span><b>Data:</b> simulated, Salesforce object shape</span>
       <span><b>Filter 3:</b> Deals that reached Negotiation</span>
     </div>
 
@@ -104,22 +104,22 @@ ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
         <ul>
           <li>Re-quote reasons to break down: quote expired while awaiting approval, discount renegotiated, scope change, pricing error.</li>
           <li>Hotspots by approver queue, region and rep: approvals handled, median wait, re-quote rate. EMEA's single approval queue is the first suspect.</li>
-          <li>Causal chain to confirm: slow approval → quote expires → re-quote → lower win rate.</li>
+          <li>Test whether approval delay causes quote expiry and re-quotes before acting on it.</li>
         </ul>
       </section>
       <section class="quad">
         <h2>Solution</h2>
         <ul>
-          <li>Apromore process discovery and performance views expose where quotes wait and loop back.</li>
+          <li>Process discovery and performance views expose where quotes wait and loop back.</li>
           <li>Conformance checking flags deals that skip Qualification or bypass approval steps.</li>
-          <li>Simulate a delegated EMEA approval threshold (discounts up to 30%) before changing policy, then monitor it.</li>
+          <li>Agree a controlled pilot with RevOps and Finance once re-quote causes are validated.</li>
         </ul>
       </section>
       <section class="quad tracking">
         <h2>Tracking</h2>
         <div><b>P&amp;L impact: revenue (win rate)</b></div>
         <div class="formula">(Baseline re-quote rate − re-quote rate after intervention) × negotiated deals per year × win-rate gap × average won deal</div>
-        <div><i>Baseline re-quote rate: <span id="baseline"></span> per negotiated deal</i><br><i>Re-quote rate after intervention: TBD</i><br><i>Negotiated deals after intervention: TBD</i></div>
+        <div><i>Baseline: <span id="baseline"></span> of negotiated deals re-quoted (frozen)</i><br><i>After intervention: TBD, measured against a comparison group</i><br><i>Realized revenue: validated by Finance, not modelled</i></div>
       </section>
     </div>
 
@@ -140,9 +140,9 @@ const DATA = /*__DATA__*/null;
 const rw = DATA.value_drivers.find(d => d.id === "rework");
 const ap = DATA.value_drivers.find(d => d.id === "approval");
 const K = DATA.kpis;
-const negotiated = Math.round(rw.affected_deals_per_year / rw.baseline);
+const negotiated = rw.negotiated_per_year; // exact, unrounded
 const improvement = 0.5;
-const value = negotiated * rw.baseline * rw.win_rate_lift * K.avg_won_deal * improvement;
+const value = rw.annual_value * improvement; // same calculation as the dashboard and deck
 const fmtUSD = v => v >= 1e6 ? `$${(v / 1e6).toFixed(2)}M` : `$${Math.round(v / 1e3)}k`;
 const pct = v => `${Math.round(v * 100)}%`;
 const winRates = rw.evidence.match(/win (\d+)% vs (\d+)%/);
@@ -150,23 +150,23 @@ const $ = id => document.getElementById(id);
 
 $("timeframe").textContent = `${DATA.period.from.slice(0, 7)} to ${DATA.period.to.slice(0, 7)}`;
 $("generated").textContent = `Generated ${DATA.generated_at.slice(0, 10)}`;
-$("baseline").textContent = rw.baseline.toFixed(2);
+$("baseline").textContent = `${(rw.baseline * 100).toFixed(1)}%`;
 $("challenge").innerHTML = [
-  `About ${negotiated.toLocaleString()} deals a year reach Negotiation, and ${pct(rw.baseline)} of them loop back to Proposal for a new quote.`,
-  `Re-quoted deals win ${winRates[1]}% of the time vs ${winRates[2]}% for clean deals, a gap of ${Math.round(rw.win_rate_lift * 100)} points.`,
-  `EMEA discount approvals take ${ap.baseline} days (median) vs ${ap.target} days in the fastest region.`,
+  `About ${Math.round(negotiated).toLocaleString()} deals a year reach Negotiation, and ${pct(rw.baseline)} of them loop back to Proposal for a new quote.`,
+  `Re-quoted deals win ${winRates[1]}% of the time vs ${winRates[2]}% for clean deals (n = ${rw.cohorts.problem} vs ${rw.cohorts.comparison}), an association of ${Math.round(rw.win_rate_lift * 100)} points.`,
+  `EMEA discount approvals take ${Number(ap.baseline).toFixed(1)} days (median) vs ${Number(ap.target).toFixed(1)} in the fastest region.`,
 ].map(s => `<li>${s}</li>`).join("");
 
 const cells = [
-  ["Negotiated deals / year", negotiated.toLocaleString()],
-  ["Re-quotes per negotiated deal", rw.baseline.toFixed(2)],
+  ["Negotiated deals / year", Math.round(negotiated).toLocaleString()],
+  ["Share of negotiated deals re-quoted", `${(rw.baseline * 100).toFixed(1)}%`],
   ["Win-rate gap", `${(rw.win_rate_lift * 100).toFixed(1)} pts`],
-  ["Average won deal", `$${Math.round(K.avg_won_deal / 1000)}k`],
-  ["Improvement with Apromore", pct(improvement)],
+  ["Average won deal", `$${(K.avg_won_deal / 1000).toFixed(1)}k`],
+  ["Scenario capture", pct(improvement)],
 ];
 $("chain").innerHTML = cells.map(([l, v], i) =>
   `<div class="cell"><div class="l">${l}</div><div class="v">${v}</div></div><div class="op" aria-hidden="true">${i < cells.length - 1 ? "×" : "="}</div>`
-).join("") + `<div class="framed"><div class="pill">Framed value</div><div class="big">≈ ${fmtUSD(value)}</div><div class="sub">revenue upside p.a.</div></div>`;
+).join("") + `<div class="framed"><div class="pill">Framed value</div><div class="big">≈ ${fmtUSD(value)}</div><div class="sub">modelled upside p.a.</div></div>`;
 
-$("assumptions").textContent = `annualised from ${DATA.period.months} months of history; the win-rate gap compares only deals that reached Negotiation; faster approvals pull revenue forward but are not counted; half of the gap is closed. Data simulated in Salesforce's object shape.`;
+$("assumptions").textContent = `simulated data in Salesforce's object shape, annualised over the ${DATA.period.months}-month event window (illustrative run rate); Amount = opportunity bookings; the win-rate gap is an association among deals that reached Negotiation; 50% capture is a scenario. Calculated from unrounded inputs.`;
 </script>

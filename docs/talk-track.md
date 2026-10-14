@@ -1,44 +1,32 @@
-# Talk track: 5 minutes with the VPs
+# Talk track: 8 slides, about 8 minutes
 
-**Frame (30s).** "I wanted to show how I'd approach a first conversation with a
-Salesforce-heavy prospect: start with their own CRM data, find where the process
-leaks, and turn that into a number the CRO cares about."
+**Frame (20s).** "This shows how I'd open with a Salesforce-heavy prospect: start from their own CRM data, find where the process leaks, frame what fixing it could be worth, and be explicit about what still needs validating."
 
-**1. The answer first (45s).** Point at the headline figure. "Three process issues,
-about $1.4M a year if we close half the gap, $2.8M at full gap. Everything below is
-how I got there and how you'd check it."
+**1. Title.** "It's a simulated value case with a working Salesforce extraction pipeline. I'll be clear throughout about which parts are illustrative."
 
-**2. Discover (60s).** Process map, Frequency view. "Fourteen percent of deals follow
-the designed path. There are 67 variants across 800 deals." Switch to Wait time.
-"Amber is idle time. Discount Approved and Finance Approval light up." Drag the
-slider: "Same abstraction idea as Apromore's path slider."
+**2. Illustrative upside (60s).** "$1.4M is a gross scenario at 50% capture across three overlapping opportunities. The full gap is $2.8M. The data is 800 simulated opportunities in Salesforce's object shape; the same pipeline runs live on 40 seeded opportunities in a trial org."
 
-**3. Diagnose (60s).** The three cards.
-- EMEA approvals: 7.0 days vs 1.2 in AMER. Same policy, one approver.
-- Re-quotes: one in five negotiated deals loops back to Proposal; they win 31% vs 49%.
-- Skipped Qualification: 12% of deals, win rate halves.
+**3. Approach (45s).** "Identify, Frame, Commit, Realize. Today stops at Frame on purpose: the assumptions are illustrative until the process owners and Finance sign them off."
 
-**4. Value engineering (60s).** Value tree. "Objective → driver → process KPI → dollars.
-The capture sliders are the conversation with the customer: they own the assumption,
-we own the evidence." Mention the overlap caveat before they do.
+**4. Discover (60s).** "Only 14% of deals match the selected winning trace, which is 38% of won deals. That's an exact-trace measure, not a conformance score: lost deals and legitimate approval steps don't match it." Click through to the live process map.
 
-**5. How it's built (30s).** "SOQL over REST using the CLI session, no stored
-credentials. Opportunity Id is the case; Leads join via ConvertedOpportunityId, Tasks
-via WhatId. The output is a standard CSV/XES you can drop straight into Apromore."
-Be upfront: trial orgs can't backdate history, so the dataset is simulated in the
-exact Salesforce shape; the extractor runs against a live org unchanged.
+**5. Diagnose (60s).** "Three patterns are associated with lower win rates: EMEA approvals 5.8 days slower, re-quoted deals 18 points lower, skipped qualification 21 points lower. Cohort sizes are on the slide. These are associations, not proven causes."
 
-**Close (15s).** "In a real engagement: validate on the production org with RevOps,
-pilot a delegated approval threshold, then monitor the three KPIs in Apromore
-and report value realised quarterly."
+**6. Business case overview (60s).** "Three opportunities with proposed owners and full-gap scenarios. They overlap: 22 deals are both re-quoted and unqualified. So the total is gross, and the checklist shows what has to happen before any value is committed."
 
-## Questions to expect
+**7. Value case (75s).** "The deep-dive: 747 negotiated deals a year × 19.2% re-quoted × a 17.5-point gap × $53.1k × 50% capture ≈ $667k, which is exactly half the $1.33M full gap. Tracking uses a frozen baseline and a comparison group, and Finance validates realized revenue."
 
-- *Object-centric?* Opportunity is the case here; Quote, Approval and Case would make a
-  natural object-centric extension (OCEL), since approvals relate to quotes, not deals.
-- *Data volume / refresh?* Bulk API 2.0 for large orgs; nightly incremental extract on
-  `SystemModstamp`.
-- *Field history limits?* OpportunityHistory is always on; other objects need Field
-  History Tracking enabled (20 fields per object, 18-24 month retention).
-- *Causality?* Win-rate gaps are correlations between cohorts; the pilot is how you
-  prove the lift.
+**8. Next steps (30s).** "Validate on production data, pilot only once the causes are confirmed, then measure against the baseline with Finance sign-off."
+
+**Tech setup deck (if asked).** Show the org, the stage-history SOQL and the object-to-event mapping. Opportunity Id is the case; tasks join on WhatId and leads on ConvertedOpportunityId.
+
+## Tough questions
+
+1. **"Did you find $1.4M in a real org?"** No. It's an illustrative scenario from simulated data. The live trial-org extract proves the pipeline, not the numbers.
+2. **"Can we add the three opportunities up?"** Only as a gross scenario. The cohorts overlap (22, 7 and 5 deals), so I'd count incremental wins once per deal before committing.
+3. **"Why would fewer re-quotes raise win rate?"** Today it's an association. I'd capture re-quote reasons, control for deal mix, and test it in a pilot.
+4. **"Does 14% mean 86% of deals break the process?"** No. It's an exact match to one winning trace. Real conformance checking has to allow loss exits and conditional steps.
+5. **"Why a 30% approval threshold?"** I've dropped that from the recommendation. Finance sets thresholds, and only after we know how many re-quotes approval delays actually cause.
+6. **"How would you prove realized value?"** Freeze the baseline and cohort, measure the operational change against a comparison group, and get Finance sign-off on the revenue.
+7. **"What changes for a production org?"** Validate activity semantics first (task timestamps can include queueing; open tasks have no completion), then add incremental refresh, stable event IDs, reconciliation and Bulk API for volume.
+8. **"Have you imported it into a process mining tool?"** The pipeline exports CSV and XES with the standard case, activity, timestamp and resource columns; the import itself is the next thing to verify.

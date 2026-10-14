@@ -204,7 +204,7 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
 
   <section aria-labelledby="s-map">
     <div class="head">
-      <div class="eyebrow">1 · Discover the process as it actually runs</div>
+      <div class="eyebrow">1 · Discover the paths in the event log</div>
       <h2 id="s-map">Process map</h2>
       <p class="muted">Every box is an activity, every arrow a hand-off seen in the data. Switch to <em>Wait time</em> to see where deals sit idle; drag the slider to hide rare paths.</p>
     </div>
@@ -255,12 +255,12 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
   <section aria-labelledby="s-pipe">
     <div class="head">
       <div class="eyebrow">5 · How it was built</div>
-      <h2 id="s-pipe">Salesforce to Apromore in four steps</h2>
+      <h2 id="s-pipe">Salesforce data to Process Intelligence in four steps</h2>
     </div>
     <div class="flow">
       <div class="step"><div class="eyebrow">Extract</div><h3>SOQL over REST</h3><p class="small muted">Lead, Opportunity, <code>OpportunityHistory</code> and <code>Task</code>, authenticated through the Salesforce CLI session. No stored passwords.</p><code>pipeline/extract.py</code></div>
       <div class="step"><div class="eyebrow">Correlate</div><h3>One case per deal</h3><p class="small muted">Case ID = Opportunity Id. Leads join via <code>ConvertedOpportunityId</code>; Tasks via <code>WhatId</code>. Duplicate history rows collapse to real stage changes.</p><code>pipeline/transform.py</code></div>
-      <div class="step"><div class="eyebrow">Load</div><h3>Event log</h3><p class="small muted">CSV with case, activity, start/end, resource and case attributes, plus IEEE XES with lifecycle transitions. Imports straight into Apromore.</p><code>data/event_log.csv · .xes</code></div>
+      <div class="step"><div class="eyebrow">Load</div><h3>Event log</h3><p class="small muted">CSV with case, activity, start/end, resource and case attributes, plus IEEE XES with lifecycle transitions. Imports into process mining tools.</p><code>data/event_log.csv · .xes</code></div>
       <div class="step"><div class="eyebrow">Mine &amp; size</div><h3>Map, variants, value</h3><p class="small muted">Directly-follows graph, variant analysis, cohort win rates and a driver-based value model.</p><code>pipeline/mine.py</code></div>
     </div>
   </section>
@@ -273,7 +273,7 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
     <div class="next">
       <div class="card"><h3>Validate</h3><p class="small">Run the same extract on the production org; confirm approval waits and re-quote rates with the EMEA deal desk and RevOps.</p></div>
       <div class="card"><h3>Act</h3><p class="small">Pilot a delegated approval threshold for EMEA discounts up to 30% and make Qualification a required stage gate.</p></div>
-      <div class="card"><h3>Monitor</h3><p class="small">Schedule the extract nightly into Apromore, track the three KPIs against target and report value realised each quarter.</p></div>
+      <div class="card"><h3>Monitor</h3><p class="small">Refresh the extract nightly, track the KPIs against a frozen baseline and a comparison group, and have Finance sign off realized value.</p></div>
     </div>
   </section>
 
@@ -326,7 +326,7 @@ const kpis = LIVE ? [
   [pct(K.win_rate), "win rate"],
   [`${K.median_cycle_days}d`, "median cycle time"],
   [K.variants, "distinct paths"],
-  [pct(K.happy_path_conformance), "follow the happy path"],
+  [pct(K.happy_path_conformance), "match the winning trace"],
   [fmtUSD(K.avg_won_deal), "average won deal"],
 ];
 $("kpis").innerHTML = kpis.map(([v, l]) => `<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join("");
@@ -513,11 +513,11 @@ if (!LIVE && DATA.source !== "synthetic") $("dl-csv").hidden = true;
 if (LIVE) {
   $("dl-csv").href = "./data/live_event_log.csv";
     $("total-hero").textContent = `${K.events} events`;
-    $("total-sub").textContent = "Extracted live from Salesforce and ready to import into Apromore as CSV or XES.";
+    $("total-sub").textContent = "Extracted live from a Salesforce org and ready to import into a process mining tool as CSV or XES.";
     return;
   }
   $("total-hero").textContent = fmtUSD(total);
-  $("total-sub").textContent = `Annual revenue upside if we close ${pct(Object.values(capture).reduce((a, b) => a + b, 0) / DATA.value_drivers.length)} of the gap on three process issues found in the CRM data. Full gap: ${fmtUSD(DATA.total_annual_value)}.`;
+  $("total-sub").textContent = `Illustrative, gross annual upside (overlapping items, simulated data) if we close ${pct(Object.values(capture).reduce((a, b) => a + b, 0) / DATA.value_drivers.length)} of the gap on three process issues found in the CRM data. Full gap: ${fmtUSD(DATA.total_annual_value)}.`;
   $("total-note").textContent = `${pct(total / K.annual_pipeline)} of the ${fmtUSD(K.annual_pipeline)} annual pipeline. Drivers overlap on some deals, so treat the sum as an upper bound until validated per deal.`;
 }
 $("assumptions").innerHTML = [
