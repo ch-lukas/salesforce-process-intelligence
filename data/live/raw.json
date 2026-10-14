@@ -1,0 +1,3400 @@
+{
+ "source": "salesforce",
+ "extracted_at": "2026-10-14T17:44:27+00:00",
+ "opportunities": [
+  {
+   "Id": "006WV00000Dkm8cYAB",
+   "Name": "[Demo] Retail Co 0000 - Platform",
+   "Amount": 30700,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-02-02",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "Singapore"
+  },
+  {
+   "Id": "006WV00000Dkm8dYAB",
+   "Name": "[Demo] Healthcare Co 0001 - Platform",
+   "Amount": 61600,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-04-06",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Healthcare",
+   "Account.BillingCountry": "Japan"
+  },
+  {
+   "Id": "006WV00000Dkm8eYAB",
+   "Name": "[Demo] Retail Co 0002 - Platform",
+   "Amount": 76400,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-09-16",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "United States"
+  },
+  {
+   "Id": "006WV00000Dkm8fYAB",
+   "Name": "[Demo] Telecommunications Co 0003 - Platform",
+   "Amount": 13600,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Partner Referral",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-06-16",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Telecommunications",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm8gYAB",
+   "Name": "[Demo] Retail Co 0004 - Platform",
+   "Amount": 41400,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-08-03",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "Canada"
+  },
+  {
+   "Id": "006WV00000Dkm8hYAB",
+   "Name": "[Demo] Healthcare Co 0005 - Platform",
+   "Amount": 47900,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-08-24",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Healthcare",
+   "Account.BillingCountry": "France"
+  },
+  {
+   "Id": "006WV00000Dkm8iYAB",
+   "Name": "[Demo] Manufacturing Co 0006 - Platform",
+   "Amount": 49200,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-09-14",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Manufacturing",
+   "Account.BillingCountry": "Canada"
+  },
+  {
+   "Id": "006WV00000Dkm8jYAB",
+   "Name": "[Demo] Insurance Co 0007 - Platform",
+   "Amount": 49900,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-03-24",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm8kYAB",
+   "Name": "[Demo] Manufacturing Co 0008 - Platform",
+   "Amount": 78200,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-05-19",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Manufacturing",
+   "Account.BillingCountry": "France"
+  },
+  {
+   "Id": "006WV00000Dkm8lYAB",
+   "Name": "[Demo] Retail Co 0009 - Platform",
+   "Amount": 104900,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-04-06",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "Canada"
+  },
+  {
+   "Id": "006WV00000Dkm8mYAB",
+   "Name": "[Demo] Insurance Co 0010 - Platform",
+   "Amount": 91900,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-08-07",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "Canada"
+  },
+  {
+   "Id": "006WV00000Dkm8nYAB",
+   "Name": "[Demo] Insurance Co 0011 - Platform",
+   "Amount": 23100,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-04-06",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "United Kingdom"
+  },
+  {
+   "Id": "006WV00000Dkm8oYAB",
+   "Name": "[Demo] Retail Co 0012 - Platform",
+   "Amount": 26800,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-05-26",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm8pYAB",
+   "Name": "[Demo] Manufacturing Co 0013 - Platform",
+   "Amount": 30800,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Partner Referral",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-05-04",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Manufacturing",
+   "Account.BillingCountry": "United Kingdom"
+  },
+  {
+   "Id": "006WV00000Dkm8qYAB",
+   "Name": "[Demo] Insurance Co 0014 - Platform",
+   "Amount": 38800,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-03-26",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm8rYAB",
+   "Name": "[Demo] Healthcare Co 0015 - Platform",
+   "Amount": 14900,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-07-08",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Healthcare",
+   "Account.BillingCountry": "United States"
+  },
+  {
+   "Id": "006WV00000Dkm8sYAB",
+   "Name": "[Demo] Telecommunications Co 0016 - Platform",
+   "Amount": 47100,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Partner Referral",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-08-03",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Telecommunications",
+   "Account.BillingCountry": "United Kingdom"
+  },
+  {
+   "Id": "006WV00000Dkm8tYAB",
+   "Name": "[Demo] Insurance Co 0017 - Platform",
+   "Amount": 32000,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-08-03",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm8uYAB",
+   "Name": "[Demo] Insurance Co 0018 - Platform",
+   "Amount": 57400,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-05-29",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm8vYAB",
+   "Name": "[Demo] Banking Co 0019 - Platform",
+   "Amount": 69800,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-04-13",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Banking",
+   "Account.BillingCountry": "Japan"
+  },
+  {
+   "Id": "006WV00000Dkm8wYAB",
+   "Name": "[Demo] Manufacturing Co 0020 - Platform",
+   "Amount": 10200,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Partner Referral",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-03-09",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Manufacturing",
+   "Account.BillingCountry": "Germany"
+  },
+  {
+   "Id": "006WV00000Dkm8xYAB",
+   "Name": "[Demo] Insurance Co 0021 - Platform",
+   "Amount": 25100,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-08-18",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "Germany"
+  },
+  {
+   "Id": "006WV00000Dkm8yYAB",
+   "Name": "[Demo] Insurance Co 0022 - Platform",
+   "Amount": 47100,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-06-09",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "United Kingdom"
+  },
+  {
+   "Id": "006WV00000Dkm8zYAB",
+   "Name": "[Demo] Insurance Co 0023 - Platform",
+   "Amount": 499500,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Partner Referral",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-09-04",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "United States"
+  },
+  {
+   "Id": "006WV00000Dkm90YAB",
+   "Name": "[Demo] Manufacturing Co 0024 - Platform",
+   "Amount": 54900,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-04-14",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Manufacturing",
+   "Account.BillingCountry": "Germany"
+  },
+  {
+   "Id": "006WV00000Dkm91YAB",
+   "Name": "[Demo] Manufacturing Co 0025 - Platform",
+   "Amount": 29400,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-03-16",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Manufacturing",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm92YAB",
+   "Name": "[Demo] Retail Co 0026 - Platform",
+   "Amount": 9200,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-06-24",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "France"
+  },
+  {
+   "Id": "006WV00000Dkm93YAB",
+   "Name": "[Demo] Telecommunications Co 0027 - Platform",
+   "Amount": 18900,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-09-21",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Telecommunications",
+   "Account.BillingCountry": "United States"
+  },
+  {
+   "Id": "006WV00000Dkm94YAB",
+   "Name": "[Demo] Insurance Co 0028 - Platform",
+   "Amount": 107100,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-07-16",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "United Kingdom"
+  },
+  {
+   "Id": "006WV00000Dkm95YAB",
+   "Name": "[Demo] Retail Co 0029 - Platform",
+   "Amount": 25200,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Partner Referral",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-08-06",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "Singapore"
+  },
+  {
+   "Id": "006WV00000Dkm96YAB",
+   "Name": "[Demo] Insurance Co 0030 - Platform",
+   "Amount": 29600,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Partner Referral",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-10-05",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm97YAB",
+   "Name": "[Demo] Telecommunications Co 0031 - Platform",
+   "Amount": 16400,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-02-18",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Telecommunications",
+   "Account.BillingCountry": "Australia"
+  },
+  {
+   "Id": "006WV00000Dkm98YAB",
+   "Name": "[Demo] Telecommunications Co 0032 - Platform",
+   "Amount": 48600,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-06-10",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Telecommunications",
+   "Account.BillingCountry": "United States"
+  },
+  {
+   "Id": "006WV00000Dkm99YAB",
+   "Name": "[Demo] Retail Co 0033 - Platform",
+   "Amount": 9800,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-07-03",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "Singapore"
+  },
+  {
+   "Id": "006WV00000Dkm9AYAR",
+   "Name": "[Demo] Retail Co 0034 - Platform",
+   "Amount": 117300,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-09-02",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Retail",
+   "Account.BillingCountry": "United Kingdom"
+  },
+  {
+   "Id": "006WV00000Dkm9BYAR",
+   "Name": "[Demo] Insurance Co 0035 - Platform",
+   "Amount": 82200,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Other",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-04-22",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Insurance",
+   "Account.BillingCountry": "Canada"
+  },
+  {
+   "Id": "006WV00000Dkm9CYAR",
+   "Name": "[Demo] Manufacturing Co 0036 - Platform",
+   "Amount": 19600,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Partner Referral",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-07-14",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Manufacturing",
+   "Account.BillingCountry": "Germany"
+  },
+  {
+   "Id": "006WV00000Dkm9DYAR",
+   "Name": "[Demo] Banking Co 0037 - Platform",
+   "Amount": 55700,
+   "StageName": "Closed Lost",
+   "IsWon": false,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-07-06",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Banking",
+   "Account.BillingCountry": "Germany"
+  },
+  {
+   "Id": "006WV00000Dkm9EYAR",
+   "Name": "[Demo] Telecommunications Co 0038 - Platform",
+   "Amount": 18500,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Web",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-05-25",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Telecommunications",
+   "Account.BillingCountry": "Germany"
+  },
+  {
+   "Id": "006WV00000Dkm9FYAR",
+   "Name": "[Demo] Telecommunications Co 0039 - Platform",
+   "Amount": 65000,
+   "StageName": "Closed Won",
+   "IsWon": true,
+   "IsClosed": true,
+   "LeadSource": "Phone Inquiry",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CloseDate": "2026-04-15",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Account.Industry": "Telecommunications",
+   "Account.BillingCountry": "United Kingdom"
+  }
+ ],
+ "stage_history": [
+  {
+   "OpportunityId": "006WV00000Dkm8cYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8cYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8dYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8dYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8dYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8dYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8dYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8eYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8eYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8eYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8eYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8eYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:42.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8fYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8fYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8fYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8fYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8fYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8fYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:47.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8fYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:58.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8gYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8gYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8hYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8hYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8hYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8iYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8iYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8iYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8iYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8iYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:32.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8jYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8jYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8jYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8jYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8jYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8kYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8kYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8lYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8lYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8lYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8lYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8lYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8mYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8mYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8mYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8mYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8mYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8nYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8nYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8nYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8oYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8oYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8oYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8oYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8oYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8oYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:47.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8oYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:53.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8pYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8pYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8pYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8pYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8pYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8qYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8qYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8qYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8qYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8qYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:47.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8rYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8rYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8rYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8rYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8rYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8sYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8sYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8sYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8sYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8sYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:42.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8tYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8tYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8tYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8tYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8tYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:32.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8uYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8uYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8uYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8uYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8uYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:47.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8vYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8vYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8vYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8vYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8vYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8wYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8wYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8wYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8xYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8xYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8xYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8xYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8xYAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8yYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8yYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8yYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8zYAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8zYAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8zYAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8zYAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm8zYAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm90YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm90YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm90YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm90YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:42.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm90YAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:53.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm91YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm91YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm91YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm91YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm91YAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:42.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm92YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm92YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm92YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm92YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm92YAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm93YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm93YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm93YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm93YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm93YAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:32.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm94YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm94YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm94YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm94YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm94YAB",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:53.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm95YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm95YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm95YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm95YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm95YAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:32.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm96YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm96YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm96YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm96YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:42.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm96YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:53.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm96YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:43:14.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm96YAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:43:18.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm97YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm97YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm97YAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm98YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm98YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:07.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm98YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm98YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:47.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm98YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:43:10.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm98YAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:43:14.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm99YAB",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm99YAB",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm99YAB",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm99YAB",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm99YAB",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:32.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9AYAR",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9AYAR",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9AYAR",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9BYAR",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9BYAR",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9BYAR",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9BYAR",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9BYAR",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:47.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9BYAR",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:43:05.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9BYAR",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:43:10.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9CYAR",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9CYAR",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9CYAR",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9CYAR",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9CYAR",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:32.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9DYAR",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9DYAR",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9DYAR",
+   "StageName": "Closed Lost",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9EYAR",
+   "StageName": "Qualify",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9EYAR",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:42:03.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9EYAR",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:13.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9EYAR",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:26.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9EYAR",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:38.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9FYAR",
+   "StageName": "Meet & Present",
+   "CreatedDate": "2026-10-14T17:41:57.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9FYAR",
+   "StageName": "Propose",
+   "CreatedDate": "2026-10-14T17:42:07.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9FYAR",
+   "StageName": "Negotiate",
+   "CreatedDate": "2026-10-14T17:42:20.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  },
+  {
+   "OpportunityId": "006WV00000Dkm9FYAR",
+   "StageName": "Closed Won",
+   "CreatedDate": "2026-10-14T17:42:32.000+0000",
+   "CreatedById": "005WV000007onO5YAI",
+   "CreatedBy.Name": "Luke Audie"
+  }
+ ],
+ "tasks": [
+  {
+   "WhatId": "006WV00000Dkm8fYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:55.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:55.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:55.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:55.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:55.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:55.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm90YAB",
+   "Subject": "Finance Approval",
+   "CreatedDate": "2026-10-14T17:42:39.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:39.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Finance Approval",
+   "CreatedDate": "2026-10-14T17:42:39.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:39.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:16.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:16.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9FYAR",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:16.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:16.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:43:07.000+0000",
+   "CompletedDateTime": "2026-10-14T17:43:07.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Finance Approval",
+   "CreatedDate": "2026-10-14T17:43:07.000+0000",
+   "CompletedDateTime": "2026-10-14T17:43:07.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8dYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8eYAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8fYAB",
+   "Subject": "Customer Requested Re-quote",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8jYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8lYAB",
+   "Subject": "Legal Review",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8mYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8oYAB",
+   "Subject": "Customer Requested Re-quote",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8pYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8qYAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8rYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8sYAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8uYAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8vYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8xYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8zYAB",
+   "Subject": "Legal Review",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm90YAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm91YAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm92YAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm94YAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9EYAR",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:34.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:34.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8dYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8eYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8fYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8hYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8iYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8jYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8lYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8mYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8nYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8oYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8pYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8qYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8rYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8sYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8tYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8uYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8vYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8wYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8xYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8yYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8zYAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm90YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm91YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm92YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm93YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm94YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm95YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm97YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm99YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9AYAR",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9CYAR",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9DYAR",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9EYAR",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:09.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:09.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8cYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8dYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8eYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8fYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8gYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8hYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8iYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8jYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8kYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8lYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8mYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8nYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8oYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8pYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8qYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8rYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8sYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8tYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8uYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8vYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8wYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8xYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8yYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8zYAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm90YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm91YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm92YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm93YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm94YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm95YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm97YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm99YAB",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9AYAR",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9CYAR",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9DYAR",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9EYAR",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9FYAR",
+   "Subject": "Discovery Call",
+   "CreatedDate": "2026-10-14T17:41:59.000+0000",
+   "CompletedDateTime": "2026-10-14T17:41:59.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:04.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:04.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9FYAR",
+   "Subject": "Product Demo",
+   "CreatedDate": "2026-10-14T17:42:04.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:04.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8dYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8eYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8fYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8iYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8jYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8lYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8mYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8oYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8pYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8qYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8rYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8sYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8tYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8uYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8vYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8xYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8zYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm90YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm91YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm92YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm93YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm94YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm95YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Finance Approval",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm99YAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9CYAR",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9EYAR",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:22.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:22.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Finance Approval",
+   "CreatedDate": "2026-10-14T17:43:11.000+0000",
+   "CompletedDateTime": "2026-10-14T17:43:11.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8eYAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8qYAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8sYAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8uYAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm90YAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm91YAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm94YAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9FYAR",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:28.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:28.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8fYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:44.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:44.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8oYAB",
+   "Subject": "Quote Sent",
+   "CreatedDate": "2026-10-14T17:42:44.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:44.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8qYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:44.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:44.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm8uYAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:44.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:44.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm94YAB",
+   "Subject": "Legal Review",
+   "CreatedDate": "2026-10-14T17:42:44.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:44.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Customer Requested Re-quote",
+   "CreatedDate": "2026-10-14T17:42:44.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:44.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Customer Requested Re-quote",
+   "CreatedDate": "2026-10-14T17:42:44.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:44.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm90YAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:49.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:49.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm94YAB",
+   "Subject": "Contract Signed",
+   "CreatedDate": "2026-10-14T17:42:49.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:49.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Customer Requested Re-quote",
+   "CreatedDate": "2026-10-14T17:42:49.000+0000",
+   "CompletedDateTime": "2026-10-14T17:42:49.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm96YAB",
+   "Subject": "Discount Approval Requested",
+   "CreatedDate": "2026-10-14T17:43:02.000+0000",
+   "CompletedDateTime": "2026-10-14T17:43:02.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm98YAB",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:43:02.000+0000",
+   "CompletedDateTime": "2026-10-14T17:43:02.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  },
+  {
+   "WhatId": "006WV00000Dkm9BYAR",
+   "Subject": "Discount Approved",
+   "CreatedDate": "2026-10-14T17:43:02.000+0000",
+   "CompletedDateTime": "2026-10-14T17:43:02.000+0000",
+   "OwnerId": "005WV000007onO5YAI",
+   "Owner.Name": "Luke Audie",
+   "Status": "Completed"
+  }
+ ],
+ "leads": []
+}

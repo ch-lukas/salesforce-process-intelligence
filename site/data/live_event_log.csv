@@ -1,0 +1,352 @@
+case_id,activity,start_time,end_time,resource,source_object,region,industry,lead_source,amount,discount_pct,outcome,owner
+006WV00000Dkm8cYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,30700,,Lost,Luke Audie
+006WV00000Dkm8cYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Retail,Phone Inquiry,30700,,Lost,Luke Audie
+006WV00000Dkm8cYAB,Closed Lost,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,30700,,Lost,Luke Audie
+006WV00000Dkm8dYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8dYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8dYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8dYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8dYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8dYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8dYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8dYAB,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8dYAB,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,APAC,Healthcare,Other,61600,,Won,Luke Audie
+006WV00000Dkm8eYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Discount Approval Requested,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Discount Approved,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Negotiate,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8eYAB,Closed Lost,2026-10-14 17:42:42,2026-10-14 17:42:42,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,76400,,Lost,Luke Audie
+006WV00000Dkm8fYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Customer Requested Re-quote,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Propose,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Quote Sent,2026-10-14 17:42:44,2026-10-14 17:42:44,Luke Audie,Task,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Negotiate,2026-10-14 17:42:47,2026-10-14 17:42:47,Luke Audie,OpportunityHistory,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Contract Signed,2026-10-14 17:42:55,2026-10-14 17:42:55,Luke Audie,Task,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8fYAB,Closed Won,2026-10-14 17:42:58,2026-10-14 17:42:58,Luke Audie,OpportunityHistory,APAC,Telecommunications,Partner Referral,13600,,Won,Luke Audie
+006WV00000Dkm8gYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Retail,Other,41400,,Lost,Luke Audie
+006WV00000Dkm8gYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Retail,Other,41400,,Lost,Luke Audie
+006WV00000Dkm8gYAB,Closed Lost,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Retail,Other,41400,,Lost,Luke Audie
+006WV00000Dkm8hYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Healthcare,Web,47900,,Lost,Luke Audie
+006WV00000Dkm8hYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Healthcare,Web,47900,,Lost,Luke Audie
+006WV00000Dkm8hYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Healthcare,Web,47900,,Lost,Luke Audie
+006WV00000Dkm8hYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Healthcare,Web,47900,,Lost,Luke Audie
+006WV00000Dkm8hYAB,Closed Lost,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Healthcare,Web,47900,,Lost,Luke Audie
+006WV00000Dkm8iYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Manufacturing,Other,49200,,Lost,Luke Audie
+006WV00000Dkm8iYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Manufacturing,Other,49200,,Lost,Luke Audie
+006WV00000Dkm8iYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Manufacturing,Other,49200,,Lost,Luke Audie
+006WV00000Dkm8iYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,AMER,Manufacturing,Other,49200,,Lost,Luke Audie
+006WV00000Dkm8iYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,AMER,Manufacturing,Other,49200,,Lost,Luke Audie
+006WV00000Dkm8iYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Manufacturing,Other,49200,,Lost,Luke Audie
+006WV00000Dkm8iYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,AMER,Manufacturing,Other,49200,,Lost,Luke Audie
+006WV00000Dkm8iYAB,Closed Lost,2026-10-14 17:42:32,2026-10-14 17:42:32,Luke Audie,OpportunityHistory,AMER,Manufacturing,Other,49200,,Lost,Luke Audie
+006WV00000Dkm8jYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8jYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8jYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8jYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8jYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8jYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8jYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8jYAB,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8jYAB,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,APAC,Insurance,Web,49900,,Won,Luke Audie
+006WV00000Dkm8kYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Other,78200,,Lost,Luke Audie
+006WV00000Dkm8kYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Manufacturing,Other,78200,,Lost,Luke Audie
+006WV00000Dkm8kYAB,Closed Lost,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Other,78200,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Legal Review,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8lYAB,Closed Lost,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,AMER,Retail,Phone Inquiry,104900,,Lost,Luke Audie
+006WV00000Dkm8mYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8mYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8mYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8mYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8mYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8mYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8mYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8mYAB,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8mYAB,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,AMER,Insurance,Other,91900,,Won,Luke Audie
+006WV00000Dkm8nYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Insurance,Phone Inquiry,23100,,Lost,Luke Audie
+006WV00000Dkm8nYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Insurance,Phone Inquiry,23100,,Lost,Luke Audie
+006WV00000Dkm8nYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Insurance,Phone Inquiry,23100,,Lost,Luke Audie
+006WV00000Dkm8nYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Insurance,Phone Inquiry,23100,,Lost,Luke Audie
+006WV00000Dkm8nYAB,Closed Lost,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Insurance,Phone Inquiry,23100,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Customer Requested Re-quote,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Propose,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Quote Sent,2026-10-14 17:42:44,2026-10-14 17:42:44,Luke Audie,Task,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Negotiate,2026-10-14 17:42:47,2026-10-14 17:42:47,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8oYAB,Closed Lost,2026-10-14 17:42:53,2026-10-14 17:42:53,Luke Audie,OpportunityHistory,APAC,Retail,Phone Inquiry,26800,,Lost,Luke Audie
+006WV00000Dkm8pYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8pYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8pYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8pYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8pYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8pYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8pYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8pYAB,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8pYAB,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,30800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Discount Approval Requested,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Discount Approved,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Negotiate,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Contract Signed,2026-10-14 17:42:44,2026-10-14 17:42:44,Luke Audie,Task,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8qYAB,Closed Won,2026-10-14 17:42:47,2026-10-14 17:42:47,Luke Audie,OpportunityHistory,APAC,Insurance,Other,38800,,Won,Luke Audie
+006WV00000Dkm8rYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8rYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8rYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8rYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8rYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8rYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8rYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8rYAB,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8rYAB,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,AMER,Healthcare,Phone Inquiry,14900,,Won,Luke Audie
+006WV00000Dkm8sYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Discount Approval Requested,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Discount Approved,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Negotiate,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8sYAB,Closed Lost,2026-10-14 17:42:42,2026-10-14 17:42:42,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Partner Referral,47100,,Lost,Luke Audie
+006WV00000Dkm8tYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Insurance,Web,32000,,Lost,Luke Audie
+006WV00000Dkm8tYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Insurance,Web,32000,,Lost,Luke Audie
+006WV00000Dkm8tYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Insurance,Web,32000,,Lost,Luke Audie
+006WV00000Dkm8tYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Insurance,Web,32000,,Lost,Luke Audie
+006WV00000Dkm8tYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Insurance,Web,32000,,Lost,Luke Audie
+006WV00000Dkm8tYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Insurance,Web,32000,,Lost,Luke Audie
+006WV00000Dkm8tYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,APAC,Insurance,Web,32000,,Lost,Luke Audie
+006WV00000Dkm8tYAB,Closed Lost,2026-10-14 17:42:32,2026-10-14 17:42:32,Luke Audie,OpportunityHistory,APAC,Insurance,Web,32000,,Lost,Luke Audie
+006WV00000Dkm8uYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Discount Approval Requested,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Discount Approved,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Negotiate,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Contract Signed,2026-10-14 17:42:44,2026-10-14 17:42:44,Luke Audie,Task,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8uYAB,Closed Won,2026-10-14 17:42:47,2026-10-14 17:42:47,Luke Audie,OpportunityHistory,APAC,Insurance,Other,57400,,Won,Luke Audie
+006WV00000Dkm8vYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8vYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8vYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8vYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8vYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8vYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8vYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8vYAB,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8vYAB,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,APAC,Banking,Other,69800,,Won,Luke Audie
+006WV00000Dkm8wYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,10200,,Lost,Luke Audie
+006WV00000Dkm8wYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,10200,,Lost,Luke Audie
+006WV00000Dkm8wYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,10200,,Lost,Luke Audie
+006WV00000Dkm8wYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,10200,,Lost,Luke Audie
+006WV00000Dkm8wYAB,Closed Lost,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,10200,,Lost,Luke Audie
+006WV00000Dkm8xYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8xYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8xYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8xYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8xYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8xYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8xYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8xYAB,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8xYAB,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,25100,,Won,Luke Audie
+006WV00000Dkm8yYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Insurance,Web,47100,,Lost,Luke Audie
+006WV00000Dkm8yYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Insurance,Web,47100,,Lost,Luke Audie
+006WV00000Dkm8yYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Insurance,Web,47100,,Lost,Luke Audie
+006WV00000Dkm8yYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Insurance,Web,47100,,Lost,Luke Audie
+006WV00000Dkm8yYAB,Closed Lost,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Insurance,Web,47100,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Legal Review,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm8zYAB,Closed Lost,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,AMER,Insurance,Partner Referral,499500,,Lost,Luke Audie
+006WV00000Dkm90YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Discount Approved,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Discount Approval Requested,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Finance Approval,2026-10-14 17:42:39,2026-10-14 17:42:39,Luke Audie,Task,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Negotiate,2026-10-14 17:42:42,2026-10-14 17:42:42,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Contract Signed,2026-10-14 17:42:49,2026-10-14 17:42:49,Luke Audie,Task,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm90YAB,Closed Won,2026-10-14 17:42:53,2026-10-14 17:42:53,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Web,54900,,Won,Luke Audie
+006WV00000Dkm91YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Discount Approval Requested,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Discount Approved,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Negotiate,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm91YAB,Closed Lost,2026-10-14 17:42:42,2026-10-14 17:42:42,Luke Audie,OpportunityHistory,APAC,Manufacturing,Phone Inquiry,29400,,Lost,Luke Audie
+006WV00000Dkm92YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm92YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm92YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm92YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm92YAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm92YAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm92YAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm92YAB,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm92YAB,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,EMEA,Retail,Web,9200,,Won,Luke Audie
+006WV00000Dkm93YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,18900,,Lost,Luke Audie
+006WV00000Dkm93YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Telecommunications,Web,18900,,Lost,Luke Audie
+006WV00000Dkm93YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,18900,,Lost,Luke Audie
+006WV00000Dkm93YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,AMER,Telecommunications,Web,18900,,Lost,Luke Audie
+006WV00000Dkm93YAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,18900,,Lost,Luke Audie
+006WV00000Dkm93YAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Telecommunications,Web,18900,,Lost,Luke Audie
+006WV00000Dkm93YAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,18900,,Lost,Luke Audie
+006WV00000Dkm93YAB,Closed Lost,2026-10-14 17:42:32,2026-10-14 17:42:32,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,18900,,Lost,Luke Audie
+006WV00000Dkm94YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Discount Approval Requested,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Discount Approved,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Negotiate,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Legal Review,2026-10-14 17:42:44,2026-10-14 17:42:44,Luke Audie,Task,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Contract Signed,2026-10-14 17:42:49,2026-10-14 17:42:49,Luke Audie,Task,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm94YAB,Closed Won,2026-10-14 17:42:53,2026-10-14 17:42:53,Luke Audie,OpportunityHistory,EMEA,Insurance,Other,107100,,Won,Luke Audie
+006WV00000Dkm95YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Retail,Partner Referral,25200,,Lost,Luke Audie
+006WV00000Dkm95YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Retail,Partner Referral,25200,,Lost,Luke Audie
+006WV00000Dkm95YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Retail,Partner Referral,25200,,Lost,Luke Audie
+006WV00000Dkm95YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Retail,Partner Referral,25200,,Lost,Luke Audie
+006WV00000Dkm95YAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Retail,Partner Referral,25200,,Lost,Luke Audie
+006WV00000Dkm95YAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Retail,Partner Referral,25200,,Lost,Luke Audie
+006WV00000Dkm95YAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,APAC,Retail,Partner Referral,25200,,Lost,Luke Audie
+006WV00000Dkm95YAB,Closed Lost,2026-10-14 17:42:32,2026-10-14 17:42:32,Luke Audie,OpportunityHistory,APAC,Retail,Partner Referral,25200,,Lost,Luke Audie
+006WV00000Dkm96YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Discount Approved,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Discount Approval Requested,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Finance Approval,2026-10-14 17:42:39,2026-10-14 17:42:39,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Negotiate,2026-10-14 17:42:42,2026-10-14 17:42:42,Luke Audie,OpportunityHistory,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Customer Requested Re-quote,2026-10-14 17:42:49,2026-10-14 17:42:49,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Propose,2026-10-14 17:42:53,2026-10-14 17:42:53,Luke Audie,OpportunityHistory,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Quote Sent,2026-10-14 17:42:59,2026-10-14 17:42:59,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Discount Approval Requested,2026-10-14 17:43:02,2026-10-14 17:43:02,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Discount Approved,2026-10-14 17:43:07,2026-10-14 17:43:07,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Finance Approval,2026-10-14 17:43:11,2026-10-14 17:43:11,Luke Audie,Task,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Negotiate,2026-10-14 17:43:14,2026-10-14 17:43:14,Luke Audie,OpportunityHistory,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm96YAB,Closed Lost,2026-10-14 17:43:18,2026-10-14 17:43:18,Luke Audie,OpportunityHistory,APAC,Insurance,Partner Referral,29600,,Lost,Luke Audie
+006WV00000Dkm97YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Telecommunications,Phone Inquiry,16400,,Lost,Luke Audie
+006WV00000Dkm97YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Telecommunications,Phone Inquiry,16400,,Lost,Luke Audie
+006WV00000Dkm97YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Telecommunications,Phone Inquiry,16400,,Lost,Luke Audie
+006WV00000Dkm97YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Telecommunications,Phone Inquiry,16400,,Lost,Luke Audie
+006WV00000Dkm97YAB,Closed Lost,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Telecommunications,Phone Inquiry,16400,,Lost,Luke Audie
+006WV00000Dkm98YAB,Meet & Present,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Product Demo,2026-10-14 17:42:04,2026-10-14 17:42:04,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Propose,2026-10-14 17:42:07,2026-10-14 17:42:07,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Quote Sent,2026-10-14 17:42:16,2026-10-14 17:42:16,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Finance Approval,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Discount Approval Requested,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Discount Approved,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Negotiate,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Customer Requested Re-quote,2026-10-14 17:42:44,2026-10-14 17:42:44,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Propose,2026-10-14 17:42:47,2026-10-14 17:42:47,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Quote Sent,2026-10-14 17:42:55,2026-10-14 17:42:55,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Discount Approval Requested,2026-10-14 17:42:59,2026-10-14 17:42:59,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Discount Approved,2026-10-14 17:43:02,2026-10-14 17:43:02,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Finance Approval,2026-10-14 17:43:07,2026-10-14 17:43:07,Luke Audie,Task,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Negotiate,2026-10-14 17:43:10,2026-10-14 17:43:10,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm98YAB,Closed Lost,2026-10-14 17:43:14,2026-10-14 17:43:14,Luke Audie,OpportunityHistory,AMER,Telecommunications,Web,48600,,Lost,Luke Audie
+006WV00000Dkm99YAB,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,APAC,Retail,Web,9800,,Lost,Luke Audie
+006WV00000Dkm99YAB,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,APAC,Retail,Web,9800,,Lost,Luke Audie
+006WV00000Dkm99YAB,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,APAC,Retail,Web,9800,,Lost,Luke Audie
+006WV00000Dkm99YAB,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,APAC,Retail,Web,9800,,Lost,Luke Audie
+006WV00000Dkm99YAB,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,APAC,Retail,Web,9800,,Lost,Luke Audie
+006WV00000Dkm99YAB,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,APAC,Retail,Web,9800,,Lost,Luke Audie
+006WV00000Dkm99YAB,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,APAC,Retail,Web,9800,,Lost,Luke Audie
+006WV00000Dkm99YAB,Closed Lost,2026-10-14 17:42:32,2026-10-14 17:42:32,Luke Audie,OpportunityHistory,APAC,Retail,Web,9800,,Lost,Luke Audie
+006WV00000Dkm9AYAR,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Retail,Phone Inquiry,117300,,Lost,Luke Audie
+006WV00000Dkm9AYAR,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Retail,Phone Inquiry,117300,,Lost,Luke Audie
+006WV00000Dkm9AYAR,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Retail,Phone Inquiry,117300,,Lost,Luke Audie
+006WV00000Dkm9AYAR,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Retail,Phone Inquiry,117300,,Lost,Luke Audie
+006WV00000Dkm9AYAR,Closed Lost,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Retail,Phone Inquiry,117300,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Discount Approval Requested,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Discount Approved,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Negotiate,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Customer Requested Re-quote,2026-10-14 17:42:44,2026-10-14 17:42:44,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Propose,2026-10-14 17:42:47,2026-10-14 17:42:47,Luke Audie,OpportunityHistory,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Quote Sent,2026-10-14 17:42:55,2026-10-14 17:42:55,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Discount Approval Requested,2026-10-14 17:42:59,2026-10-14 17:42:59,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Discount Approved,2026-10-14 17:43:02,2026-10-14 17:43:02,Luke Audie,Task,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Negotiate,2026-10-14 17:43:05,2026-10-14 17:43:05,Luke Audie,OpportunityHistory,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9BYAR,Closed Lost,2026-10-14 17:43:10,2026-10-14 17:43:10,Luke Audie,OpportunityHistory,AMER,Insurance,Other,82200,,Lost,Luke Audie
+006WV00000Dkm9CYAR,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,19600,,Lost,Luke Audie
+006WV00000Dkm9CYAR,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,19600,,Lost,Luke Audie
+006WV00000Dkm9CYAR,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,19600,,Lost,Luke Audie
+006WV00000Dkm9CYAR,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,19600,,Lost,Luke Audie
+006WV00000Dkm9CYAR,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,19600,,Lost,Luke Audie
+006WV00000Dkm9CYAR,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,EMEA,Manufacturing,Partner Referral,19600,,Lost,Luke Audie
+006WV00000Dkm9CYAR,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,19600,,Lost,Luke Audie
+006WV00000Dkm9CYAR,Closed Lost,2026-10-14 17:42:32,2026-10-14 17:42:32,Luke Audie,OpportunityHistory,EMEA,Manufacturing,Partner Referral,19600,,Lost,Luke Audie
+006WV00000Dkm9DYAR,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Banking,Web,55700,,Lost,Luke Audie
+006WV00000Dkm9DYAR,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Banking,Web,55700,,Lost,Luke Audie
+006WV00000Dkm9DYAR,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Banking,Web,55700,,Lost,Luke Audie
+006WV00000Dkm9DYAR,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Banking,Web,55700,,Lost,Luke Audie
+006WV00000Dkm9DYAR,Closed Lost,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Banking,Web,55700,,Lost,Luke Audie
+006WV00000Dkm9EYAR,Qualify,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9EYAR,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9EYAR,Meet & Present,2026-10-14 17:42:03,2026-10-14 17:42:03,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9EYAR,Product Demo,2026-10-14 17:42:09,2026-10-14 17:42:09,Luke Audie,Task,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9EYAR,Propose,2026-10-14 17:42:13,2026-10-14 17:42:13,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9EYAR,Quote Sent,2026-10-14 17:42:22,2026-10-14 17:42:22,Luke Audie,Task,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9EYAR,Negotiate,2026-10-14 17:42:26,2026-10-14 17:42:26,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9EYAR,Contract Signed,2026-10-14 17:42:34,2026-10-14 17:42:34,Luke Audie,Task,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9EYAR,Closed Won,2026-10-14 17:42:38,2026-10-14 17:42:38,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Web,18500,,Won,Luke Audie
+006WV00000Dkm9FYAR,Meet & Present,2026-10-14 17:41:57,2026-10-14 17:41:57,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Phone Inquiry,65000,,Won,Luke Audie
+006WV00000Dkm9FYAR,Discovery Call,2026-10-14 17:41:59,2026-10-14 17:41:59,Luke Audie,Task,EMEA,Telecommunications,Phone Inquiry,65000,,Won,Luke Audie
+006WV00000Dkm9FYAR,Product Demo,2026-10-14 17:42:04,2026-10-14 17:42:04,Luke Audie,Task,EMEA,Telecommunications,Phone Inquiry,65000,,Won,Luke Audie
+006WV00000Dkm9FYAR,Propose,2026-10-14 17:42:07,2026-10-14 17:42:07,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Phone Inquiry,65000,,Won,Luke Audie
+006WV00000Dkm9FYAR,Quote Sent,2026-10-14 17:42:16,2026-10-14 17:42:16,Luke Audie,Task,EMEA,Telecommunications,Phone Inquiry,65000,,Won,Luke Audie
+006WV00000Dkm9FYAR,Negotiate,2026-10-14 17:42:20,2026-10-14 17:42:20,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Phone Inquiry,65000,,Won,Luke Audie
+006WV00000Dkm9FYAR,Contract Signed,2026-10-14 17:42:28,2026-10-14 17:42:28,Luke Audie,Task,EMEA,Telecommunications,Phone Inquiry,65000,,Won,Luke Audie
+006WV00000Dkm9FYAR,Closed Won,2026-10-14 17:42:32,2026-10-14 17:42:32,Luke Audie,OpportunityHistory,EMEA,Telecommunications,Phone Inquiry,65000,,Won,Luke Audie

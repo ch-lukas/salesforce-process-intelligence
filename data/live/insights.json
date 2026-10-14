@@ -1,0 +1,537 @@
+{
+ "generated_at": "2026-10-14T18:44:32",
+ "source": "salesforce",
+ "period": {
+  "from": "2026-10-14",
+  "to": "2026-10-14",
+  "months": 1,
+  "span_days": 0.0
+ },
+ "kpis": {
+  "cases": 40,
+  "win_rate": 0.375,
+  "median_cycle_days": 0.0,
+  "events": 351,
+  "activities": 15,
+  "variants": 15,
+  "happy_path_conformance": 0.225,
+  "rework_rate": 0.167,
+  "avg_won_deal": 47233,
+  "annual_pipeline": 27308400,
+  "events_by_object": {
+   "OpportunityHistory": 185,
+   "Task": 166
+  }
+ },
+ "process_map": {
+  "nodes": [
+   {
+    "id": "\u25b6 Start",
+    "count": 40,
+    "median_duration_days": 0
+   },
+   {
+    "id": "Qualify",
+    "count": 38,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Discovery Call",
+    "count": 40,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Closed Lost",
+    "count": 25,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "\u25a0 End",
+    "count": 40,
+    "median_duration_days": 0
+   },
+   {
+    "id": "Meet & Present",
+    "count": 37,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Product Demo",
+    "count": 37,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Propose",
+    "count": 35,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Quote Sent",
+    "count": 35,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Negotiate",
+    "count": 35,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Contract Signed",
+    "count": 15,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Closed Won",
+    "count": 15,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Discount Approval Requested",
+    "count": 13,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Discount Approved",
+    "count": 13,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Customer Requested Re-quote",
+    "count": 5,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Legal Review",
+    "count": 3,
+    "median_duration_days": 0.0
+   },
+   {
+    "id": "Finance Approval",
+    "count": 5,
+    "median_duration_days": 0.0
+   }
+  ],
+  "edges": [
+   {
+    "source": "\u25b6 Start",
+    "target": "Qualify",
+    "count": 38,
+    "median_wait_days": 0
+   },
+   {
+    "source": "Qualify",
+    "target": "Discovery Call",
+    "count": 38,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Discovery Call",
+    "target": "Closed Lost",
+    "count": 3,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Closed Lost",
+    "target": "\u25a0 End",
+    "count": 25,
+    "median_wait_days": 0
+   },
+   {
+    "source": "Discovery Call",
+    "target": "Meet & Present",
+    "count": 35,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Meet & Present",
+    "target": "Product Demo",
+    "count": 35,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Product Demo",
+    "target": "Propose",
+    "count": 30,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Propose",
+    "target": "Quote Sent",
+    "count": 35,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Quote Sent",
+    "target": "Negotiate",
+    "count": 22,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Negotiate",
+    "target": "Contract Signed",
+    "count": 14,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Contract Signed",
+    "target": "Closed Won",
+    "count": 15,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Closed Won",
+    "target": "\u25a0 End",
+    "count": 15,
+    "median_wait_days": 0
+   },
+   {
+    "source": "Quote Sent",
+    "target": "Discount Approval Requested",
+    "count": 10,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Discount Approval Requested",
+    "target": "Discount Approved",
+    "count": 11,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Discount Approved",
+    "target": "Negotiate",
+    "count": 9,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Negotiate",
+    "target": "Closed Lost",
+    "count": 13,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Negotiate",
+    "target": "Customer Requested Re-quote",
+    "count": 5,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Customer Requested Re-quote",
+    "target": "Propose",
+    "count": 5,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Product Demo",
+    "target": "Closed Lost",
+    "count": 7,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Negotiate",
+    "target": "Legal Review",
+    "count": 3,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Legal Review",
+    "target": "Closed Lost",
+    "count": 2,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Quote Sent",
+    "target": "Discount Approved",
+    "count": 2,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Discount Approved",
+    "target": "Discount Approval Requested",
+    "count": 2,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Discount Approval Requested",
+    "target": "Finance Approval",
+    "count": 2,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Finance Approval",
+    "target": "Negotiate",
+    "count": 4,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Legal Review",
+    "target": "Contract Signed",
+    "count": 1,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Discount Approved",
+    "target": "Finance Approval",
+    "count": 2,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "\u25b6 Start",
+    "target": "Meet & Present",
+    "count": 2,
+    "median_wait_days": 0
+   },
+   {
+    "source": "Meet & Present",
+    "target": "Discovery Call",
+    "count": 2,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Discovery Call",
+    "target": "Product Demo",
+    "count": 2,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Quote Sent",
+    "target": "Finance Approval",
+    "count": 1,
+    "median_wait_days": 0.0
+   },
+   {
+    "source": "Finance Approval",
+    "target": "Discount Approval Requested",
+    "count": 1,
+    "median_wait_days": 0.0
+   }
+  ]
+ },
+ "happy_path": [
+  "Qualify",
+  "Discovery Call",
+  "Meet & Present",
+  "Product Demo",
+  "Propose",
+  "Quote Sent",
+  "Negotiate",
+  "Contract Signed",
+  "Closed Won"
+ ],
+ "variants": [
+  {
+   "path": [
+    "Qualify",
+    "Discovery Call",
+    "Meet & Present",
+    "Product Demo",
+    "Propose",
+    "Quote Sent",
+    "Negotiate",
+    "Contract Signed",
+    "Closed Won"
+   ],
+   "count": 9,
+   "share": 0.225,
+   "cases": 9,
+   "win_rate": 1.0,
+   "median_cycle_days": 0.0
+  },
+  {
+   "path": [
+    "Qualify",
+    "Discovery Call",
+    "Meet & Present",
+    "Product Demo",
+    "Closed Lost"
+   ],
+   "count": 7,
+   "share": 0.175,
+   "cases": 7,
+   "win_rate": 0.0,
+   "median_cycle_days": 0.0
+  },
+  {
+   "path": [
+    "Qualify",
+    "Discovery Call",
+    "Meet & Present",
+    "Product Demo",
+    "Propose",
+    "Quote Sent",
+    "Negotiate",
+    "Closed Lost"
+   ],
+   "count": 6,
+   "share": 0.15,
+   "cases": 6,
+   "win_rate": 0.0,
+   "median_cycle_days": 0.0
+  },
+  {
+   "path": [
+    "Qualify",
+    "Discovery Call",
+    "Closed Lost"
+   ],
+   "count": 3,
+   "share": 0.075,
+   "cases": 3,
+   "win_rate": 0.0,
+   "median_cycle_days": 0.0
+  },
+  {
+   "path": [
+    "Qualify",
+    "Discovery Call",
+    "Meet & Present",
+    "Product Demo",
+    "Propose",
+    "Quote Sent",
+    "Discount Approval Requested",
+    "Discount Approved",
+    "Negotiate",
+    "Closed Lost"
+   ],
+   "count": 3,
+   "share": 0.075,
+   "cases": 3,
+   "win_rate": 0.0,
+   "median_cycle_days": 0.0
+  },
+  {
+   "path": [
+    "Qualify",
+    "Discovery Call",
+    "Meet & Present",
+    "Product Demo",
+    "Propose",
+    "Quote Sent",
+    "Negotiate",
+    "Legal Review",
+    "Closed Lost"
+   ],
+   "count": 2,
+   "share": 0.05,
+   "cases": 2,
+   "win_rate": 0.0,
+   "median_cycle_days": 0.0
+  },
+  {
+   "path": [
+    "Qualify",
+    "Discovery Call",
+    "Meet & Present",
+    "Product Demo",
+    "Propose",
+    "Quote Sent",
+    "Discount Approval Requested",
+    "Discount Approved",
+    "Negotiate",
+    "Contract Signed",
+    "Closed Won"
+   ],
+   "count": 2,
+   "share": 0.05,
+   "cases": 2,
+   "win_rate": 1.0,
+   "median_cycle_days": 0.0
+  },
+  {
+   "path": [
+    "Qualify",
+    "Discovery Call",
+    "Meet & Present",
+    "Product Demo",
+    "Propose",
+    "Quote Sent",
+    "Negotiate",
+    "Customer Requested Re-quote",
+    "Propose",
+    "Quote Sent",
+    "Negotiate",
+    "Contract Signed",
+    "Closed Won"
+   ],
+   "count": 1,
+   "share": 0.025,
+   "cases": 1,
+   "win_rate": 1.0,
+   "median_cycle_days": 0.0
+  }
+ ],
+ "bottlenecks": {
+  "handoffs": [],
+  "activities": []
+ },
+ "by_region": {
+  "AMER": {
+   "cases": 10,
+   "win_rate": 0.2,
+   "median_cycle_days": 0.0,
+   "approval_wait_days": 0.0
+  },
+  "APAC": {
+   "cases": 14,
+   "win_rate": 0.429,
+   "median_cycle_days": 0.0,
+   "approval_wait_days": 0.0
+  },
+  "EMEA": {
+   "cases": 16,
+   "win_rate": 0.438,
+   "median_cycle_days": 0.0,
+   "approval_wait_days": 0.0
+  }
+ },
+ "monthly": [
+  {
+   "month": "2026-10",
+   "opened": 40,
+   "won": 15
+  }
+ ],
+ "value_drivers": [
+  {
+   "id": "approval",
+   "theme": "Accelerate revenue",
+   "driver": "Remove EMEA discount-approval bottleneck",
+   "evidence": "EMEA approvals take 0.0 days (median) vs 0.0 days in the best region; deals waiting >7 days win 0% vs 67%.",
+   "kpi": "Median discount-approval cycle (days)",
+   "baseline": 0.0,
+   "target": 0.0,
+   "affected_deals_per_year": 36,
+   "win_rate_lift": 0.667,
+   "deals_at_risk_per_year": 0,
+   "default_capture": 0.5,
+   "annual_value": 0,
+   "days_saved_per_deal": 0.0
+  },
+  {
+   "id": "rework",
+   "theme": "Improve win rate",
+   "driver": "Cut re-quote rework in Negotiation",
+   "evidence": "17% of negotiated deals loop back to Proposal; they win 20% vs 56% for clean deals.",
+   "kpi": "Re-quote rate (% of deals)",
+   "baseline": 0.167,
+   "target": 0.083,
+   "affected_deals_per_year": 60,
+   "win_rate_lift": 0.36,
+   "default_capture": 0.5,
+   "annual_value": 1020240
+  },
+  {
+   "id": "qualification",
+   "theme": "Increase sales productivity",
+   "driver": "Enforce the Qualification gate",
+   "evidence": "5% of deals skip Qualification and win 50% vs 37%.",
+   "kpi": "Deals skipping Qualification (%)",
+   "baseline": 0.05,
+   "target": 0.02,
+   "affected_deals_per_year": 24,
+   "win_rate_lift": 0,
+   "default_capture": 0.5,
+   "annual_value": 0
+  }
+ ],
+ "total_annual_value": 1020240
+}

@@ -1,0 +1,171 @@
+<title>Re-quote Value Case</title>
+<meta name="description" content="Value framing one-pager: reduce re-quotes in quote-to-close, sized from Salesforce process data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a single printed-style card, the value-framing one-pager: header + filter bar,
+   2x2 narrative quadrants, then the multiplicative value chain ending in the framed value. */
+:root {
+  --bg: #f6f8f8; --surface: #ffffff; --ink: #12262b; --ink-2: #4b6268; --ink-3: #7d9196;
+  --line: #dbe4e5; --accent: #0b6e72; --accent-soft: #e0f0ef; --flag: #9a5b0a; --flag-soft: #fbefd9;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1719; --surface: #142225; --ink: #e4eeef; --ink-2: #a9bcbf; --ink-3: #74898d;
+    --line: #26393c; --accent: #4fc1bf; --accent-soft: #173638; --flag: #f3b860; --flag-soft: #3a2a12;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1719; --surface: #142225; --ink: #e4eeef; --ink-2: #a9bcbf; --ink-3: #74898d;
+  --line: #26393c; --accent: #4fc1bf; --accent-soft: #173638; --flag: #f3b860; --flag-soft: #3a2a12;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 32px 64px; display: grid; gap: 16px; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 0.78rem; }
+.nav a { color: var(--ink-2); text-decoration: none; }
+.nav a[aria-current] { color: var(--accent); }
+.nav a:hover { color: var(--accent); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: clamp(18px, 3vw, 36px); display: grid; gap: 22px; }
+h1, h2 { font-family: var(--display); margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(1.9rem, 4vw, 2.7rem); line-height: 1.05; font-weight: 700; }
+h2 { font-size: 1.25rem; font-weight: 600; padding-bottom: 8px; border-bottom: 1.5px solid var(--ink); display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.owner { color: var(--ink-2); font-size: 1.05rem; margin-top: 4px; }
+.top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: start; }
+.mark { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); text-align: right; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; padding: 10px 14px; background: var(--bg); border-radius: 8px; font-size: 0.88rem; }
+.filters b { font-weight: 600; }
+.filters svg { flex: none; }
+.quads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 40px; }
+.quad { display: grid; gap: 10px; align-content: start; min-width: 0; }
+ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.tag { font-family: var(--mono); font-size: 0.68rem; font-weight: 400; padding: 2px 8px; border-radius: 4px; background: var(--flag-soft); color: var(--flag); }
+.formula { font-family: var(--mono); font-size: 0.8rem; color: var(--ink-2); background: var(--bg); padding: 10px 12px; border-radius: 6px; }
+.tracking i { color: var(--ink-2); }
+.chain { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr) auto) minmax(0, 1.4fr); gap: 10px; align-items: end; }
+.cell { display: grid; gap: 6px; min-width: 0; }
+.cell .l { font-size: 0.8rem; font-weight: 600; text-align: center; min-height: 2.6em; display: flex; align-items: end; justify-content: center; }
+.cell .v { background: var(--bg); border-radius: 6px; padding: 12px 6px; text-align: center; font-family: var(--display); font-size: 1.4rem; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.op { font-family: var(--display); font-size: 1.4rem; color: var(--ink-3); padding-bottom: 12px; }
+.framed { display: grid; gap: 6px; text-align: center; }
+.framed .pill { background: var(--ink); color: var(--bg); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.9rem; }
+.framed .big { font-family: var(--display); font-size: clamp(2rem, 4.2vw, 2.8rem); font-weight: 700; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.framed .sub { font-size: 0.82rem; color: var(--ink-2); }
+.assume { font-size: 0.85rem; color: var(--ink-2); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 14px; }
+.assume b { color: var(--ink); }
+.assume a { color: var(--accent); font-weight: 600; }
+@media (max-width: 860px) {
+  .quads { grid-template-columns: minmax(0, 1fr); }
+  .chain { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .op { display: none; }
+  .framed { grid-column: 1 / -1; }
+}
+</style>
+
+<div class="wrap">
+  <nav class="nav" aria-label="Pages">
+    <a href="./">Process dashboard</a>
+    <a href="./value-case.html" aria-current="page">Value case</a>
+    <a href="./live.html">Live Salesforce extract</a>
+    <a href="https://github.com/ch-lukas/salesforce-process-intelligence">Source on GitHub</a>
+  </nav>
+
+  <article class="card">
+    <div class="top">
+      <div>
+        <h1>Reduce re-quotes in quote-to-close</h1>
+        <div class="owner">Opportunity owner: VP Revenue Operations</div>
+      </div>
+      <div class="mark">Salesforce → event log → Apromore<br><span id="generated"></span></div>
+    </div>
+
+    <div class="filters">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></svg>
+      <span><b>Time frame:</b> <span id="timeframe"></span></span>
+      <span><b>Filter 2:</b> New business opportunities</span>
+      <span><b>Filter 3:</b> Deals that reached Negotiation</span>
+    </div>
+
+    <div class="quads">
+      <section class="quad">
+        <h2>Challenge</h2>
+        <ul id="challenge"></ul>
+      </section>
+      <section class="quad">
+        <h2>Root cause <span class="tag">illustrative · reason codes to be captured</span></h2>
+        <ul>
+          <li>Re-quote reasons to break down: quote expired while awaiting approval, discount renegotiated, scope change, pricing error.</li>
+          <li>Hotspots by approver queue, region and rep: approvals handled, median wait, re-quote rate. EMEA's single approval queue is the first suspect.</li>
+          <li>Causal chain to confirm: slow approval → quote expires → re-quote → lower win rate.</li>
+        </ul>
+      </section>
+      <section class="quad">
+        <h2>Solution</h2>
+        <ul>
+          <li>Apromore process discovery and performance views expose where quotes wait and loop back.</li>
+          <li>Conformance checking flags deals that skip Qualification or bypass approval steps.</li>
+          <li>Simulate a delegated EMEA approval threshold (discounts up to 30%) before changing policy, then monitor it.</li>
+        </ul>
+      </section>
+      <section class="quad tracking">
+        <h2>Tracking</h2>
+        <div><b>P&amp;L impact: revenue (win rate)</b></div>
+        <div class="formula">(Baseline re-quote rate − re-quote rate after intervention) × negotiated deals per year × win-rate gap × average won deal</div>
+        <div><i>Baseline re-quote rate: <span id="baseline"></span> per negotiated deal</i><br><i>Re-quote rate after intervention: TBD</i><br><i>Negotiated deals after intervention: TBD</i></div>
+      </section>
+    </div>
+
+    <section class="quad">
+      <h2>Value</h2>
+      <div class="chain" id="chain"></div>
+    </section>
+
+    <div class="assume">
+      <span><b>Assumptions:</b> <span id="assumptions"></span></span>
+      <a href="./">Open the process dashboard →</a>
+    </div>
+  </article>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const rw = DATA.value_drivers.find(d => d.id === "rework");
+const ap = DATA.value_drivers.find(d => d.id === "approval");
+const K = DATA.kpis;
+const negotiated = Math.round(rw.affected_deals_per_year / rw.baseline);
+const improvement = 0.5;
+const value = negotiated * rw.baseline * rw.win_rate_lift * K.avg_won_deal * improvement;
+const fmtUSD = v => v >= 1e6 ? `$${(v / 1e6).toFixed(2)}M` : `$${Math.round(v / 1e3)}k`;
+const pct = v => `${Math.round(v * 100)}%`;
+const winRates = rw.evidence.match(/win (\d+)% vs (\d+)%/);
+const $ = id => document.getElementById(id);
+
+$("timeframe").textContent = `${DATA.period.from.slice(0, 7)} to ${DATA.period.to.slice(0, 7)}`;
+$("generated").textContent = `Generated ${DATA.generated_at.slice(0, 10)}`;
+$("baseline").textContent = rw.baseline.toFixed(2);
+$("challenge").innerHTML = [
+  `About ${negotiated.toLocaleString()} deals a year reach Negotiation, and ${pct(rw.baseline)} of them loop back to Proposal for a new quote.`,
+  `Re-quoted deals win ${winRates[1]}% of the time vs ${winRates[2]}% for clean deals, a gap of ${Math.round(rw.win_rate_lift * 100)} points.`,
+  `EMEA discount approvals take ${ap.baseline} days (median) vs ${ap.target} days in the fastest region.`,
+].map(s => `<li>${s}</li>`).join("");
+
+const cells = [
+  ["Negotiated deals / year", negotiated.toLocaleString()],
+  ["Re-quotes per negotiated deal", rw.baseline.toFixed(2)],
+  ["Win-rate gap", `${(rw.win_rate_lift * 100).toFixed(1)} pts`],
+  ["Average won deal", `$${Math.round(K.avg_won_deal / 1000)}k`],
+  ["Improvement with Apromore", pct(improvement)],
+];
+$("chain").innerHTML = cells.map(([l, v], i) =>
+  `<div class="cell"><div class="l">${l}</div><div class="v">${v}</div></div><div class="op" aria-hidden="true">${i < cells.length - 1 ? "×" : "="}</div>`
+).join("") + `<div class="framed"><div class="pill">Framed value</div><div class="big">≈ ${fmtUSD(value)}</div><div class="sub">revenue upside p.a.</div></div>`;
+
+$("assumptions").textContent = `annualised from ${DATA.period.months} months of history; the win-rate gap compares only deals that reached Negotiation; faster approvals pull revenue forward but are not counted; half of the gap is closed. Data simulated in Salesforce's object shape.`;
+</script>

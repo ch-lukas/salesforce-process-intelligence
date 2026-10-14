@@ -1,0 +1,2473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log xes.version="1.0" xmlns="http://www.xes-standard.org/">
+  <extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext"/>
+  <extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+  <extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext"/>
+  <extension name="Organizational" prefix="org" uri="http://www.xes-standard.org/org.xesext"/>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8cYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="30700.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8dYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Healthcare"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="61600.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8eYAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="76400.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:42+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8fYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Telecommunications"/>
+    <string key="lead_source" value="Partner Referral"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="13600.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Customer Requested Re-quote"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:44+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:47+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:55+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:58+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8gYAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="41400.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8hYAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Healthcare"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="47900.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8iYAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Manufacturing"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="49200.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:32+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8jYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="49900.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8kYAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Manufacturing"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="78200.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8lYAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="104900.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Legal Review"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8mYAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="91900.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8nYAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="23100.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8oYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="26800.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Customer Requested Re-quote"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:44+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:47+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:53+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8pYAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Manufacturing"/>
+    <string key="lead_source" value="Partner Referral"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="30800.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8qYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="38800.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:44+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:47+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8rYAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Healthcare"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="14900.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8sYAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Telecommunications"/>
+    <string key="lead_source" value="Partner Referral"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="47100.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:42+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8tYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="32000.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:32+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8uYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="57400.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:44+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:47+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8vYAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Banking"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="69800.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8wYAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Manufacturing"/>
+    <string key="lead_source" value="Partner Referral"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="10200.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8xYAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="25100.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8yYAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="47100.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm8zYAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Partner Referral"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="499500.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Legal Review"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm90YAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Manufacturing"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="54900.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Finance Approval"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:39+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:42+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:49+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:53+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm91YAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Manufacturing"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="29400.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:42+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm92YAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="9200.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm93YAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Telecommunications"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="18900.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:32+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm94YAB"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="107100.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Legal Review"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:44+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:49+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:53+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm95YAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Partner Referral"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="25200.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:32+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm96YAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Partner Referral"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="29600.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Finance Approval"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:39+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:42+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Customer Requested Re-quote"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:49+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:53+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:02+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:07+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Finance Approval"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:11+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:14+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:18+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm97YAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Telecommunications"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="16400.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm98YAB"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Telecommunications"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="48600.0"/>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:04+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:07+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:16+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Finance Approval"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Customer Requested Re-quote"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:44+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:47+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:55+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:02+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Finance Approval"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:07+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:10+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:14+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm99YAB"/>
+    <string key="region" value="APAC"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="9800.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:32+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm9AYAR"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Retail"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="117300.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm9BYAR"/>
+    <string key="region" value="AMER"/>
+    <string key="industry" value="Insurance"/>
+    <string key="lead_source" value="Other"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="82200.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Customer Requested Re-quote"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:44+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:47+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:55+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approval Requested"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discount Approved"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:02+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:05+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:43:10+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm9CYAR"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Manufacturing"/>
+    <string key="lead_source" value="Partner Referral"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="19600.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:32+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm9DYAR"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Banking"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Lost"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="55700.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Lost"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm9EYAR"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Telecommunications"/>
+    <string key="lead_source" value="Web"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="18500.0"/>
+    <event>
+      <string key="concept:name" value="Qualify"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:03+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:09+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:13+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:22+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:26+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:34+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:38+00:00"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="006WV00000Dkm9FYAR"/>
+    <string key="region" value="EMEA"/>
+    <string key="industry" value="Telecommunications"/>
+    <string key="lead_source" value="Phone Inquiry"/>
+    <string key="outcome" value="Won"/>
+    <string key="owner" value="Luke Audie"/>
+    <float key="amount" value="65000.0"/>
+    <event>
+      <string key="concept:name" value="Meet &amp; Present"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:57+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Discovery Call"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:41:59+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Product Demo"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:04+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Propose"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:07+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Quote Sent"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:16+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Negotiate"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:20+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Contract Signed"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:28+00:00"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Closed Won"/>
+      <string key="org:resource" value="Luke Audie"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <date key="time:timestamp" value="2026-10-14T17:42:32+00:00"/>
+    </event>
+  </trace>
+</log>
