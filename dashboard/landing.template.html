@@ -179,6 +179,32 @@ section { display: grid; gap: 26px; }
 .dl { display: flex; flex-wrap: wrap; gap: 10px; }
 .dl a { color: var(--on-navy); }
 
+/* go-deeper buttons and modals */
+.bigbtns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.bigbtn { all: unset; box-sizing: border-box; cursor: pointer; position: relative; display: grid; gap: 10px; align-content: start; min-height: 220px; padding: 28px; border-radius: 20px; background: var(--navy); color: var(--on-navy); overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
+.bigbtn::after { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; right: -70px; bottom: -90px; background: var(--cloud); opacity: 0.3; transition: transform .25s ease; }
+.bigbtn:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(3, 45, 96, 0.28); }
+.bigbtn:hover::after { transform: scale(1.12); }
+.bigbtn:focus-visible { outline: 3px solid var(--cloud); outline-offset: 4px; }
+.bigbtn .n { font-family: var(--mono); font-size: 0.8rem; color: var(--on-navy-2); }
+.bigbtn b { font-family: var(--display); font-size: 1.9rem; font-weight: 800; line-height: 1.05; }
+.bigbtn span:not(.n):not(.go) { color: var(--on-navy-2); font-size: 0.98rem; max-width: 30ch; position: relative; z-index: 1; }
+.bigbtn .go { position: absolute; right: 22px; top: 20px; font-size: 1.4rem; color: var(--cloud); z-index: 1; }
+dialog.modal { width: min(1080px, calc(100% - 32px)); max-height: 88vh; padding: 0; border: 0; border-radius: 20px; background: var(--bg); color: var(--ink); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35); overflow: hidden; }
+dialog.modal[open] { display: flex; flex-direction: column; }
+dialog.modal::backdrop { background: rgba(3, 20, 45, 0.62); backdrop-filter: blur(3px); }
+.modal-bar { display: flex; justify-content: flex-end; padding: 14px 16px 0; }
+.modal-close { all: unset; cursor: pointer; font-weight: 700; font-size: 0.9rem; color: var(--ink-2); padding: 8px 14px; border-radius: 999px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.modal-close:hover { color: var(--ink); }
+.modal-close:focus-visible { outline: 3px solid var(--cloud); outline-offset: 2px; }
+.modal-body { overflow: auto; padding: 4px clamp(16px, 3vw, 36px) 36px; display: grid; gap: 24px; }
+.files { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.file { display: grid; gap: 4px; padding: 16px 18px; border-radius: 14px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); text-decoration: none; color: var(--ink); }
+.file:hover { box-shadow: 0 0 0 2px var(--accent); }
+.file em { font-style: normal; font-family: var(--mono); font-size: 0.74rem; color: var(--accent); }
+.file span { font-size: 0.85rem; color: var(--ink-2); }
+@media (prefers-reduced-motion: reduce) { .bigbtn, .bigbtn::after { transition: none; } .bigbtn:hover { transform: none; } }
+
 /* resources */
 .resources { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .res { display: grid; gap: 6px; padding: 20px 22px; border-radius: 14px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); text-decoration: none; color: var(--ink); transition: box-shadow .15s ease, transform .15s ease; }
@@ -192,7 +218,9 @@ footer .inner { display: grid; gap: 6px; }
 
 @media (max-width: 900px) {
   .hero-grid, .build { grid-template-columns: minmax(0, 1fr); }
-  .values, .resources, .quads, .shots { grid-template-columns: minmax(0, 1fr); }
+  .values, .resources, .quads, .shots, .bigbtns { grid-template-columns: minmax(0, 1fr); }
+  .files { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bigbtn { min-height: 0; }
   .chain { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .op { display: none; }
   .fv { grid-column: 1 / -1; }
@@ -216,7 +244,7 @@ footer .inner { display: grid; gap: 6px; }
       <nav class="topnav" aria-label="Pages">
         <a href="./" aria-current="page">Overview</a>
         <a href="./dashboard.html">Process analysis</a>
-        <a href="#resources">Decks</a>
+        <a href="#resources">Documents</a>
         <a href="https://github.com/ch-lukas/salesforce-process-intelligence">GitHub</a>
       </nav>
     </div>
@@ -294,6 +322,22 @@ footer .inner { display: grid; gap: 6px; }
     </article>
   </section>
 
+  <section class="explore" aria-labelledby="s-explore">
+    <div class="head">
+      <div class="eyebrow">Go deeper</div>
+      <h2 id="s-explore">Approach, data and documents</h2>
+    </div>
+    <div class="bigbtns">
+      <button class="bigbtn" type="button" data-open="approach"><span class="n">01</span><b>Approach</b><span>Identify, Frame, Commit, Realize: where this case sits and what comes next.</span><span class="go" aria-hidden="true">↗</span></button>
+      <button class="bigbtn" type="button" data-open="live-run"><span class="n">02</span><b>Data assets</b><span>The live Salesforce run, how it's built, and every event log to download.</span><span class="go" aria-hidden="true">↗</span></button>
+      <button class="bigbtn" type="button" data-open="resources"><span class="n">03</span><b>Documents</b><span>Story and tech setup decks, the process analysis and the source code.</span><span class="go" aria-hidden="true">↗</span></button>
+    </div>
+  </section>
+</main>
+
+<dialog class="modal" id="approach" aria-labelledby="s-approach">
+  <div class="modal-bar"><button class="modal-close" type="button" aria-label="Close">Close ✕</button></div>
+  <div class="modal-body">
   <section aria-labelledby="s-approach">
     <div class="head">
       <div class="eyebrow">Approach</div>
@@ -308,9 +352,14 @@ footer .inner { display: grid; gap: 6px; }
     </div>
   </section>
 
-  <section id="live-run" aria-labelledby="s-build">
+  </div>
+</dialog>
+<dialog class="modal" id="live-run" aria-labelledby="s-build">
+  <div class="modal-bar"><button class="modal-close" type="button" aria-label="Close">Close ✕</button></div>
+  <div class="modal-body">
+  <section aria-labelledby="s-build">
     <div class="head">
-      <div class="eyebrow">Live Salesforce run</div>
+      <div class="eyebrow">Data assets · live Salesforce run</div>
       <h2 id="s-build">Salesforce data to Process Intelligence in four steps</h2>
       <p>The same pipeline, run against a real Salesforce trial org. It proves the plumbing works; the business numbers above come from the simulated dataset.</p>
     </div>
@@ -329,8 +378,13 @@ footer .inner { display: grid; gap: 6px; }
           <div><b class="num" id="live-events"></b><span>events in the log</span></div>
         </div>
         <p><code>seed.py</code> loaded demo deals and walked them through real stage changes, standing in for a client's CRM. Trial orgs can't backdate history, so elapsed times are seconds.</p>
-        <div class="dl"><a href="./data/live_event_log.csv">Download CSV</a><a href="./data/live_event_log.xes">Download XES</a></div>
       </div>
+    </div>
+    <div class="files">
+      <a class="file" href="./data/demo_event_log.csv"><em>CSV</em><b>Simulated event log</b><span>800 deals · used for the analysis</span></a>
+      <a class="file" href="./data/demo_event_log.xes"><em>XES</em><b>Simulated event log</b><span>IEEE XES with lifecycle events</span></a>
+      <a class="file" href="./data/live_event_log.csv"><em>CSV</em><b>Live event log</b><span>Extracted from the Salesforce trial org</span></a>
+      <a class="file" href="./data/live_event_log.xes"><em>XES</em><b>Live event log</b><span>Same extract, XES format</span></a>
     </div>
     <div class="shots">
       <figure><img src="./img/salesforce-org.jpg" alt="Salesforce trial org with the seeded demo accounts" loading="lazy"><figcaption>The trial org with ${cases} seeded [Demo] records, standing in for a client's CRM.</figcaption></figure>
@@ -338,21 +392,26 @@ footer .inner { display: grid; gap: 6px; }
     </div>
   </section>
 
-  <section id="resources" aria-labelledby="s-res">
+  </div>
+</dialog>
+<dialog class="modal" id="resources" aria-labelledby="s-res">
+  <div class="modal-bar"><button class="modal-close" type="button" aria-label="Close">Close ✕</button></div>
+  <div class="modal-body">
+  <section aria-labelledby="s-res">
     <div class="head">
-      <div class="eyebrow">Open to inspect</div>
-      <h2 id="s-res">Decks, analysis and source</h2>
+      <div class="eyebrow">Documents</div>
+      <h2 id="s-res">Decks, analysis and source code</h2>
     </div>
     <div class="resources">
       <a class="res" href="./dashboard.html"><em>Interactive</em><b>Process analysis</b><span>Map, paths, bottlenecks and the value model.</span></a>
       <a class="res" href="./decks/salesforce-process-intelligence.pdf"><em>PDF</em><b>Story deck</b><span>Eight slides: answer, evidence, value, next steps.</span></a>
       <a class="res" href="./decks/salesforce-process-intelligence-tech-setup.pdf"><em>PDF</em><b>Tech setup deck</b><span>From a Salesforce org to an event log.</span></a>
-      <a class="res" href="./data/demo_event_log.csv"><em>CSV</em><b>Simulated event log</b><span>800 deals, 9,011 events.</span></a>
-      <a class="res" href="./data/live_event_log.csv"><em>CSV</em><b>Live event log</b><span>From the Salesforce trial org.</span></a>
       <a class="res" href="https://github.com/ch-lukas/salesforce-process-intelligence"><em>Source</em><b>GitHub repository</b><span>Pipeline, event logs and deck generator.</span></a>
     </div>
   </section>
-</main>
+  </div>
+</dialog>
+
 
 <footer>
   <div class="inner">
@@ -440,4 +499,19 @@ $("chain").innerHTML = cells.map(([l, v], i) =>
 ).join("") + `<div class="fv"><div class="pill">Framed value</div><div class="big num">≈ ${usd(bcValue)}</div><div class="sub">modelled upside p.a.</div></div>`;
 $("bc-assumptions").textContent = `Assumptions: simulated data in Salesforce's object shape, annualised over the ${DATA.period.months}-month event window (illustrative run rate); Amount = opportunity bookings; the win-rate gap is an association among deals that reached Negotiation; 50% capture is a scenario. Calculated from unrounded inputs.`;
 document.querySelectorAll("figcaption").forEach(f => { f.textContent = f.textContent.replace("${cases}", LIVE.kpis.cases); });
+
+// ---------- go-deeper modals: buttons and #hash links open them ----------
+const openModal = id => { const d = document.getElementById(id); if (d && d.tagName === "DIALOG" && !d.open) d.showModal(); };
+document.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => {
+  history.replaceState(null, "", `#${b.dataset.open}`);
+  openModal(b.dataset.open);
+}));
+document.querySelectorAll("dialog.modal").forEach(d => {
+  d.querySelector(".modal-close").addEventListener("click", () => d.close());
+  d.addEventListener("click", e => { if (e.target === d) d.close(); }); // click on the backdrop
+  d.addEventListener("close", () => { if (location.hash === `#${d.id}`) history.replaceState(null, "", location.pathname); });
+});
+const fromHash = () => openModal(location.hash.slice(1));
+window.addEventListener("hashchange", fromHash);
+fromHash();
 </script>
