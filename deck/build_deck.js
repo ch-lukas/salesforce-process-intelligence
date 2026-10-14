@@ -332,13 +332,13 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   circle(s, 9.4, 3.4, 6.6, C.accent1, 70, "Decor circle large");
   circle(s, 10.6, 2.6, 0.75, C.accent3, 0, "Decor circle small");
   s.addText("Tech setup", { placeholder: "title" });
-  s.addText("From a Salesforce org to Process Intelligence: the pipeline behind the demo", { placeholder: "body" });
+  s.addText("The pipeline behind the demo: Salesforce data to an event log", { placeholder: "body" });
   text(s, "Luke Audie  ·  October 2026", { x: 0.8, y: 6.4, w: 6, h: 0.4, fontSize: 14, color: C.accent3, objectName: "Byline" });
   s.addNotes("Companion to the main deck for a technical audience: how the data gets out of Salesforce and where to see it running.");
 
   // ---------- Tech setup: evidence ----------
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("Tech setup: from a Salesforce org to an event log", { placeholder: "title" });
+  s.addText("From a Salesforce org to an event log", { placeholder: "title" });
 
   // Left: the org itself (screenshot with its URL), seeded by seed.py.
   const orgShot = fs.existsSync(path.join(ROOT, "docs/img/org/salesforce-with-url.jpg"))
@@ -402,6 +402,39 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   popup(4, px + pw - 2.45, 3.43, 2.35, "Objects → events");
   s.addNotes("Left: the trial org standing in for a client's CRM, seeded by seed.py so there's real OpportunityHistory to read. Right: the stage-history query and how each object maps to events; Opportunity Id is the case. Known limits: Task created → completed can include queueing time; open tasks have no completion time and show as zero duration; history can't be backdated in a trial org, so the 10-month dataset is simulated in the same shape. The export produces CSV and XES; an import into a process mining tool is the next step to verify. Production work would add incremental refresh, stable event IDs and reconciliation.");
 
+  // ---------- Tech setup: prototype today, production next ----------
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
+  s.addText("Prototype today, production next", { placeholder: "title" });
+  const lanes = [
+    ["What the prototype proves", C.background2, C.text2, [
+      "SOQL over REST, signed by the CLI session; no stored credentials",
+      "Opportunity as the case; Tasks join on WhatId, Leads on ConvertedOpportunityId",
+      "History rows collapse to real stage changes; paginated queries",
+      "CSV and XES export with start and complete events",
+    ]],
+    ["Known limits", "FFEEDD", C.text2, [
+      "Task created → completed can include queueing time",
+      "Open tasks have no completion time yet",
+      "Trial orgs can't backdate history, so the analysis uses simulated data",
+      "Import into a process mining tool still to verify",
+    ]],
+    ["Production path", C.text2, C.background1, [
+      "Bulk API 2.0 with incremental refresh on SystemModstamp",
+      "Stable event IDs and deterministic ordering for timestamp ties",
+      "Approval history from ProcessInstance and its steps",
+      "Reconciliation and data-quality checks against source counts",
+    ]],
+  ];
+  lanes.forEach(([head, fill, ink, items], i) => {
+    const x = 0.6 + i * 4.12;
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 1.45, w: 3.86, h: 3.85, rectRadius: 0.12, fill: { color: fill }, line: { type: "none" }, objectName: `Lane ${i + 1} card` });
+    text(s, head, { x: x + 0.25, y: 1.65, w: 3.36, h: 0.45, fontSize: 18, bold: true, color: ink, objectName: `Lane ${i + 1} heading` });
+    text(s, items.map((t, j) => ({ text: t, options: { bullet: true, breakLine: j < items.length - 1 } })),
+      { x: x + 0.25, y: 2.25, w: 3.36, h: 2.9, fontSize: 14, color: ink, paraSpaceAfter: 10, objectName: `Lane ${i + 1} body` });
+  });
+  text(s, "The plumbing is proven. What's left is event semantics and data quality, not connectivity.", { x: 0.6, y: 5.6, w: 12.1, h: 0.5, fontSize: 18, italic: true, color: C.accent6, objectName: "Production takeaway" });
+  s.addNotes("The prototype proves the extraction and event-log design end to end on a real org. The limits are about event semantics and data, not plumbing. Production work is incremental refresh at volume, stable identifiers, approval history from the approval objects, and reconciliation so Finance can trust the numbers.");
+
   // ---------- Tech setup: everything is live ----------
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
   s.addText("Hosted demo, live extraction proof and source code", { placeholder: "title" });
@@ -409,7 +442,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
     ["Overview: value items and business case", SITE, `https://${SITE}`],
     ["Process analysis", `${SITE}/dashboard.html`, `https://${SITE}/dashboard.html`],
     ["Business case (re-quotes)", `${SITE}/#business-case`, `https://${SITE}/#business-case`],
-    ["Live Salesforce run and downloads", `${SITE}/#live-run`, `https://${SITE}/#live-run`],
+    ["Data assets and downloads", `${SITE}/#live-run`, `https://${SITE}/#live-run`],
     ["Source code and event logs", REPO, `https://${REPO}`],
   ];
   proof.forEach(([label, shown, url], i) => {
@@ -420,10 +453,11 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
     text(s, label, { x: 1.45, y: y + 0.08, w: 5.6, h: 0.36, fontSize: 16, bold: true, color: C.text2, objectName: `Proof ${i + 1} label` });
     text(s, url ? [{ text: shown, options: { hyperlink: { url } } }] : shown, { x: 1.45, y: y + 0.46, w: 5.6, h: 0.34, fontSize: 14, color: C.accent6, objectName: `Proof ${i + 1} link` });
   });
-  const shotH = 4.75, shotW = shotH * (1280 / 1180);
-  s.addShape(pres.shapes.RECTANGLE, { x: 7.6 - 0.05, y: 1.5, w: shotW + 0.1, h: shotH + 0.1, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: "Screenshot frame" });
-  s.addImage({ path: path.join(ROOT, "docs/img/value-case.png"), x: 7.6, y: 1.55, w: shotW, h: shotH, objectName: "Value case screenshot", altText: "Value case one-pager on the hosted site" });
-  s.addNotes("All of this is hosted. The repo has the pipeline, the seeding script and the README with the setup gotchas I hit on a new trial org.");
+  const ovSize = require("image-size")(path.join(ROOT, "docs/img/overview-top.png"));
+  const shotW = 5.1, shotH = shotW * (ovSize.height / ovSize.width), shotY = 1.5 + (4.88 - shotH) / 2;
+  s.addShape(pres.shapes.RECTANGLE, { x: 7.6 - 0.05, y: shotY - 0.05, w: shotW + 0.1, h: shotH + 0.1, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: "Screenshot frame" });
+  s.addImage({ path: path.join(ROOT, "docs/img/overview-top.png"), x: 7.6, y: shotY, w: shotW, h: shotH, objectName: "Overview screenshot", altText: "Overview page of the hosted site" });
+  s.addNotes("All of this is hosted. The overview carries the value items and business case; Data assets has the live run and every event log; the repo has the pipeline, the seeding script and the README with the setup gotchas from a new trial org.");
 
   }
 
