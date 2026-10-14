@@ -38,6 +38,7 @@ const D = Object.fromEntries(I.value_drivers.map(d => [d.id, d]));
 const winPair = d => d.evidence.match(/win (\d+)% vs (\d+)%/).slice(1).map(Number);
 const [rwBad, rwGood] = winPair(D.rework);
 const [qBad, qGood] = winPair(D.qualification);
+const apWin = winPair(D.approval); // [waited >7 days, waited <=7 days]
 const regions = Object.entries(I.by_region).filter(([, v]) => v.approval_wait_days != null);
 const negotiated = D.rework.negotiated_per_year; // exact, unrounded
 const framed = D.rework.annual_value * 0.5; // same calculation as the dashboard
@@ -128,7 +129,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   text(s, `Illustrative: ${K.cases} simulated opportunities in Salesforce's object shape (${I.period.months} months). The same pipeline runs live on ${LIVE.kpis.cases} seeded opportunities in a Salesforce trial org.`, { x: 0.8, y: 4.08, w: 5.2, h: 1.1, fontSize: 13, color: C.text2, valign: "middle", objectName: "Headline basis" });
 
   const findings = [
-    ["Accelerate revenue", `EMEA discount approvals take ${days(D.approval.baseline)} days vs ${days(D.approval.target)} in the fastest region.`],
+    ["Accelerate bookings", `EMEA discount approvals take ${days(D.approval.baseline)} days vs ${days(D.approval.target)} in the fastest region.`],
     ["Improve win rate", `${pct(D.rework.baseline)} of negotiated deals loop back for a re-quote; they win ${rwBad}% vs ${rwGood}%.`],
     ["Sales productivity", `${pct(D.qualification.baseline)} of deals skip Qualification and win ${qBad}% vs ${qGood}%.`],
   ];
@@ -188,7 +189,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   const discover = [
     [pct(K.happy_path_conformance), `match the selected winning trace (${pct(K.winning_trace_share_of_won)} of won deals)`],
     [String(K.variants), `distinct paths across ${K.cases} deals`],
-    [`${days(D.approval.baseline)} days`, "median EMEA approval wait, the slowest hand-off"],
+    [`${days(D.approval.baseline)} days`, "median EMEA discount approval, the slowest region"],
   ];
   discover.forEach(([v, l], i) => {
     const y = 1.5 + i * 1.3;
@@ -214,7 +215,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   const charts = [
     { title: "Median approval wait (days)", labels: regions.map(([r]) => r), values: regions.map(([, v]) => v.approval_wait_days),
       colors: regions.map(([, v]) => (v.approval_wait_days === Math.max(...regions.map(([, w]) => w.approval_wait_days)) ? hot : muted)), fmt: "0.0",
-      take: `EMEA approvals take ${(D.approval.baseline - D.approval.target).toFixed(1)} days longer than the fastest region (${D.approval.cohorts.problem + D.approval.cohorts.comparison} EMEA approvals).` },
+      take: `${(D.approval.baseline - D.approval.target).toFixed(1)} days slower than the fastest region. EMEA deals waiting >7 days won ${apWin[0]}% vs ${apWin[1]}% (n = ${D.approval.cohorts.problem} vs ${D.approval.cohorts.comparison}).` },
     { title: "Win rate of negotiated deals", labels: ["Clean path", "Re-quoted"], values: [rwGood / 100, rwBad / 100], colors: [muted, hot], fmt: "0%",
       take: `Re-quoted deals win ${rwGood - rwBad} points less often (n = ${D.rework.cohorts.problem} re-quoted vs ${D.rework.cohorts.comparison} clean).` },
     { title: "Win rate by qualification", labels: ["Qualified", "Skipped"], values: [qGood / 100, qBad / 100], colors: [muted, hot], fmt: "0%",
@@ -242,7 +243,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   s.addText("Business case overview: three opportunities, one deep-dive", { placeholder: "title" });
   const hdr = t => ({ text: t, options: { bold: true, color: C.background1, fill: { color: C.text2 } } });
   const opps = [
-    ["Accelerate revenue", "1  EMEA discount approvals", "Deal desk lead", "Short", D.approval, false],
+    ["Accelerate bookings", "1  EMEA discount approvals", "Deal desk lead", "Short", D.approval, false],
     ["Improve win rate", "2  Re-quotes (deep-dive)", "VP Revenue Ops", "Medium", D.rework, true],
     ["Sales productivity", "3  Skipped qualification", "Sales operations", "Short", D.qualification, false],
   ];
@@ -264,9 +265,9 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   card(s, 0.6, 4.6, 6.0, 1.85, "Overlap card");
   text(s, [
     { text: "Opportunities overlap", options: { bold: true, color: C.text2, breakLine: true } },
-    { text: `${ov.rework_and_qualification} deals are both re-quoted and unqualified, ${ov.rework_and_approval} re-quoted with slow approvals, ${ov.qualification_and_approval} unqualified with slow approvals.`, options: { breakLine: true } },
+    { text: `${ov.rework_and_qualification} deals were re-quoted and skipped Qualification, ${ov.rework_and_approval} were re-quoted with slow approvals, ${ov.qualification_and_approval} skipped Qualification with slow approvals.`, options: { breakLine: true } },
     { text: " ", options: { breakLine: true, fontSize: 6 } },
-    { text: "So the total is gross: incremental wins must be counted once per opportunity before anything is committed.", options: { italic: true, color: C.accent6 } },
+    { text: "So the total is gross: count each incremental deal win once across all three improvement opportunities before committing.", options: { italic: true, color: C.accent6 } },
   ], { x: 0.85, y: 4.72, w: 5.5, h: 1.95, fontSize: 14, color: C.text1, objectName: "Overlap text" });
   text(s, "Before value is committed", { x: 6.95, y: 4.6, w: 5.75, h: 0.35, fontSize: 14, bold: true, color: C.text2, objectName: "Checklist heading" });
   const checks = [
@@ -286,7 +287,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Value" });
   s.addText("Value case: reduce re-quotes in quote-to-close", { placeholder: "title" });
   card(s, 0.6, 1.35, 12.1, 0.45, "Filter bar");
-  text(s, `Time frame: ${I.period.from.slice(0, 7)} to ${I.period.to.slice(0, 7)}   ·   Deals that reached Negotiate   ·   Proposed owner: VP Revenue Operations   ·   Simulated data`, { x: 0.85, y: 1.35, w: 11.6, h: 0.45, fontSize: 12, color: C.text2, valign: "middle", objectName: "Filter text" });
+  text(s, `${I.period.from.slice(0, 7)} to ${I.period.to.slice(0, 7)}, annualised  ·  Reached Negotiation/Review  ·  Amount = bookings  ·  Proposed owner: VP Revenue Ops  ·  Simulated data`, { x: 0.85, y: 1.35, w: 11.6, h: 0.45, fontSize: 12, color: C.text2, valign: "middle", objectName: "Filter text" });
   const cols = [
     ["Challenge", [`${Math.round(negotiated)} negotiated deals a year; ${pct(D.rework.baseline)} loop back for a re-quote`, `Re-quoted deals win ${rwBad}% vs ${rwGood}%`, `EMEA approvals take ${days(D.approval.baseline)} days vs ${days(D.approval.target)}`]],
     ["Root cause (to capture)", ["Reason codes: quote expired, discount, scope, pricing error", "Hotspots by approver queue, region and rep", "Test whether approval delay causes expiry and re-quotes"]],
@@ -302,7 +303,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
     ["Share re-quoted", `${(D.rework.baseline * 100).toFixed(1)}%`],
     ["Win-rate gap", `${(D.rework.win_rate_lift * 100).toFixed(1)} pts`],
     ["Average won deal", `$${(K.avg_won_deal / 1000).toFixed(1)}k`],
-    ["Scenario capture", "50%"],
+    ["Re-quotes prevented", "50%"],
   ];
   chain.forEach(([l, v], i) => {
     const x = 0.6 + i * 1.95;
@@ -314,10 +315,13 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   card(s, 10.4, 4.65, 2.3, 1.35, "Framed value pill", C.text2);
   text(s, [
     { text: `≈ ${usd(framed)}`, options: { fontSize: 30, bold: true, color: C.background1, breakLine: true } },
-    { text: "modelled upside p.a.", options: { fontSize: 12, color: C.accent3 } },
+    { text: "modelled incremental bookings p.a.", options: { fontSize: 11, color: C.accent3 } },
   ], { x: 10.4, y: 4.65, w: 2.3, h: 1.35, align: "center", valign: "middle", objectName: "Framed value" });
-  text(s, `Assumptions: simulated data, annualised over the ${I.period.months}-month event window (illustrative run rate); Amount = opportunity bookings; win-rate gap is an association among deals that reached Negotiate; 50% capture is a scenario. Tracking: share re-quoted vs a frozen baseline of ${(D.rework.baseline * 100).toFixed(1)}%, win rate vs a comparison group; Finance validates realized revenue.`, { x: 0.6, y: 6.2, w: 12.1, h: 0.5, fontSize: 11, italic: true, color: C.accent6, objectName: "Assumptions" });
-  s.addNotes("This follows my value framing format: challenge, root cause, solution, then a multiplicative value chain. The customer owns the improvement assumption; we own the evidence. Root cause is labelled 'to capture' because it needs reason codes the CRM doesn't hold yet. The chain multiplies to the displayed value using unrounded inputs.");
+  text(s, [
+    { text: "Scenario to test: ", options: { bold: true, color: C.text2 } },
+    { text: `cut re-quotes from ${(D.rework.baseline * 100).toFixed(1)}% to ${(D.rework.baseline * 50).toFixed(1)}% of negotiated deals, assuming each prevented re-quote recovers the ${(D.rework.win_rate_lift * 100).toFixed(1)}-point win-rate gap. Measured against a comparison group; Finance validates incremental bookings, revenue recognition assessed separately.` },
+  ], { x: 0.6, y: 6.12, w: 12.1, h: 0.75, fontSize: 14, color: C.text1, objectName: "Scenario" });
+  s.addNotes(`This follows my value framing format: challenge, root cause, solution, then a multiplicative value chain. The customer owns the improvement assumption; we own the evidence. Root cause is labelled 'to capture' because it needs reason codes the CRM doesn't hold yet. The chain multiplies to the displayed value using unrounded inputs. Annualised over the ${I.period.months}-month event window as an illustrative run rate; the win-rate gap is an association among deals that reached Negotiation/Review.`);
 
   }
 
@@ -441,6 +445,11 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
     text(s, body, { x: x + 0.3, y: 2.95, w: 3.05, h: 1.3, fontSize: 16, color: C.background1, objectName: `Next ${i + 1} body` });
     text(s, owner, { x: x + 0.3, y: 4.0, w: 3.05, h: 0.4, fontSize: 12, color: C.accent3, objectName: `Next ${i + 1} owner` });
   });
+  text(s, "Illustrative schedule; owners are proposed.", { x: 0.8, y: 4.75, w: 8, h: 0.3, fontSize: 12, italic: true, color: C.accent3, objectName: "Schedule note" });
+  text(s, [
+    { text: "Decision today: ", options: { bold: true, color: C.background1 } },
+    { text: "agree the validation scope, named owners and pilot success criteria.", options: { color: C.accent3 } },
+  ], { x: 0.8, y: 5.25, w: 9.2, h: 0.6, fontSize: 18, objectName: "Decision" });
   text(s, `${SITE}  ·  Luke Audie`, { x: 0.8, y: 6.5, w: 8, h: 0.4, fontSize: 14, color: C.accent3, objectName: "Closing contact" });
   logo(s, 10.35, 6.35, 0.55);
   s.addNotes("Close on the decision: validate on production data, run a controlled pilot only after the causes are confirmed, then measure against a frozen baseline with Finance sign-off.");

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T20:47:06",
+ "generated_at": "2026-10-14T21:22:31",
  "source": "salesforce",
  "period": {
   "from": "2026-10-14",
@@ -494,7 +494,7 @@
  "value_drivers": [
   {
    "id": "approval",
-   "theme": "Accelerate revenue",
+   "theme": "Accelerate bookings",
    "driver": "Remove EMEA discount-approval bottleneck",
    "evidence": "EMEA approvals take 0.0 days (median) vs 0.0 days in the best region; deals waiting >7 days win 0% vs 67%.",
    "kpi": "Median discount-approval cycle (days)",

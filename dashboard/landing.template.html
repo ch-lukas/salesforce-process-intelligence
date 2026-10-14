@@ -1,4 +1,4 @@
-<title>Lead-to-Close Process Intelligence</title>
+<title>Process Intelligence</title>
 <meta name="description" content="Lead-to-close process mining on Salesforce data: three value items, a framed business case, and the pipeline behind it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -240,7 +240,7 @@ footer .inner { display: grid; gap: 6px; }
 <div class="hero">
   <div class="inner">
     <div class="topbar">
-      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">PI</span>Lead-to-Close Process Intelligence</a>
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">PI</span>Process Intelligence</a>
       <nav class="topnav" aria-label="Pages">
         <a href="./" aria-current="page">Overview</a>
         <a href="./dashboard.html">Process analysis</a>
@@ -293,7 +293,8 @@ footer .inner { display: grid; gap: 6px; }
     <article class="bc">
       <div class="filters">
         <span><b>Time frame:</b> <span id="timeframe"></span></span>
-        <span><b>Scope:</b> deals that reached Negotiation</span>
+        <span><b>Scope:</b> deals that reached Negotiation/Review</span>
+        <span><b>Amount:</b> bookings</span>
         <span><b>Data:</b> simulated, Salesforce object shape</span>
       </div>
       <div class="quads">
@@ -313,7 +314,7 @@ footer .inner { display: grid; gap: 6px; }
           <ul>
             <li>Baseline: <span id="baseline"></span> of negotiated deals re-quoted (frozen)</li>
             <li>After intervention: measured against a comparison group</li>
-            <li>Realized revenue: validated by Finance, not modelled</li>
+            <li>Incremental bookings validated by Finance; revenue recognition assessed separately</li>
           </ul>
         </section>
       </div>
@@ -434,7 +435,7 @@ const win = d => d.evidence.match(/win (\d+)% vs (\d+)%/).slice(1).map(Number);
 
 $("lede").textContent = `An illustrative value case: ${K.cases} simulated opportunities in Salesforce's object shape, mined into a process map, with the same pipeline proven live on a Salesforce trial org. Three patterns stand out, each with a measurable KPI and a framed annual value.`;
 const OV = DATA.overlaps;
-$("overlap-note").textContent = `Items overlap: ${OV.rework_and_qualification} deals are both re-quoted and unqualified, ${OV.rework_and_approval} re-quoted with slow approvals, ${OV.qualification_and_approval} unqualified with slow approvals. So the total is gross: count incremental wins once per deal before committing. Committed value is agreed with each owner and Finance; realized value is tracked against a frozen baseline.`;
+$("overlap-note").textContent = `Items overlap: ${OV.rework_and_qualification} deals were re-quoted and skipped Qualification, ${OV.rework_and_approval} were re-quoted with slow approvals, ${OV.qualification_and_approval} skipped Qualification with slow approvals. So the total is gross: count each incremental deal win once across all three improvement opportunities before committing. Committed value is agreed with each owner and Finance; realized value is tracked against a frozen baseline.`;
 $("headline").textContent = usd(headline);
 $("fullgap").textContent = usd(DATA.total_annual_value);
 $("total").textContent = usd(DATA.total_annual_value);
@@ -452,7 +453,7 @@ $("kpis").innerHTML = [
 
 const [rwBad, rwGood] = win(D.rework), [qBad, qGood] = win(D.qualification);
 const items = [
-  { n: 1, d: D.approval, chip: "Accelerate revenue", title: "EMEA discount approvals", owner: "Deal desk lead", ttv: "Short",
+  { n: 1, d: D.approval, chip: "Accelerate bookings", title: "EMEA discount approvals", owner: "Deal desk lead", ttv: "Short",
     evidence: `Approvals take ${Number(D.approval.baseline).toFixed(1)} days in EMEA against ${Number(D.approval.target).toFixed(1)} in the fastest region.`,
     rows: [["Fastest region", D.approval.target, false], ["EMEA", D.approval.baseline, true]], max: D.approval.baseline, fmt: v => `${Number(v).toFixed(1)}d` },
   { n: 2, d: D.rework, chip: "Improve win rate", title: "Re-quotes in negotiation", owner: "VP Revenue Ops", ttv: "Medium", focus: true,
@@ -492,12 +493,12 @@ const cells = [
   ["Share re-quoted", `${(rw.baseline * 100).toFixed(1)}%`],
   ["Win-rate gap", `${(rw.win_rate_lift * 100).toFixed(1)} pts`],
   ["Average won deal", `$${(K.avg_won_deal / 1000).toFixed(1)}k`],
-  ["Scenario capture", pct(capture)],
+  ["Re-quotes prevented", pct(capture)],
 ];
 $("chain").innerHTML = cells.map(([l, v], i) =>
   `<div class="cell"><div class="l">${l}</div><div class="v">${v}</div></div><div class="op" aria-hidden="true">${i < cells.length - 1 ? "×" : "="}</div>`
-).join("") + `<div class="fv"><div class="pill">Framed value</div><div class="big num">≈ ${usd(bcValue)}</div><div class="sub">modelled upside p.a.</div></div>`;
-$("bc-assumptions").textContent = `Assumptions: simulated data in Salesforce's object shape, annualised over the ${DATA.period.months}-month event window (illustrative run rate); Amount = opportunity bookings; the win-rate gap is an association among deals that reached Negotiation; 50% capture is a scenario. Calculated from unrounded inputs.`;
+).join("") + `<div class="fv"><div class="pill">Framed value</div><div class="big num">≈ ${usd(bcValue)}</div><div class="sub">modelled incremental bookings p.a.</div></div>`;
+$("bc-assumptions").innerHTML = `<b>Scenario to test:</b> cut re-quotes from ${(rw.baseline * 100).toFixed(1)}% to ${(rw.baseline * 50).toFixed(1)}% of negotiated deals, assuming each prevented re-quote recovers the ${(rw.win_rate_lift * 100).toFixed(1)}-point win-rate gap. Simulated data, annualised over the ${DATA.period.months}-month event window (illustrative run rate); the gap is an association among deals that reached Negotiation/Review. Calculated from unrounded inputs.`;
 document.querySelectorAll("figcaption").forEach(f => { f.textContent = f.textContent.replace("${cases}", LIVE.kpis.cases); });
 
 // ---------- go-deeper modals: buttons and #hash links open them ----------

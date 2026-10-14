@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T20:47:06",
+ "generated_at": "2026-10-14T21:22:31",
  "source": "synthetic",
  "period": {
   "from": "2025-10-23",
@@ -761,7 +761,7 @@
  "value_drivers": [
   {
    "id": "approval",
-   "theme": "Accelerate revenue",
+   "theme": "Accelerate bookings",
    "driver": "Remove EMEA discount-approval bottleneck",
    "evidence": "EMEA approvals take 7.0 days (median) vs 1.2 days in the best region; deals waiting >7 days win 47% vs 54%.",
    "kpi": "Median discount-approval cycle (days)",

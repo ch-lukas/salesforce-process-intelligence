@@ -153,7 +153,7 @@ def main():
     drivers = [
         {
             "id": "approval",
-            "theme": "Accelerate revenue",
+            "theme": "Accelerate bookings",
             "driver": "Remove EMEA discount-approval bottleneck",
             "evidence": f"EMEA approvals take {region_wait.get('EMEA', 0)} days (median) vs "
                         f"{best_region_wait} days in the best region; deals waiting >7 days win "
