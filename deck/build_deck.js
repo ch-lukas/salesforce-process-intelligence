@@ -236,6 +236,48 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   text(s, "Assumptions: annualised from 10 months of history; win-rate gap compares only deals that reached Negotiation; cycle-time gains not counted; half of the gap closed.", { x: 0.6, y: 6.2, w: 12.1, h: 0.5, fontSize: 11, italic: true, color: C.accent6, objectName: "Assumptions" });
   s.addNotes("This follows my value framing format: challenge, root cause, solution, then a multiplicative value chain. The customer owns the improvement assumption; we own the evidence. Root cause is labelled 'to capture' because it needs reason codes the CRM doesn't hold yet.");
 
+  // ---------- Value: proof ----------
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Value" });
+  s.addText("Everything is live and open to inspect", { placeholder: "title" });
+  const proof = [
+    ["Process dashboard", SITE, `https://${SITE}`],
+    ["Value case one-pager", `${SITE}/value-case.html`, `https://${SITE}/value-case.html`],
+    ["Live Salesforce extract", `${SITE}/live.html`, `https://${SITE}/live.html`],
+    ["Source code and event logs", REPO, `https://${REPO}`],
+  ];
+  proof.forEach(([label, shown, url], i) => {
+    const y = 1.55 + i * 1.22;
+    card(s, 0.6, y, 6.6, 1.05, `Proof ${i + 1}`);
+    s.addShape(pres.shapes.OVAL, { x: 0.82, y: y + 0.3, w: 0.45, h: 0.45, fill: { color: C.accent1 }, line: { type: "none" }, objectName: `Proof ${i + 1} marker` });
+    text(s, "→", { x: 0.82, y: y + 0.3, w: 0.45, h: 0.45, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Proof ${i + 1} glyph` });
+    text(s, label, { x: 1.45, y: y + 0.14, w: 5.6, h: 0.38, fontSize: 16, bold: true, color: C.text2, objectName: `Proof ${i + 1} label` });
+    text(s, url ? [{ text: shown, options: { hyperlink: { url } } }] : shown, { x: 1.45, y: y + 0.54, w: 5.6, h: 0.38, fontSize: 14, color: C.accent6, objectName: `Proof ${i + 1} link` });
+  });
+  const shotH = 4.75, shotW = shotH * (1280 / 1180);
+  s.addShape(pres.shapes.RECTANGLE, { x: 7.6 - 0.05, y: 1.5, w: shotW + 0.1, h: shotH + 0.1, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: "Screenshot frame" });
+  s.addImage({ path: path.join(ROOT, "docs/img/value-case.png"), x: 7.6, y: 1.55, w: shotW, h: shotH, objectName: "Value case screenshot", altText: "Value case one-pager on the hosted site" });
+  s.addNotes("All of this is hosted. The repo has the pipeline, the seeding script and the README with the setup gotchas I hit on a new trial org.");
+
+  // ---------- Close: next steps ----------
+  pres.addSection({ title: "Close" });
+  s = pres.addSlide({ masterName: "CLOSING_DARK", sectionTitle: "Close" });
+  circle(s, 10.2, 4.4, 5.4, C.accent1, 75, "Decor circle large");
+  s.addText("Turning the finding into a decision", { placeholder: "title" });
+  const next = [
+    ["Validate", "Run the same extract on the production org and confirm approval waits and re-quote rates with RevOps."],
+    ["Act", "Pilot a delegated approval threshold for EMEA discounts up to 30% and make Qualification a required gate."],
+    ["Monitor", "Schedule the extract into Apromore, track the KPIs against target and report value realised quarterly."],
+  ];
+  next.forEach(([head, body], i) => {
+    const x = 0.8 + i * 3.95;
+    card(s, x, 2.0, 3.65, 2.5, `Next ${i + 1} card`, C.accent6);
+    text(s, head, { x: x + 0.3, y: 2.3, w: 3.05, h: 0.5, fontSize: 22, bold: true, color: C.accent3, objectName: `Next ${i + 1} heading` });
+    text(s, body, { x: x + 0.3, y: 2.95, w: 3.05, h: 1.4, fontSize: 16, color: C.background1, objectName: `Next ${i + 1} body` });
+  });
+  text(s, `${SITE}  ·  Luke Audie`, { x: 0.8, y: 6.5, w: 8, h: 0.4, fontSize: 14, color: C.accent3, objectName: "Closing contact" });
+  logo(s, 10.35, 6.35, 0.55);
+  s.addNotes("Close on the decision: validate on production data, pilot one policy change, then monitor value realised in Apromore.");
+
   // ---------- Tech setup: divider ----------
   pres.addSection({ title: "Tech setup" });
   s = pres.addSlide({ masterName: "SECTION_DARK", sectionTitle: "Tech setup" });
@@ -332,48 +374,6 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
     text(s, b, { x: 7.15, y: y + 0.5, w: 5.35, h: 0.4, fontSize: 14, color: C.text1, objectName: `Gotcha ${i + 1} fix` });
   });
   s.addNotes("These are the things that would trip up a customer's first technical session; each one is solved in the repo and written up in the README.");
-
-  // ---------- Tech setup: proof ----------
-  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("Everything is live and open to inspect", { placeholder: "title" });
-  const proof = [
-    ["Process dashboard", SITE, `https://${SITE}`],
-    ["Value case one-pager", `${SITE}/value-case.html`, `https://${SITE}/value-case.html`],
-    ["Live Salesforce extract", `${SITE}/live.html`, `https://${SITE}/live.html`],
-    ["Source code and event logs", REPO, `https://${REPO}`],
-  ];
-  proof.forEach(([label, shown, url], i) => {
-    const y = 1.55 + i * 1.22;
-    card(s, 0.6, y, 6.6, 1.05, `Proof ${i + 1}`);
-    s.addShape(pres.shapes.OVAL, { x: 0.82, y: y + 0.3, w: 0.45, h: 0.45, fill: { color: C.accent1 }, line: { type: "none" }, objectName: `Proof ${i + 1} marker` });
-    text(s, "→", { x: 0.82, y: y + 0.3, w: 0.45, h: 0.45, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Proof ${i + 1} glyph` });
-    text(s, label, { x: 1.45, y: y + 0.14, w: 5.6, h: 0.38, fontSize: 16, bold: true, color: C.text2, objectName: `Proof ${i + 1} label` });
-    text(s, url ? [{ text: shown, options: { hyperlink: { url } } }] : shown, { x: 1.45, y: y + 0.54, w: 5.6, h: 0.38, fontSize: 14, color: C.accent6, objectName: `Proof ${i + 1} link` });
-  });
-  const shotH = 4.75, shotW = shotH * (1280 / 1180);
-  s.addShape(pres.shapes.RECTANGLE, { x: 7.6 - 0.05, y: 1.5, w: shotW + 0.1, h: shotH + 0.1, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: "Screenshot frame" });
-  s.addImage({ path: path.join(ROOT, "docs/img/value-case.png"), x: 7.6, y: 1.55, w: shotW, h: shotH, objectName: "Value case screenshot", altText: "Value case one-pager on the hosted site" });
-  s.addNotes("All of this is hosted. The repo has the pipeline, the seeding script and the README with the setup gotchas I hit on a new trial org.");
-
-  // ---------- Close: next steps ----------
-  pres.addSection({ title: "Close" });
-  s = pres.addSlide({ masterName: "CLOSING_DARK", sectionTitle: "Close" });
-  circle(s, 10.2, 4.4, 5.4, C.accent1, 75, "Decor circle large");
-  s.addText("Turning the finding into a decision", { placeholder: "title" });
-  const next = [
-    ["Validate", "Run the same extract on the production org and confirm approval waits and re-quote rates with RevOps."],
-    ["Act", "Pilot a delegated approval threshold for EMEA discounts up to 30% and make Qualification a required gate."],
-    ["Monitor", "Schedule the extract into Apromore, track the KPIs against target and report value realised quarterly."],
-  ];
-  next.forEach(([head, body], i) => {
-    const x = 0.8 + i * 3.95;
-    card(s, x, 2.0, 3.65, 2.5, `Next ${i + 1} card`, C.accent6);
-    text(s, head, { x: x + 0.3, y: 2.3, w: 3.05, h: 0.5, fontSize: 22, bold: true, color: C.accent3, objectName: `Next ${i + 1} heading` });
-    text(s, body, { x: x + 0.3, y: 2.95, w: 3.05, h: 1.4, fontSize: 16, color: C.background1, objectName: `Next ${i + 1} body` });
-  });
-  text(s, `${SITE}  ·  Luke Audie`, { x: 0.8, y: 6.5, w: 8, h: 0.4, fontSize: 14, color: C.accent3, objectName: "Closing contact" });
-  logo(s, 10.35, 6.35, 0.55);
-  s.addNotes("Close on the decision: validate on production data, pilot one policy change, then monitor value realised in Apromore.");
 
   await pres.writeFile({ fileName: OUT });
   await applyTheme(OUT, THEME);
