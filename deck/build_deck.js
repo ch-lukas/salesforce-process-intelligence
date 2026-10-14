@@ -102,7 +102,7 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   circle(s, 9.4, 3.4, 6.6, C.accent1, 70, "Decor circle large");
   circle(s, 10.6, 2.6, 0.75, C.accent3, 0, "Decor circle small");
   s.addText("From Salesforce data to a framed value case", { placeholder: "title" });
-  s.addText("Lead-to-close process intelligence: a working demo built for Apromore", { placeholder: "body" });
+  s.addText("Lead-to-close process intelligence: a working demo build", { placeholder: "body" });
   text(s, "Luke Audie  ·  October 2026", { x: 0.8, y: 6.4, w: 6, h: 0.4, fontSize: 14, color: C.accent3, objectName: "Byline" });
   logo(s, 0.8, 0.7, 0.6);
   s.addNotes("I wanted to show how I'd open with a Salesforce-heavy prospect: start from their own CRM data, find where the process leaks, and turn it into a number the CRO cares about.");
