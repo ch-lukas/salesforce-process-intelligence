@@ -221,6 +221,8 @@ dialog.modal::backdrop { background: rgba(3, 20, 45, 0.62); backdrop-filter: blu
 footer { border-top: 1px solid var(--line); padding-block: 24px 40px; color: var(--ink-3); font-size: 0.86rem; }
 footer .inner { display: grid; gap: 6px; }
 
+/* the small accent circle would sit over the hero text below this width */
+@media (max-width: 1000px) { .hero::after { display: none; } }
 @media (max-width: 900px) {
   .hero-grid, .build { grid-template-columns: minmax(0, 1fr); }
   .values, .resources, .quads, .shots, .bigbtns { grid-template-columns: minmax(0, 1fr); }

@@ -92,6 +92,7 @@ section, header.hero { display: grid; grid-template-columns: minmax(0, 1fr); gap
 .band .lineage span { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); }
 .band .lineage i { color: var(--on-navy-2); }
 .band .badge { background: rgba(255, 255, 255, 0.12); color: var(--on-navy); }
+@media (max-width: 1000px) { .band::after { display: none; } }
 @media (max-width: 860px) { .band::before { width: 360px; height: 360px; right: -200px; top: 200px; } .band::after { display: none; } }
 
 .lineage { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-2); }
@@ -265,7 +266,7 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
     <div class="head">
       <div class="eyebrow">1 · Discover the paths in the event log</div>
       <h2 id="s-map">Process map</h2>
-      <p class="muted">Every box is an activity, every arrow a hand-off seen in the data. Switch to <em>Wait time</em> to see where deals sit idle; drag the slider to hide rare paths.</p>
+      <p class="muted">Every box is an activity, every arrow a hand-off seen in the data. Switch to <em>Wait time</em> to see where deals sit idle; drag the slider to hide rare transitions.</p>
     </div>
     <div class="panel">
       <div class="toolbar">
@@ -273,7 +274,7 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
           <button id="v-freq" aria-pressed="true">Frequency</button>
           <button id="v-perf" aria-pressed="false">Wait time</button>
         </div>
-        <label class="slider" for="abstraction">Paths shown <input id="abstraction" type="range" min="15" max="100" value="50"> <span id="abs-val" class="num">50%</span></label>
+        <label class="slider" for="abstraction">Transitions shown <input id="abstraction" type="range" min="15" max="100" value="50"> <span id="abs-val" class="num">50%</span></label>
         <div class="legend" id="legend"></div>
       </div>
       <div class="mapbox"><svg id="map" role="img" aria-label="Directly-follows process map"></svg></div>
@@ -283,7 +284,7 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
   <section aria-labelledby="s-evidence">
     <div class="head">
       <div class="eyebrow">2 · Diagnose</div>
-      <h2 id="s-evidence">Three deviations explain most of the lost value</h2>
+      <h2 id="s-evidence">Three process patterns associated with lower win rates</h2>
     </div>
     <div class="grid3" id="evidence"></div>
   </section>
@@ -491,7 +492,7 @@ function drawMap() {
       const t = el("text", { x: ed.x, y: ed.y + 3, "text-anchor": "middle" }, grp);
       t.textContent = label;
     }
-    const tipText = `${e.source} → ${e.target}\n${e.count} deals · median wait ${e.median_wait_days.toFixed(1)} days`;
+    const tipText = `${e.source} → ${e.target}\n${e.count} transitions · median wait ${e.median_wait_days.toFixed(1)} days`;
     hit.addEventListener("mousemove", ev => showTip(ev, tipText));
     hit.addEventListener("mouseleave", hideTip);
   });
@@ -513,7 +514,7 @@ function drawMap() {
 
   $("legend").innerHTML = view === "perf"
     ? `<span>Median wait</span><span class="ramp" aria-hidden="true"></span><span class="num">0 → ${maxWait.toFixed(0)}d</span>`
-    : `<span>Line weight = number of deals</span>`;
+    : `<span>Line weight = transition occurrences</span>`;
 }
 
 const tip = $("tip");
@@ -554,7 +555,7 @@ $("evidence").innerHTML = `
 
 // ---------- variants ----------
 const happy = new Set(DATA.happy_path);
-$("variants-sub").textContent = `${K.variants} distinct paths across ${K.cases} deals. The top ${DATA.variants.length} cover ${pct(DATA.variants.reduce((s, v) => s + v.share, 0))}. Amber steps are off the designed path.`;
+$("variants-sub").textContent = `${K.variants} distinct paths across ${K.cases} deals. The top ${DATA.variants.length} cover ${pct(DATA.variants.reduce((s, v) => s + v.share, 0))}. Amber activities are additional to the selected winning trace; they may be valid conditional steps.`;
 $("variants").innerHTML = `<thead><tr><th>#</th><th>Path</th><th class="n">Deals</th><th class="n">Share</th><th class="n">Median cycle</th></tr></thead><tbody>${
   DATA.variants.map((v, i) => `<tr><td class="n">${i + 1}</td><td><div class="path">${v.path.map(a =>
     `<span class="${a === "Closed Won" ? "won" : a === "Closed Lost" ? "lost" : happy.has(a) ? "" : "dev"}">${esc(a)}</span>`).join("")}</div></td><td class="n">${v.count}</td><td class="n">${pct(v.share)}</td><td class="n">${v.median_cycle_days}d</td></tr>`).join("")
@@ -571,7 +572,7 @@ function renderTree() {
     <div class="td${last}"><b>${esc(d.driver)}</b><span class="small muted">${esc(d.evidence)}</span></div>
     <div class="td${last}"><span class="small muted">${esc(d.kpi)}</span><span class="kpimove">${kpiFmt(d, d.baseline)} <span class="arrow">→</span> ${kpiFmt(d, d.target)}</span><span class="small muted">${d.affected_deals_per_year} deals / year in scope</span></div>
     <div class="td last${last}"><span class="usd num" id="usd-${d.id}"></span>
-      <label class="capture" for="cap-${d.id}">Gap closed <input type="range" id="cap-${d.id}" min="10" max="100" step="5" value="${d.default_capture * 100}"> <span id="capv-${d.id}" class="num"></span></label></div>`;
+      <label class="capture" for="cap-${d.id}">Gap closed <input type="range" id="cap-${d.id}" min="0" max="100" step="5" value="${d.default_capture * 100}"> <span id="capv-${d.id}" class="num"></span></label></div>`;
   }).join("");
   $("tree").innerHTML = head + rows;
   DATA.value_drivers.forEach(d => {
@@ -594,13 +595,13 @@ function updateValue() {
     return;
   }
   $("total-hero").textContent = fmtUSD(total);
-  $("total-sub").textContent = `Illustrative, gross annual upside (overlapping items, simulated data) if we close ${pct(Object.values(capture).reduce((a, b) => a + b, 0) / DATA.value_drivers.length)} of the gap on three process issues found in the CRM data. Full gap: ${fmtUSD(DATA.total_annual_value)}.`;
+  $("total-sub").textContent = `Illustrative, gross incremental bookings (overlapping items, simulated data) at the selected capture assumptions: ${pct(total / DATA.total_annual_value)} of the ${fmtUSD(DATA.total_annual_value)} full gap. Set a driver to 0% to exclude it.`;
   $("total-note").textContent = `${pct(total / K.annual_pipeline)} of the ${fmtUSD(K.annual_pipeline)} annual pipeline. Drivers overlap on some deals, so treat the sum as an upper bound until validated per deal.`;
 }
 $("assumptions").innerHTML = [
   `Value = deals in scope per year × win-rate gap between the problem cohort and the clean cohort × average won deal (${fmtUSD(K.avg_won_deal)}) × share of the gap closed.`,
   `Annualised from ${DATA.period.months} months of history. Win-rate gaps compare like with like (for example, only deals that reached Negotiation for re-quotes).`,
-  `Cycle-time gains (EMEA approvals ${D.approval.days_saved_per_deal} days faster per deal) pull revenue forward and are not counted in the totals.`,
+  `Cycle-time gains (EMEA approvals ${D.approval.days_saved_per_deal} days faster per deal) bring bookings forward and are not counted in the totals. Figures are modelled bookings; Finance validates measured bookings, and revenue recognition is assessed separately.`,
 ].map(s => `<li>${esc(s)}</li>`).join("");
 
 drawMap();
