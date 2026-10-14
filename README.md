@@ -13,6 +13,8 @@ Takes lead-to-close data out of a Salesforce org, turns it into a process-mining
 
 > **About the data.** The business case is an *illustrative* scenario: 800 opportunities simulated in Salesforce's exact object shape, with process issues planted on purpose. The same pipeline runs unchanged against a real Salesforce trial org (40 seeded opportunities, 351 events in [`data/live/`](data/live/)), which proves the extraction, not the numbers. Value figures are gross, overlapping and based on associations that would need validating with the process owners and Finance.
 
+![Process analysis page](docs/img/dashboard.png)
+
 ## How it works
 
 ```mermaid

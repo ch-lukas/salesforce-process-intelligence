@@ -436,6 +436,7 @@ const LIVE = {"generated_at":"2026-10-14T21:22:31","source":"salesforce","period
 const $ = id => document.getElementById(id);
 const usd = v => v >= 1e6 ? `$${(v / 1e6).toFixed(1)}M` : `$${Math.round(v / 1e3)}k`;
 const pct = v => `${Math.round(v * 100)}%`;
+const usd2 = v => v >= 1e6 ? `$${(v / 1e6).toFixed(2)}M` : `$${Math.round(v / 1e3)}k`;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const K = DATA.kpis;
 const D = Object.fromEntries(DATA.value_drivers.map(d => [d.id, d]));
@@ -469,7 +470,7 @@ const items = [
     evidence: `${pct(D.rework.baseline)} of negotiated deals loop back for a new quote (n = ${D.rework.cohorts.problem}), and those deals win less often.`,
     rows: [["Clean path", rwGood / 100, false], ["Re-quoted", rwBad / 100, true]], max: 0.6, fmt: pct },
   { n: 3, d: D.qualification, chip: "Sales productivity", title: "Skipped qualification", owner: "Sales operations", ttv: "Short",
-    evidence: `${pct(D.qualification.baseline)} of deals skip the Qualification stage (n = ${D.qualification.cohorts.problem}) and win less than half as often.`,
+    evidence: `${pct(D.qualification.baseline)} of deals skip the Qualification stage (n = ${D.qualification.cohorts.problem}), and they win less than half as often.`,
     rows: [["Qualified", qGood / 100, false], ["Skipped", qBad / 100, true]], max: 0.6, fmt: pct },
 ];
 $("values").innerHTML = items.map(it => `
@@ -480,7 +481,7 @@ $("values").innerHTML = items.map(it => `
     <div class="compare">${it.rows.map(([l, v, hot]) =>
       `<div class="cmp"><span>${esc(l)}</span><div class="track"><div class="fill${hot ? " hot" : ""}" style="width:${Math.min(v / it.max, 1) * 100}%"></div></div><b>${it.fmt(v)}</b></div>`).join("")}</div>
     <div class="vfoot">
-      <div class="framed"><b class="num">${usd(it.d.annual_value)}</b><span>full-gap scenario p.a.</span></div>
+      <div class="framed"><b class="num">${usd2(it.d.annual_value)}</b><span>full-gap scenario p.a.</span></div>
       <div class="meta">Proposed: ${esc(it.owner)}<br>Time to value: ${it.ttv}${it.focus ? `<br><a class="deep" href="#business-case">Read the deep-dive →</a>` : ""}</div>
     </div>
   </article>`).join("");
