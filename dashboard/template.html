@@ -180,10 +180,31 @@ td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowra
 .step h3 { font-size: 1rem; }
 .next { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .next .card h3 { color: var(--accent); }
+/* go-deeper buttons and modals (same component as the overview) */
+.bigbtns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.bigbtn { all: unset; box-sizing: border-box; cursor: pointer; position: relative; display: grid; gap: 10px; align-content: start; min-height: 200px; padding: 28px; border-radius: 20px; background: var(--navy); color: var(--on-navy); overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
+.bigbtn::after { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; right: -70px; bottom: -90px; background: var(--cloud); opacity: 0.3; transition: transform .25s ease; }
+.bigbtn:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(3, 45, 96, 0.28); }
+.bigbtn:hover::after { transform: scale(1.12); }
+.bigbtn:focus-visible { outline: 3px solid var(--cloud); outline-offset: 4px; }
+.bigbtn .n { font-family: var(--mono); font-size: 0.8rem; color: var(--on-navy-2); }
+.bigbtn b { font-family: var(--display); font-size: 1.9rem; font-weight: 800; line-height: 1.05; }
+.bigbtn span:not(.n):not(.go) { color: var(--on-navy-2); font-size: 0.98rem; max-width: 36ch; position: relative; z-index: 1; }
+.bigbtn .go { position: absolute; right: 22px; top: 20px; font-size: 1.4rem; color: var(--cloud); z-index: 1; }
+dialog.modal { width: min(1080px, calc(100% - 32px)); max-height: 88vh; padding: 0; border: 0; border-radius: 20px; background: var(--bg); color: var(--ink); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35); overflow: hidden; }
+dialog.modal[open] { display: flex; flex-direction: column; }
+dialog.modal::backdrop { background: rgba(3, 20, 45, 0.62); backdrop-filter: blur(3px); }
+.modal-bar { display: flex; justify-content: flex-end; padding: 14px 16px 0; }
+.modal-close { all: unset; cursor: pointer; font-weight: 700; font-size: 0.9rem; color: var(--ink-2); padding: 8px 14px; border-radius: 999px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.modal-close:hover { color: var(--ink); }
+.modal-close:focus-visible { outline: 3px solid var(--cloud); outline-offset: 2px; }
+.modal-body { overflow: auto; padding: 4px clamp(16px, 3vw, 36px) 36px; display: grid; gap: 24px; }
+@media (prefers-reduced-motion: reduce) { .bigbtn, .bigbtn::after { transition: none; } .bigbtn:hover { transform: none; } }
 footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 16px; }
 
 @media (max-width: 860px) {
-  .answer, .grid3, .next { grid-template-columns: minmax(0, 1fr); }
+  .answer, .grid3, .next, .bigbtns { grid-template-columns: minmax(0, 1fr); }
+  .bigbtn { min-height: 0; }
   .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tree { grid-template-columns: minmax(0, 1fr); }
   .tree .th { display: none; }
@@ -290,9 +311,23 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
     <ul class="assume" id="assumptions"></ul>
   </section>
 
+  <section class="explore" aria-labelledby="s-explore">
+    <div class="head">
+      <div class="eyebrow">Go deeper</div>
+      <h2 id="s-explore">How it was built and what happens next</h2>
+    </div>
+    <div class="bigbtns">
+      <button class="bigbtn" type="button" data-open="built"><span class="n">01</span><b>How it was built</b><span>Salesforce data to Process Intelligence in four steps: extract, correlate, load, mine.</span><span class="go" aria-hidden="true">↗</span></button>
+      <button class="bigbtn" type="button" data-open="next"><span class="n">02</span><b>Next steps</b><span>Validate, pilot, measure: turning the finding into a decision.</span><span class="go" aria-hidden="true">↗</span></button>
+    </div>
+  </section>
+
+  <dialog class="modal" id="built" aria-labelledby="s-pipe">
+    <div class="modal-bar"><button class="modal-close" type="button" aria-label="Close">Close ✕</button></div>
+    <div class="modal-body">
   <section aria-labelledby="s-pipe">
     <div class="head">
-      <div class="eyebrow">5 · How it was built</div>
+      <div class="eyebrow">How it was built</div>
       <h2 id="s-pipe">Salesforce data to Process Intelligence in four steps</h2>
     </div>
     <div class="flow">
@@ -303,17 +338,26 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
     </div>
   </section>
 
+    </div>
+  </dialog>
+  <dialog class="modal" id="next" aria-labelledby="s-next">
+    <div class="modal-bar"><button class="modal-close" type="button" aria-label="Close">Close ✕</button></div>
+    <div class="modal-body">
   <section aria-labelledby="s-next">
     <div class="head">
-      <div class="eyebrow">6 · Next steps</div>
+      <div class="eyebrow">Next steps</div>
       <h2 id="s-next">Turning the finding into a decision</h2>
     </div>
     <div class="next">
-      <div class="card"><h3>Validate</h3><p class="small">Run the same extract on the production org; confirm approval waits and re-quote rates with the EMEA deal desk and RevOps.</p></div>
-      <div class="card"><h3>Act</h3><p class="small">Pilot a delegated approval threshold for EMEA discounts up to 30% and make Qualification a required stage gate.</p></div>
-      <div class="card"><h3>Monitor</h3><p class="small">Refresh the extract nightly, track the KPIs against a frozen baseline and a comparison group, and have Finance sign off realized value.</p></div>
+      <div class="card"><h3>Validate</h3><p class="small">Run the extract on the production org; confirm cohorts, re-quote causes and overlap.</p><p class="small muted">RevOps + SE · weeks 1–2</p></div>
+      <div class="card"><h3>Pilot</h3><p class="small">Agree a controlled pilot with RevOps and Finance once re-quote causes are validated.</p><p class="small muted">RevOps + Finance · weeks 3–8</p></div>
+      <div class="card"><h3>Measure</h3><p class="small">Track the share re-quoted and win rate against a frozen baseline and a comparison group; Finance validates incremental bookings.</p><p class="small muted">Finance · monthly, signed off quarterly</p></div>
     </div>
+    <p><b>Decision today:</b> agree the validation scope, named owners and pilot success criteria.</p>
+    <p class="small muted">Illustrative schedule; owners are proposed.</p>
   </section>
+    </div>
+  </dialog>
 
   <footer id="foot"></footer>
 </div>
@@ -561,4 +605,18 @@ $("assumptions").innerHTML = [
 
 drawMap();
 renderTree();
+
+// ---------- go-deeper modals: buttons and #hash links open them ----------
+const openModal = id => { const d = id && document.getElementById(id); if (d && d.tagName === "DIALOG" && !d.open) d.showModal(); };
+document.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => {
+  history.replaceState(null, "", `#${b.dataset.open}`);
+  openModal(b.dataset.open);
+}));
+document.querySelectorAll("dialog.modal").forEach(d => {
+  d.querySelector(".modal-close").addEventListener("click", () => d.close());
+  d.addEventListener("click", e => { if (e.target === d) d.close(); });
+  d.addEventListener("close", () => { if (location.hash === `#${d.id}`) history.replaceState(null, "", location.pathname); });
+});
+window.addEventListener("hashchange", () => openModal(location.hash.slice(1)));
+openModal(location.hash.slice(1));
 </script>
