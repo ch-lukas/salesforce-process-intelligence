@@ -1,15 +1,13 @@
 {
-  "name": "deck",
+  "name": "salesforce-process-intelligence-deck",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Generates the story and tech setup decks from the mined insights",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:story && npm run build:tech",
+    "build:story": "node build_deck.js",
+    "build:tech": "DECK_KIND=tech node build_deck.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "image-size": "^1.1.1",
     "pptxgenjs": "^3.12.0"

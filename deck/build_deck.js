@@ -1,12 +1,12 @@
 // Builds deck/salesforce-process-intelligence.pptx from data/insights.json.
 // Colour theme follows the Salesforce CRM handbook: navy, cloud blue, light-blue panels.
-// Usage: node deck/build_deck.js   (logo picked up from deck/logo-white.svg if present)
+// Usage (from deck/): npm ci && npm run build
+//   DECK_KIND=tech builds the tech setup deck; DECK_LOGO=path/to/logo.svg adds a logo to the closing slide.
 const fs = require("fs");
 const path = require("path");
 const pptxgen = require("pptxgenjs");
 
-const SKILL = process.env.PPTX_SKILL_DIR;
-const { applyTheme } = require(path.join(SKILL, "scripts/apply_theme.js"));
+const { applyTheme } = require("./theme");
 
 const ROOT = path.join(__dirname, "..");
 const I = JSON.parse(fs.readFileSync(path.join(ROOT, "data/insights.json"), "utf8"));
@@ -20,7 +20,7 @@ const REPO = "github.com/ch-lukas/salesforce-process-intelligence";
 const SITE = "salesforce-process-intelligence.vercel.app";
 
 const THEME = {
-  name: "Salesforce Handbook",
+  name: "Process Intelligence",
   headFontFace: "Arial",
   bodyFontFace: "Arial",
   colors: {
