@@ -153,6 +153,32 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   });
   s.addNotes("Lead with the number, then the three findings. Everything after this slide is how I got there and how you would check it.");
 
+  // ---------- Opening: approach overview ----------
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Opening" });
+  s.addText("Approach: from finding value to realising it", { placeholder: "title" });
+  const stages = [
+    ["Identify", "Mine the CRM event log: process map, variants and bottlenecks.", "3 opportunities found", true],
+    ["Frame", "Size each opportunity from its KPI baseline and customer-owned assumptions.", `${usd(I.total_annual_value)} framed`, true],
+    ["Commit", "Validate KPI definitions and values with each opportunity owner.", "Signed-off committed value", false],
+    ["Realize", "Act on the root cause, then track the KPI against its baseline.", "Value realised, reported quarterly", false],
+  ];
+  stages.forEach(([head, body, out, done], i) => {
+    const x = 0.6 + i * 3.1, w = 2.85;
+    const fill = done ? C.text2 : C.background2, ink = done ? C.background1 : C.text2;
+    card(s, x, 1.85, w, 3.55, `Stage ${i + 1} card`, fill);
+    s.addShape(pres.shapes.OVAL, { x: x + 0.25, y: 2.1, w: 0.5, h: 0.5, fill: { color: done ? C.accent1 : C.accent3 }, line: { type: "none" }, objectName: `Stage ${i + 1} marker` });
+    text(s, String(i + 1), { x: x + 0.25, y: 2.1, w: 0.5, h: 0.5, fontSize: 16, bold: true, color: done ? C.background1 : C.text2, align: "center", valign: "middle", objectName: `Stage ${i + 1} number` });
+    text(s, head, { x: x + 0.25, y: 2.8, w: w - 0.5, h: 0.5, fontSize: 22, bold: true, color: ink, objectName: `Stage ${i + 1} title` });
+    text(s, body, { x: x + 0.25, y: 3.35, w: w - 0.5, h: 1.2, fontSize: 14, color: ink, objectName: `Stage ${i + 1} body` });
+    text(s, [{ text: "Output: ", options: { bold: true } }, { text: out }], { x: x + 0.25, y: 4.65, w: w - 0.5, h: 0.6, fontSize: 13, color: done ? C.accent3 : C.accent6, objectName: `Stage ${i + 1} output` });
+    if (i < stages.length - 1) s.addShape(pres.shapes.RIGHT_ARROW, { x: x + w + 0.03, y: 3.45, w: 0.19, h: 0.34, fill: { color: C.accent2 }, line: { type: "none" }, objectName: `Stage ${i + 1} arrow` });
+  });
+  // "Today" marker sits over the Frame stage.
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6 + 3.1 + 0.85, y: 1.38, w: 1.15, h: 0.36, rectRadius: 0.18, fill: { color: C.accent4 }, line: { type: "none" }, objectName: "Today pill" });
+  text(s, "Today", { x: 0.6 + 3.1 + 0.85, y: 1.38, w: 1.15, h: 0.36, fontSize: 13, bold: true, color: C.background1, align: "center", valign: "middle", objectName: "Today label" });
+  text(s, "This demo covers Identify and Frame on Salesforce data. Commit and Realize run with the customer's process owners.", { x: 0.6, y: 5.75, w: 12.1, h: 0.5, fontSize: 16, italic: true, color: C.accent6, objectName: "Approach note" });
+  s.addNotes("Framed value isn't committed value. Today's work stops at Frame on purpose: the numbers are evidence-backed but the improvement assumption belongs to the opportunity owner. Commit means signing off KPI definitions and values together; Realize means tracking the KPI against the baseline on a fixed cadence.");
+
   // ---------- Evidence: discover ----------
   pres.addSection({ title: "Evidence" });
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Evidence" });
@@ -202,8 +228,54 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   });
   s.addNotes("Orange marks the problem cohort in each chart. Win-rate gaps compare like with like, for example only deals that reached Negotiation for re-quotes.");
 
-  // ---------- Value: value case ----------
+  // ---------- Value: business case overview ----------
   pres.addSection({ title: "Value" });
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Value" });
+  s.addText("Business case overview: three opportunities, one deep-dive", { placeholder: "title" });
+  const hdr = t => ({ text: t, options: { bold: true, color: C.background1, fill: { color: C.text2 } } });
+  const opps = [
+    ["Accelerate revenue", "1  EMEA discount approvals", "Deal desk lead", "Short", D.approval, false],
+    ["Improve win rate", "2  Re-quotes (deep-dive)", "VP Revenue Ops", "Medium", D.rework, true],
+    ["Sales productivity", "3  Skipped qualification", "Sales operations", "Short", D.qualification, false],
+  ];
+  const cell = (t, focus, extra = {}) => ({ text: t, options: { fill: { color: focus ? C.accent3 : C.background1 }, bold: focus, ...extra } });
+  const rows = [
+    ["Objective", "Opportunity", "Owner", "Time to value", "Framed", "Committed", "Realized"].map(hdr),
+    ...opps.map(([obj, opp, owner, ttv, d, focus]) => [
+      cell(obj, focus), cell(opp, focus), cell(owner, focus), cell(ttv, focus),
+      cell(usd(d.annual_value), focus, { align: "right" }), cell("TBD", focus, { align: "right", color: C.accent6 }), cell("—", focus, { align: "right", color: C.accent6 }),
+    ]),
+    [cell("Total", false, { bold: true }), cell(""), cell(""), cell(""), cell(usd(I.total_annual_value), false, { bold: true, align: "right" }), cell("TBD", false, { align: "right", color: C.accent6 }), cell("—", false, { align: "right", color: C.accent6 })],
+  ];
+  s.addTable(rows, { x: 0.6, y: 1.45, w: 12.1, colW: [2.05, 2.95, 1.9, 1.3, 1.2, 1.45, 1.25], fontSize: 14, color: C.text1, valign: "middle", rowH: 0.48,
+    border: { type: "solid", pt: 0.75, color: HEX.accent3 }, margin: [0.05, 0.12, 0.05, 0.12], objectName: "Business case table" });
+  text(s, "Framed = full gap sized from Salesforce data. Committed is agreed with each owner after validation; realized is tracked against the baseline.", { x: 0.6, y: 4.08, w: 12.1, h: 0.35, fontSize: 12, italic: true, color: C.accent6, objectName: "Table note" });
+
+  // Value vs time-to-value grid: where each opportunity sits.
+  const gx = 0.6, gy = 4.55, gw = 5.4, gh = 2.05;
+  card(s, gx, gy, gw, gh, "Priority grid");
+  s.addShape(pres.shapes.LINE, { x: gx + gw / 2, y: gy + 0.15, w: 0, h: gh - 0.3, line: { color: C.accent3, width: 1 }, objectName: "Grid vertical" });
+  s.addShape(pres.shapes.LINE, { x: gx + 0.15, y: gy + gh / 2, w: gw - 0.3, h: 0, line: { color: C.accent3, width: 1 }, objectName: "Grid horizontal" });
+  text(s, "Quick wins", { x: gx + 0.15, y: gy + 0.1, w: 2, h: 0.3, fontSize: 11, bold: true, color: C.accent6, objectName: "Grid quick wins" });
+  text(s, "Strategic", { x: gx + gw / 2 + 0.15, y: gy + 0.1, w: 2, h: 0.3, fontSize: 11, bold: true, color: C.accent6, objectName: "Grid strategic" });
+  text(s, "Faster  ←  time to value  →  slower", { x: gx, y: gy + gh + 0.02, w: gw, h: 0.3, fontSize: 11, color: C.accent6, align: "center", objectName: "Grid x axis" });
+  text(s, "Higher value ↑", { x: gx + gw + 0.1, y: gy + 0.1, w: 1.5, h: 0.3, fontSize: 11, color: C.accent6, objectName: "Grid y axis" });
+  const dots = [["1", 0.25, 0.75, false], ["2", 0.72, 0.22, true], ["3", 0.3, 0.25, false]]; // [label, x frac, y frac, focus]
+  dots.forEach(([n, fx, fy, focus], i) => {
+    const d = focus ? 0.5 : 0.42;
+    s.addShape(pres.shapes.OVAL, { x: gx + fx * gw - d / 2, y: gy + fy * gh, w: d, h: d, fill: { color: focus ? C.accent4 : C.accent1 }, line: { type: "none" }, objectName: `Grid dot ${n}` });
+    text(s, n, { x: gx + fx * gw - d / 2, y: gy + fy * gh, w: d, h: d, fontSize: 14, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Grid dot ${n} label` });
+  });
+  text(s, [
+    { text: "Why re-quotes first", options: { bold: true, color: C.text2, breakLine: true } },
+    { text: "Largest framed value, visible directly in OpportunityHistory, and a clear owner in RevOps.", options: { breakLine: true } },
+    { text: " ", options: { breakLine: true, fontSize: 6 } },
+    { text: "Quick wins run alongside", options: { bold: true, color: C.text2, breakLine: true } },
+    { text: "Delegated EMEA approvals (1) and a required Qualification gate (3) are policy changes, not projects." },
+  ], { x: 7.6, y: 4.55, w: 5.1, h: 2.05, fontSize: 14, color: C.text1, objectName: "Priority rationale" });
+  s.addNotes("Portfolio view first, then one deep-dive. Framed values come straight from the data; Committed stays TBD until the owner signs off the KPI definition and the improvement assumption. Numbers on the grid match the table rows.");
+
+  // ---------- Value: value case ----------
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Value" });
   s.addText("Value case: reduce re-quotes in quote-to-close", { placeholder: "title" });
   card(s, 0.6, 1.35, 12.1, 0.45, "Filter bar");
