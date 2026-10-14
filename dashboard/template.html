@@ -175,11 +175,8 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
   <nav class="nav" aria-label="Pages">
     <a href="./">Overview</a>
     <a href="./dashboard.html" id="nav-demo">Process analysis</a>
-    <a href="./#business-case">Business case</a>
-    <a href="./#live-run">Data assets</a>
     <a href="./#resources">Documents</a>
     <a href="https://github.com/ch-lukas/salesforce-process-intelligence">GitHub</a>
-    <a href="./data/demo_event_log.csv" id="dl-csv">Download event log (CSV)</a>
   </nav>
   <header class="hero">
     <div class="lineage" aria-label="Data lineage">
@@ -304,9 +301,7 @@ $("source").textContent = DATA.source === "synthetic"
 $("foot").textContent = `Generated ${DATA.generated_at} · ${DATA.source === "synthetic" ? "Simulated with planted process issues, in the exact Salesforce object shape, because trial orgs cannot backdate history." : "Source: Salesforce org."} Annualised over ${DATA.period.months} months of history.`;
 
 $("nav-demo").setAttribute("aria-current", "page");
-if (!LIVE && DATA.source !== "synthetic") $("dl-csv").hidden = true;
 if (LIVE) {
-  $("dl-csv").href = "./data/live_event_log.csv";
   ["s-evidence", "s-value"].forEach(id => { sectionOf(id).hidden = true; });
   $("v-perf").hidden = true;
   $("headline").textContent = "Lead-to-close, extracted live from Salesforce";
