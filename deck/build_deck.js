@@ -189,11 +189,17 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
     [`${days(D.approval.baseline)} days`, "median EMEA approval wait, the slowest hand-off"],
   ];
   discover.forEach(([v, l], i) => {
-    const y = 1.65 + i * 1.55;
+    const y = 1.5 + i * 1.3;
     text(s, v, { x: 0.6, y, w: 2.9, h: 0.9, fontSize: 44, bold: true, color: C.accent1, valign: "middle", objectName: `Discover stat ${i + 1}` });
     text(s, l, { x: 3.6, y, w: 3.9, h: 0.9, fontSize: 18, color: C.text2, valign: "middle", objectName: `Discover label ${i + 1}` });
   });
-  text(s, "Approval steps and re-quote loops show up as detours from the designed path.", { x: 0.6, y: 6.25, w: 6.9, h: 0.5, fontSize: 14, italic: true, color: C.accent6, objectName: "Discover note" });
+  text(s, "Approval steps and re-quote loops show up as detours from the designed path.", { x: 0.6, y: 5.35, w: 6.9, h: 0.45, fontSize: 14, italic: true, color: C.accent6, objectName: "Discover note" });
+  // Highlighted, clickable link to the live dashboard.
+  s.addText([
+    { text: "Live process map:  ", options: { bold: true, color: C.text2 } },
+    { text: SITE, options: { bold: true, hyperlink: { url: `https://${SITE}`, tooltip: "Open the live dashboard" } } },
+  ], { shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.15, x: 0.6, y: 6.0, w: 6.9, h: 0.6, fill: { color: C.accent3 }, line: { color: C.accent1, width: 1.5 },
+    fontSize: 14, align: "center", valign: "middle", margin: 0.08, objectName: "Dashboard link" });
   const mapH = 5.25, mapW = mapH * (1080 / 1250);
   s.addShape(pres.shapes.RECTANGLE, { x: 12.7 - mapW - 0.05, y: 1.4, w: mapW + 0.1, h: mapH + 0.1, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: "Map frame" });
   s.addImage({ path: path.join(__dirname, "process-map.png"), x: 12.7 - mapW, y: 1.45, w: mapW, h: mapH, objectName: "Process map", altText: "Process map from the hosted dashboard" });
