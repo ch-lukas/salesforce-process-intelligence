@@ -402,39 +402,6 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   popup(4, px + pw - 2.45, 3.43, 2.35, "Objects → events");
   s.addNotes("Left: the trial org standing in for a client's CRM, seeded by seed.py so there's real OpportunityHistory to read. Right: the stage-history query and how each object maps to events; Opportunity Id is the case. Known limits: Task created → completed can include queueing time; open tasks have no completion time and show as zero duration; history can't be backdated in a trial org, so the 10-month dataset is simulated in the same shape. The export produces CSV and XES; an import into a process mining tool is the next step to verify. Production work would add incremental refresh, stable event IDs and reconciliation.");
 
-  // ---------- Tech setup: prototype today, production next ----------
-  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("Prototype today, production next", { placeholder: "title" });
-  const lanes = [
-    ["What the prototype proves", C.background2, C.text2, [
-      "SOQL over REST, signed by the CLI session; no stored credentials",
-      "Opportunity as the case; Tasks join on WhatId, Leads on ConvertedOpportunityId",
-      "History rows collapse to real stage changes; paginated queries",
-      "CSV and XES export with start and complete events",
-    ]],
-    ["Known limits", "FFEEDD", C.text2, [
-      "Task created → completed can include queueing time",
-      "Open tasks have no completion time yet",
-      "Trial orgs can't backdate history, so the analysis uses simulated data",
-      "Import into a process mining tool still to verify",
-    ]],
-    ["Production path", C.text2, C.background1, [
-      "Bulk API 2.0 with incremental refresh on SystemModstamp",
-      "Stable event IDs and deterministic ordering for timestamp ties",
-      "Approval history from ProcessInstance and its steps",
-      "Reconciliation and data-quality checks against source counts",
-    ]],
-  ];
-  lanes.forEach(([head, fill, ink, items], i) => {
-    const x = 0.6 + i * 4.12;
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 1.45, w: 3.86, h: 3.85, rectRadius: 0.12, fill: { color: fill }, line: { type: "none" }, objectName: `Lane ${i + 1} card` });
-    text(s, head, { x: x + 0.25, y: 1.65, w: 3.36, h: 0.45, fontSize: 18, bold: true, color: ink, objectName: `Lane ${i + 1} heading` });
-    text(s, items.map((t, j) => ({ text: t, options: { bullet: true, breakLine: j < items.length - 1 } })),
-      { x: x + 0.25, y: 2.25, w: 3.36, h: 2.9, fontSize: 14, color: ink, paraSpaceAfter: 10, objectName: `Lane ${i + 1} body` });
-  });
-  text(s, "The plumbing is proven. What's left is event semantics and data quality, not connectivity.", { x: 0.6, y: 5.6, w: 12.1, h: 0.5, fontSize: 18, italic: true, color: C.accent6, objectName: "Production takeaway" });
-  s.addNotes("The prototype proves the extraction and event-log design end to end on a real org. The limits are about event semantics and data, not plumbing. Production work is incremental refresh at volume, stable identifiers, approval history from the approval objects, and reconciliation so Finance can trust the numbers.");
-
   // ---------- Tech setup: everything is live ----------
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
   s.addText("Hosted demo, live extraction proof and source code", { placeholder: "title" });
