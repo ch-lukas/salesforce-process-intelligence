@@ -66,11 +66,12 @@ p { margin: 0; }
 .hero::before { width: 620px; height: 620px; right: -170px; top: 120px; background: var(--cloud); opacity: 0.28; }
 .hero::after { width: 64px; height: 64px; right: 330px; top: 92px; background: var(--cloud-soft); }
 .topbar { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between; }
-.brand { display: flex; gap: 10px; align-items: center; font-weight: 700; letter-spacing: -0.01em; }
+.brand { display: flex; gap: 10px; align-items: center; font-weight: 700; letter-spacing: -0.01em; color: var(--on-navy); text-decoration: none; }
 .brand-mark { width: 30px; height: 30px; border-radius: 50%; background: var(--cloud); display: grid; place-items: center; font-family: var(--mono); font-size: 0.72rem; font-weight: 500; color: var(--navy); }
 .topnav { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.92rem; }
 .topnav a { color: var(--on-navy-2); text-decoration: none; }
-.topnav a:hover { color: var(--on-navy); text-decoration: underline; }
+.topnav a:hover, .topnav a[aria-current] { color: var(--on-navy); }
+.topnav a[aria-current] { text-decoration: underline; text-underline-offset: 6px; }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 40px; align-items: end; margin-top: 72px; }
 .hero .eyebrow { color: var(--on-navy-2); }
 .hero h1 { font-size: clamp(2.4rem, 5.6vw, 4.2rem); line-height: 1.02; font-weight: 800; margin-top: 14px; }
@@ -155,6 +156,34 @@ section { display: grid; gap: 26px; }
 .live code { background: rgba(255, 255, 255, 0.12); color: var(--on-navy); }
 .live a { color: var(--on-navy); font-weight: 700; }
 
+/* business case (formerly its own page) */
+.bc { background: var(--surface); border-radius: var(--radius); padding: clamp(18px, 3vw, 32px); display: grid; gap: 24px; box-shadow: 0 0 0 1px var(--line); }
+.filters { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 10px 14px; background: var(--panel); border-radius: 10px; font-size: 0.9rem; color: var(--ink-2); }
+.filters b { color: var(--ink); }
+.quads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 36px; }
+.quad { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.quad h3 { font-size: 1.15rem; font-weight: 800; padding-bottom: 8px; border-bottom: 1.5px solid var(--ink); display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.quad ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--ink-2); font-size: 0.97rem; }
+.formula { font-family: var(--mono); font-size: 0.8rem; color: var(--ink-2); background: var(--panel); padding: 10px 12px; border-radius: 8px; }
+.chain { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr) auto) minmax(0, 1.3fr); gap: 10px; align-items: end; }
+.cell { display: grid; gap: 6px; min-width: 0; }
+.cell .l { font-size: 0.8rem; font-weight: 700; text-align: center; min-height: 2.6em; display: flex; align-items: end; justify-content: center; color: var(--ink-2); }
+.cell .v { background: var(--panel); border-radius: 10px; padding: 12px 6px; text-align: center; font-family: var(--display); font-size: 1.35rem; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.op { font-size: 1.3rem; color: var(--ink-3); padding-bottom: 12px; }
+.fv { display: grid; gap: 6px; text-align: center; }
+.fv .pill { background: var(--navy); color: var(--on-navy); border-radius: 999px; padding: 6px 12px; font-weight: 700; font-size: 0.85rem; }
+.fv .big { font-family: var(--display); font-size: clamp(1.9rem, 4vw, 2.5rem); font-weight: 800; line-height: 1; color: var(--accent); white-space: nowrap; }
+.fv .sub, .assume { font-size: 0.85rem; color: var(--ink-3); }
+.assume { border-top: 1px solid var(--line); padding-top: 14px; }
+
+/* live run evidence */
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.shots figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+.shots img { width: 100%; border-radius: 12px; box-shadow: 0 0 0 1px var(--line); display: block; }
+.shots figcaption { font-size: 0.88rem; color: var(--ink-2); }
+.dl { display: flex; flex-wrap: wrap; gap: 10px; }
+.dl a { color: var(--on-navy); }
+
 /* resources */
 .resources { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .res { display: grid; gap: 6px; padding: 20px 22px; border-radius: 14px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); text-decoration: none; color: var(--ink); transition: box-shadow .15s ease, transform .15s ease; }
@@ -168,7 +197,10 @@ footer .inner { display: grid; gap: 6px; }
 
 @media (max-width: 900px) {
   .hero-grid, .build { grid-template-columns: minmax(0, 1fr); }
-  .values, .resources { grid-template-columns: minmax(0, 1fr); }
+  .values, .resources, .quads, .shots { grid-template-columns: minmax(0, 1fr); }
+  .chain { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .op { display: none; }
+  .fv { grid-column: 1 / -1; }
   .journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .kpi:nth-child(3) { border-right: 0; }
@@ -187,11 +219,11 @@ footer .inner { display: grid; gap: 6px; }
 <div class="hero">
   <div class="inner">
     <div class="topbar">
-      <div class="brand"><span class="brand-mark" aria-hidden="true">PI</span>Lead-to-Close Process Intelligence</div>
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">PI</span>Lead-to-Close Process Intelligence</a>
       <nav class="topnav" aria-label="Pages">
-        <a href="./dashboard.html">Process dashboard</a>
-        <a href="./value-case.html">Value case</a>
-        <a href="./live.html">Live extract</a>
+        <a href="./" aria-current="page">Overview</a>
+        <a href="./dashboard.html">Process analysis</a>
+        <a href="#resources">Decks</a>
         <a href="https://github.com/ch-lukas/salesforce-process-intelligence">GitHub</a>
       </nav>
     </div>
@@ -202,7 +234,7 @@ footer .inner { display: grid; gap: 6px; }
         <p class="lede" id="lede"></p>
         <div class="ctas">
           <a class="btn btn-primary" href="./dashboard.html">Open the process dashboard →</a>
-          <a class="btn btn-ghost" href="./value-case.html">Read the value case</a>
+          <a class="btn btn-ghost" href="#business-case">Read the business case</a>
         </div>
       </div>
       <div class="hero-card" aria-label="Headline value">
@@ -232,6 +264,44 @@ footer .inner { display: grid; gap: 6px; }
     </div>
   </section>
 
+  <section id="business-case" aria-labelledby="s-bc">
+    <div class="head">
+      <div class="eyebrow">Business case · deep-dive on item 2</div>
+      <h2 id="s-bc">Reduce re-quotes in quote-to-close</h2>
+      <p>Proposed opportunity owner: VP Revenue Operations.</p>
+    </div>
+    <article class="bc">
+      <div class="filters">
+        <span><b>Time frame:</b> <span id="timeframe"></span></span>
+        <span><b>Scope:</b> deals that reached Negotiation</span>
+        <span><b>Data:</b> simulated, Salesforce object shape</span>
+      </div>
+      <div class="quads">
+        <section class="quad"><h3>Challenge</h3><ul id="challenge"></ul></section>
+        <section class="quad"><h3>Root cause <span class="chip hot">to capture</span></h3><ul>
+          <li>Re-quote reasons to break down: quote expired while awaiting approval, discount renegotiated, scope change, pricing error.</li>
+          <li>Hotspots by approver queue, region and rep: approvals handled, median wait, re-quote rate.</li>
+          <li>Test whether approval delay causes quote expiry and re-quotes before acting on it.</li>
+        </ul></section>
+        <section class="quad"><h3>Solution</h3><ul>
+          <li>Process discovery and performance views expose where quotes wait and loop back.</li>
+          <li>Conformance checking flags deals that skip Qualification or bypass approval steps.</li>
+          <li>Agree a controlled pilot with RevOps and Finance once re-quote causes are validated.</li>
+        </ul></section>
+        <section class="quad"><h3>Tracking</h3>
+          <div class="formula">(Baseline re-quote share − share after intervention) × negotiated deals per year × win-rate gap × average won deal</div>
+          <ul>
+            <li>Baseline: <span id="baseline"></span> of negotiated deals re-quoted (frozen)</li>
+            <li>After intervention: measured against a comparison group</li>
+            <li>Realized revenue: validated by Finance, not modelled</li>
+          </ul>
+        </section>
+      </div>
+      <div class="chain" id="chain"></div>
+      <p class="assume" id="bc-assumptions"></p>
+    </article>
+  </section>
+
   <section aria-labelledby="s-approach">
     <div class="head">
       <div class="eyebrow">Approach</div>
@@ -246,10 +316,11 @@ footer .inner { display: grid; gap: 6px; }
     </div>
   </section>
 
-  <section aria-labelledby="s-build">
+  <section id="live-run" aria-labelledby="s-build">
     <div class="head">
-      <div class="eyebrow">How it's built</div>
+      <div class="eyebrow">Live Salesforce run</div>
       <h2 id="s-build">Salesforce data to Process Intelligence in four steps</h2>
+      <p>The same pipeline, run against a real Salesforce trial org. It proves the plumbing works; the business numbers above come from the simulated dataset.</p>
     </div>
     <div class="build">
       <ol class="steps">
@@ -265,23 +336,27 @@ footer .inner { display: grid; gap: 6px; }
           <div><b class="num" id="live-cases"></b><span>opportunities extracted</span></div>
           <div><b class="num" id="live-events"></b><span>events in the log</span></div>
         </div>
-        <p><code>seed.py</code> loaded demo deals and walked them through real stage changes, standing in for a client's CRM. Trial orgs can't backdate history, so the 10-month analysis uses a simulated dataset in the same object shape.</p>
-        <p><a href="./live.html">See the live extract →</a></p>
+        <p><code>seed.py</code> loaded demo deals and walked them through real stage changes, standing in for a client's CRM. Trial orgs can't backdate history, so elapsed times are seconds.</p>
+        <div class="dl"><a href="./data/live_event_log.csv">Download CSV</a><a href="./data/live_event_log.xes">Download XES</a></div>
       </div>
+    </div>
+    <div class="shots">
+      <figure><img src="./img/salesforce-org.jpg" alt="Salesforce trial org with the seeded demo accounts" loading="lazy"><figcaption>The trial org with ${cases} seeded [Demo] records, standing in for a client's CRM.</figcaption></figure>
+      <figure><img src="./img/stage-history.png" alt="Stage history for one demo deal showing a re-quote loop" loading="lazy"><figcaption>OpportunityHistory for one deal: Propose → Negotiate twice, the re-quote loop the analysis measures.</figcaption></figure>
     </div>
   </section>
 
-  <section aria-labelledby="s-res">
+  <section id="resources" aria-labelledby="s-res">
     <div class="head">
       <div class="eyebrow">Open to inspect</div>
-      <h2 id="s-res">Everything behind the numbers</h2>
+      <h2 id="s-res">Decks, analysis and source</h2>
     </div>
     <div class="resources">
-      <a class="res" href="./dashboard.html"><em>Interactive</em><b>Process dashboard</b><span>Map, variants, bottlenecks and the value model.</span></a>
-      <a class="res" href="./value-case.html"><em>One-pager</em><b>Value case</b><span>Reduce re-quotes in quote-to-close.</span></a>
-      <a class="res" href="./live.html"><em>Live</em><b>Salesforce extract</b><span>The pipeline run against a trial org.</span></a>
+      <a class="res" href="./dashboard.html"><em>Interactive</em><b>Process analysis</b><span>Map, paths, bottlenecks and the value model.</span></a>
       <a class="res" href="./decks/salesforce-process-intelligence.pdf"><em>PDF</em><b>Story deck</b><span>Eight slides: answer, evidence, value, next steps.</span></a>
       <a class="res" href="./decks/salesforce-process-intelligence-tech-setup.pdf"><em>PDF</em><b>Tech setup deck</b><span>From a Salesforce org to an event log.</span></a>
+      <a class="res" href="./data/demo_event_log.csv"><em>CSV</em><b>Simulated event log</b><span>800 deals, 9,011 events.</span></a>
+      <a class="res" href="./data/live_event_log.csv"><em>CSV</em><b>Live event log</b><span>From the Salesforce trial org.</span></a>
       <a class="res" href="https://github.com/ch-lukas/salesforce-process-intelligence"><em>Source</em><b>GitHub repository</b><span>Pipeline, event logs and deck generator.</span></a>
     </div>
   </section>
@@ -345,9 +420,34 @@ $("values").innerHTML = items.map(it => `
       `<div class="cmp"><span>${esc(l)}</span><div class="track"><div class="fill${hot ? " hot" : ""}" style="width:${Math.min(v / it.max, 1) * 100}%"></div></div><b>${it.fmt(v)}</b></div>`).join("")}</div>
     <div class="vfoot">
       <div class="framed"><b class="num">${usd(it.d.annual_value)}</b><span>full-gap scenario p.a.</span></div>
-      <div class="meta">Proposed: ${esc(it.owner)}<br>Time to value: ${it.ttv}${it.focus ? `<br><a class="deep" href="./value-case.html">Read the deep-dive →</a>` : ""}</div>
+      <div class="meta">Proposed: ${esc(it.owner)}<br>Time to value: ${it.ttv}${it.focus ? `<br><a class="deep" href="#business-case">Read the deep-dive →</a>` : ""}</div>
     </div>
   </article>`).join("");
+
+// ---------- business case (deep-dive on re-quotes) ----------
+const rw = D.rework, ap = D.approval;
+const negotiated = rw.negotiated_per_year;
+const capture = 0.5;
+const bcValue = rw.annual_value * capture; // same calculation as the dashboard and deck
+$("timeframe").textContent = `${DATA.period.from.slice(0, 7)} to ${DATA.period.to.slice(0, 7)}`;
+$("baseline").textContent = `${(rw.baseline * 100).toFixed(1)}%`;
+$("challenge").innerHTML = [
+  `About ${Math.round(negotiated).toLocaleString()} deals a year reach Negotiation, and ${pct(rw.baseline)} of them loop back to Proposal for a new quote.`,
+  `Re-quoted deals win ${rwBad}% vs ${rwGood}% for clean deals (n = ${rw.cohorts.problem} vs ${rw.cohorts.comparison}), an association of ${Math.round(rw.win_rate_lift * 100)} points.`,
+  `EMEA discount approvals take ${Number(ap.baseline).toFixed(1)} days (median) vs ${Number(ap.target).toFixed(1)} in the fastest region.`,
+].map(t => `<li>${esc(t)}</li>`).join("");
+const cells = [
+  ["Negotiated deals / year", Math.round(negotiated).toLocaleString()],
+  ["Share re-quoted", `${(rw.baseline * 100).toFixed(1)}%`],
+  ["Win-rate gap", `${(rw.win_rate_lift * 100).toFixed(1)} pts`],
+  ["Average won deal", `$${(K.avg_won_deal / 1000).toFixed(1)}k`],
+  ["Scenario capture", pct(capture)],
+];
+$("chain").innerHTML = cells.map(([l, v], i) =>
+  `<div class="cell"><div class="l">${l}</div><div class="v">${v}</div></div><div class="op" aria-hidden="true">${i < cells.length - 1 ? "×" : "="}</div>`
+).join("") + `<div class="fv"><div class="pill">Framed value</div><div class="big num">≈ ${usd(bcValue)}</div><div class="sub">modelled upside p.a.</div></div>`;
+$("bc-assumptions").textContent = `Assumptions: simulated data in Salesforce's object shape, annualised over the ${DATA.period.months}-month event window (illustrative run rate); Amount = opportunity bookings; the win-rate gap is an association among deals that reached Negotiation; 50% capture is a scenario. Calculated from unrounded inputs.`;
+document.querySelectorAll("figcaption").forEach(f => { f.textContent = f.textContent.replace("${cases}", LIVE.kpis.cases); });
 </script>
 
 </body>

@@ -402,10 +402,10 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
   s.addText("Hosted demo, live extraction proof and source code", { placeholder: "title" });
   const proof = [
-    ["Landing page and value items", SITE, `https://${SITE}`],
-    ["Process dashboard", `${SITE}/dashboard.html`, `https://${SITE}/dashboard.html`],
-    ["Value case one-pager", `${SITE}/value-case.html`, `https://${SITE}/value-case.html`],
-    ["Live Salesforce extract", `${SITE}/live.html`, `https://${SITE}/live.html`],
+    ["Overview: value items and business case", SITE, `https://${SITE}`],
+    ["Process analysis", `${SITE}/dashboard.html`, `https://${SITE}/dashboard.html`],
+    ["Business case (re-quotes)", `${SITE}/#business-case`, `https://${SITE}/#business-case`],
+    ["Live Salesforce run and downloads", `${SITE}/#live-run`, `https://${SITE}/#live-run`],
     ["Source code and event logs", REPO, `https://${REPO}`],
   ];
   proof.forEach(([label, shown, url], i) => {

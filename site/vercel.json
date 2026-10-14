@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/value-case.html",
+      "destination": "/#business-case",
+      "permanent": false
+    },
+    {
+      "source": "/live.html",
+      "destination": "/#live-run",
+      "permanent": false
+    }
+  ]
+}

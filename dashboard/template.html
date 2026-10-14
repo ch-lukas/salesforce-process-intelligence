@@ -173,11 +173,11 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
 
 <div class="wrap">
   <nav class="nav" aria-label="Pages">
-    <a href="./">Home</a>
-    <a href="./dashboard.html" id="nav-demo">Process dashboard</a>
-    <a href="./value-case.html">Value case</a>
-    <a href="./live.html" id="nav-live">Live Salesforce extract</a>
-    <a href="https://github.com/ch-lukas/salesforce-process-intelligence">Source on GitHub</a>
+    <a href="./">Overview</a>
+    <a href="./dashboard.html" id="nav-demo">Process analysis</a>
+    <a href="./#business-case">Business case</a>
+    <a href="./#live-run">Live Salesforce run</a>
+    <a href="https://github.com/ch-lukas/salesforce-process-intelligence">GitHub</a>
     <a href="./data/demo_event_log.csv" id="dl-csv">Download event log (CSV)</a>
   </nav>
   <header class="hero">
@@ -302,7 +302,7 @@ $("source").textContent = DATA.source === "synthetic"
   : "Live data · extracted from Salesforce org";
 $("foot").textContent = `Generated ${DATA.generated_at} · ${DATA.source === "synthetic" ? "Simulated with planted process issues, in the exact Salesforce object shape, because trial orgs cannot backdate history." : "Source: Salesforce org."} Annualised over ${DATA.period.months} months of history.`;
 
-(LIVE ? $("nav-live") : $("nav-demo")).setAttribute("aria-current", "page");
+$("nav-demo").setAttribute("aria-current", "page");
 if (!LIVE && DATA.source !== "synthetic") $("dl-csv").hidden = true;
 if (LIVE) {
   $("dl-csv").href = "./data/live_event_log.csv";
@@ -508,10 +508,7 @@ function updateValue() {
     $(`capv-${d.id}`).textContent = pct(capture[d.id]);
   });
   $("total").textContent = fmtUSD(total);
-  (LIVE ? $("nav-live") : $("nav-demo")).setAttribute("aria-current", "page");
-if (!LIVE && DATA.source !== "synthetic") $("dl-csv").hidden = true;
-if (LIVE) {
-  $("dl-csv").href = "./data/live_event_log.csv";
+  if (LIVE) {
     $("total-hero").textContent = `${K.events} events`;
     $("total-sub").textContent = "Extracted live from a Salesforce org and ready to import into a process mining tool as CSV or XES.";
     return;
