@@ -30,12 +30,18 @@
   --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --radius: 10px;
+  --navy: #032d60;
+  --on-navy: #ffffff;
+  --on-navy-2: #cfe9fe;
+  --cloud: #0b9de0;
+  --cloud-soft: #cfe9fe;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #071a33; --surface: #0d2747; --ink: #eaf3fd; --ink-2: #a9c3e0; --ink-3: #7894b5;
     --line: #1f3d63; --accent: #4fb3f0; --accent-soft: #12365e;
     --heat-1: #6b3a12; --heat-2: #f08a35; --heat-3: #ffb37a; --good: #5cc983; --bad: #ff8a80;
+    --navy: #041b38; --on-navy: #ffffff; --on-navy-2: #a9d4fb; --cloud: #4fb3f0; --cloud-soft: #12365e;
     color-scheme: dark;
   }
 }
@@ -43,6 +49,7 @@
   --bg: #071a33; --surface: #0d2747; --ink: #eaf3fd; --ink-2: #a9c3e0; --ink-3: #7894b5;
     --line: #1f3d63; --accent: #4fb3f0; --accent-soft: #12365e;
     --heat-1: #6b3a12; --heat-2: #f08a35; --heat-3: #ffb37a; --good: #5cc983; --bad: #ff8a80;
+  --navy: #041b38; --on-navy: #ffffff; --on-navy-2: #a9d4fb; --cloud: #4fb3f0; --cloud-soft: #12365e;
   color-scheme: dark;
 }
 
@@ -68,6 +75,30 @@ section, header.hero { display: grid; grid-template-columns: minmax(0, 1fr); gap
 .nav { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 0.78rem; margin-bottom: -24px; }
 .nav a { color: var(--ink-2); text-decoration: none; }
 .nav a[aria-current], .nav a:hover { color: var(--accent); }
+/* navy header band, shared with the overview page */
+.band { position: relative; overflow: hidden; background: var(--navy); color: var(--on-navy); }
+.band::before, .band::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+.band::before { width: 520px; height: 520px; right: -160px; top: 60px; background: var(--cloud); opacity: 0.28; }
+.band::after { width: 56px; height: 56px; right: 300px; top: 80px; background: var(--cloud-soft); }
+.band-inner { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 22px 56px; display: grid; gap: 40px; }
+.topbar { display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between; }
+.brand { display: flex; gap: 10px; align-items: center; font-family: var(--display); font-weight: 700; letter-spacing: -0.01em; color: var(--on-navy); text-decoration: none; }
+.brand-mark { width: 30px; height: 30px; border-radius: 50%; background: var(--cloud); display: grid; place-items: center; font-family: var(--mono); font-size: 0.72rem; font-weight: 500; color: var(--navy); }
+.topnav { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.92rem; }
+.topnav a { color: var(--on-navy-2); text-decoration: none; }
+.topnav a:hover, .topnav a[aria-current] { color: var(--on-navy); }
+.topnav a[aria-current] { text-decoration: underline; text-underline-offset: 6px; }
+.back { display: inline-flex; align-items: center; gap: 8px; width: fit-content; padding: 8px 16px; border-radius: 999px; color: var(--on-navy); text-decoration: none; font-weight: 700; font-size: 0.92rem; box-shadow: inset 0 0 0 1.5px var(--on-navy-2); }
+.back:hover { background: rgba(255, 255, 255, 0.08); }
+.back:focus-visible, .brand:focus-visible, .topnav a:focus-visible { outline: 3px solid var(--cloud); outline-offset: 3px; border-radius: 8px; }
+.band h1 { color: var(--on-navy); font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; max-width: 22ch; }
+.band .muted { color: var(--on-navy-2); }
+.band .lineage { color: var(--on-navy-2); }
+.band .lineage span { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); }
+.band .lineage i { color: var(--on-navy-2); }
+.band .badge { background: rgba(255, 255, 255, 0.12); color: var(--on-navy); }
+@media (max-width: 860px) { .band::before { width: 360px; height: 360px; right: -200px; top: 200px; } .band::after { display: none; } }
+
 .lineage { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-2); }
 .lineage span { padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
 .lineage i { font-style: normal; color: var(--ink-3); }
@@ -178,21 +209,30 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--lin
 
 </head>
 <body>
-<div class="wrap">
-  <nav class="nav" aria-label="Pages">
-    <a href="./">Overview</a>
-    <a href="./dashboard.html" id="nav-demo">Process analysis</a>
-    <a href="./#resources">Documents</a>
-    <a href="https://github.com/ch-lukas/salesforce-process-intelligence">GitHub</a>
-  </nav>
-  <header class="hero">
-    <div class="lineage" aria-label="Data lineage">
-      <span>Salesforce</span><i>→</i><span>Lead · Opportunity · OpportunityHistory · Task</span><i>→</i><span>event log (CSV / XES)</span><i>→</i><span>process mining</span><i>→</i><span>value case</span>
+<div class="band">
+  <div class="band-inner">
+    <div class="topbar">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">PI</span>Lead-to-Close Process Intelligence</a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="./dashboard.html" id="nav-demo">Process analysis</a>
+        <a href="./#resources">Documents</a>
+        <a href="https://github.com/ch-lukas/salesforce-process-intelligence">GitHub</a>
+      </nav>
     </div>
-    <h1 id="headline">Lead-to-close: where the pipeline leaks, and what fixing it is worth</h1>
-    <p class="muted" id="intro"></p>
-    <div class="badge" id="source"></div>
-  </header>
+      <header class="hero">
+          <a class="back" href="./">← Back to overview</a>
+        <div class="lineage" aria-label="Data lineage">
+          <span>Salesforce</span><i>→</i><span>Lead · Opportunity · OpportunityHistory · Task</span><i>→</i><span>event log (CSV / XES)</span><i>→</i><span>process mining</span><i>→</i><span>value case</span>
+        </div>
+        <h1 id="headline">Lead-to-close: where the pipeline leaks, and what fixing it is worth</h1>
+        <p class="muted" id="intro"></p>
+        <div class="badge" id="source"></div>
+      </header>
+  </div>
+</div>
+
+<div class="wrap">
 
   <section aria-labelledby="s-answer">
     <div class="eyebrow">The answer first</div>
