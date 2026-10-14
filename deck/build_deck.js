@@ -236,30 +236,50 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   text(s, "Assumptions: annualised from 10 months of history; win-rate gap compares only deals that reached Negotiation; cycle-time gains not counted; half of the gap closed.", { x: 0.6, y: 6.2, w: 12.1, h: 0.5, fontSize: 11, italic: true, color: C.accent6, objectName: "Assumptions" });
   s.addNotes("This follows my value framing format: challenge, root cause, solution, then a multiplicative value chain. The customer owns the improvement assumption; we own the evidence. Root cause is labelled 'to capture' because it needs reason codes the CRM doesn't hold yet.");
 
-  // ---------- Tech setup: key steps, in pictures ----------
+  // ---------- Tech setup: evidence ----------
   pres.addSection({ title: "Tech setup" });
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
-  s.addText("Tech setup: the key steps, as they ran", { placeholder: "title" });
-  const keySteps = [
-    ["Connect", "Salesforce CLI allowed under Connected Apps OAuth Usage; the CLI session signs every API call.", "connected-apps.png", 1340 / 896],
-    ["Seed", `seed.py loads ${LIVE.kpis.cases} [Demo] deals and walks them through the org's own stages.`, "opportunities.jpg", 1200 / 807],
-    ["Extract", "OpportunityHistory and Task become events, one case per Opportunity. Shown: a re-quote loop.", "stage-history.png", 1512 / 807],
-    ["Mine and publish", "The event log (CSV / XES) feeds the hosted dashboard and value case.", "dashboard-top.png", 1160 / 780],
-  ];
-  keySteps.forEach(([head, body, file, ratio], i) => {
-    const cx = 0.6 + (i % 2) * 6.15, cy = 1.4 + Math.floor(i / 2) * 2.75;
-    card(s, cx, cy, 5.95, 2.55, `Key step ${i + 1} card`);
-    const imgW = 3.2, imgH = Math.min(imgW / ratio, 2.25);
-    const w = imgH * ratio, ix = cx + 0.15 + (imgW - w) / 2, iy = cy + (2.55 - imgH) / 2;
-    s.addShape(pres.shapes.RECTANGLE, { x: ix - 0.03, y: iy - 0.03, w: w + 0.06, h: imgH + 0.06, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: `Key step ${i + 1} frame` });
-    s.addImage({ path: path.join(ROOT, "docs/img/org", file), x: ix, y: iy, w, h: imgH, objectName: `Key step ${i + 1} image`, altText: body });
-    const tx = cx + 3.55;
-    s.addShape(pres.shapes.OVAL, { x: tx, y: cy + 0.25, w: 0.45, h: 0.45, fill: { color: C.accent1 }, line: { type: "none" }, objectName: `Key step ${i + 1} marker` });
-    text(s, String(i + 1), { x: tx, y: cy + 0.25, w: 0.45, h: 0.45, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", objectName: `Key step ${i + 1} number` });
-    text(s, head, { x: tx, y: cy + 0.8, w: 2.25, h: 0.4, fontSize: 16, bold: true, color: C.text2, objectName: `Key step ${i + 1} title` });
-    text(s, body, { x: tx, y: cy + 1.2, w: 2.25, h: 1.25, fontSize: 14, color: C.text1, objectName: `Key step ${i + 1} body` });
+  s.addText("Tech setup: from a Salesforce org to an event log", { placeholder: "title" });
+
+  // Left: the org itself (screenshot with its URL), seeded by seed.py.
+  const orgShot = fs.existsSync(path.join(ROOT, "docs/img/org/salesforce-with-url.jpg"))
+    ? { file: "salesforce-with-url.jpg" } : { file: "opportunities.jpg" };
+  const { width: ow, height: oh } = require("image-size")(path.join(ROOT, "docs/img/org", orgShot.file));
+  const boxW = 5.55, boxH = 4.7, r = ow / oh;
+  const sw = Math.min(boxW, boxH * r), sh = sw / r;
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.6 - 0.04, y: 1.4 - 0.04, w: sw + 0.08, h: sh + 0.08, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: "Org screenshot frame" });
+  s.addImage({ path: path.join(ROOT, "docs/img/org", orgShot.file), x: 0.6, y: 1.4, w: sw, h: sh, objectName: "Org screenshot", altText: "Salesforce trial org with seeded demo records" });
+  text(s, [
+    { text: "Salesforce trial org: ", options: { bold: true } },
+    { text: `seed.py loaded ${LIVE.kpis.cases} [Demo] deals through real stage changes to simulate a client's CRM.` },
+  ], { x: 0.6, y: 6.2, w: 5.55, h: 0.75, fontSize: 14, color: C.text2, objectName: "Org caption" });
+
+  // Right: the SOQL in extract.py, shown verbatim with light syntax colouring.
+  const src = fs.readFileSync(path.join(ROOT, "pipeline/extract.py"), "utf8").split("\n");
+  const q0 = src.findIndex(l => l.startsWith("QUERIES = {"));
+  const q1 = src.findIndex((l, i) => i > q0 && l.startsWith("}"));
+  const codeLines = src.slice(q0, q1 + 1).map(l => l.replace(/^ {4}(?= {4})/, ""));
+  const KW = /\b(SELECT|FROM|WHERE|ORDER BY|AND)\b/;
+  const runs = [];
+  codeLines.forEach((line, li) => {
+    const parts = line.split(/(\b(?:SELECT|FROM|WHERE|ORDER BY|AND)\b|"[a-z_]+"|'[^']*')/).filter(Boolean);
+    parts.forEach((part, pi) => {
+      const color = KW.test(part) ? HEX.accent1 : /^["']/.test(part) ? HEX.accent4 : HEX.accent3;
+      runs.push({ text: part, options: { color, bold: KW.test(part), breakLine: pi === parts.length - 1 && li < codeLines.length - 1 } });
+    });
+    if (!parts.length && li < codeLines.length - 1) runs.push({ text: " ", options: { breakLine: true } });
   });
-  s.addNotes("Every step is real: the CLI fix in Setup, the seeded deals, the raw stage history the extract reads, and the published output. Opportunity is the case; leads join via ConvertedOpportunityId and tasks via WhatId. Trial orgs can't backdate history, so the 10-month dataset is simulated in the same object shape.");
+  const px = 6.45, pw = 6.25;
+  card(s, px, 1.4, pw, 4.7, "Code panel", C.text2);
+  [HEX.accent4, "F6C344", HEX.accent5].forEach((dot, i) =>
+    s.addShape(pres.shapes.OVAL, { x: px + 0.2 + i * 0.2, y: 1.55, w: 0.12, h: 0.12, fill: { color: dot }, line: { type: "none" }, objectName: `Code panel dot ${i + 1}` }));
+  text(s, "pipeline/extract.py", { x: px + 0.85, y: 1.48, w: 3, h: 0.26, fontSize: 11, color: C.accent3, objectName: "Code panel filename" });
+  text(s, runs, { x: px + 0.2, y: 1.82, w: pw - 0.3, h: 4.2, fontSize: 10, fontFace: "Courier New", lineSpacingMultiple: 1.0, objectName: "SOQL code" });
+  text(s, [
+    { text: "extract.py: ", options: { bold: true } },
+    { text: "four SOQL queries over the REST API, signed by the Salesforce CLI session. Opportunity Id becomes the case ID." },
+  ], { x: px, y: 6.2, w: pw, h: 0.75, fontSize: 14, color: C.text2, objectName: "Code caption" });
+  s.addNotes("Left: the trial org standing in for a client's CRM, seeded by seed.py so there's real OpportunityHistory to read. Right: the exact SOQL the extractor runs. Opportunity is the case; leads join via ConvertedOpportunityId and tasks via WhatId. Trial orgs can't backdate history, so the 10-month dataset is simulated in the same object shape.");
 
   // ---------- Tech setup: everything is live ----------
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });

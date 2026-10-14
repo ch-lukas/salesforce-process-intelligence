@@ -15,17 +15,26 @@ from sf_client import SalesforceClient
 
 QUERIES = {
     "opportunities": """
-        SELECT Id, Name, Amount, StageName, IsWon, IsClosed, LeadSource, CreatedDate,
-               CloseDate, OwnerId, Owner.Name, Account.Industry, Account.BillingCountry FROM Opportunity""",
+        SELECT Id, Name, Amount, StageName, IsWon, IsClosed,
+               LeadSource, CreatedDate, CloseDate, OwnerId, Owner.Name,
+               Account.Industry, Account.BillingCountry
+        FROM Opportunity""",
     "stage_history": """
-        SELECT OpportunityId, StageName, CreatedDate, CreatedById, CreatedBy.Name
-        FROM OpportunityHistory ORDER BY OpportunityId, CreatedDate""",
+        SELECT OpportunityId, StageName, CreatedDate,
+               CreatedById, CreatedBy.Name
+        FROM OpportunityHistory
+        ORDER BY OpportunityId, CreatedDate""",
     "tasks": """
-        SELECT WhatId, Subject, CreatedDate, CompletedDateTime, OwnerId, Owner.Name, Status
-        FROM Task WHERE What.Type = 'Opportunity'""",
+        SELECT WhatId, Subject, CreatedDate, CompletedDateTime,
+               OwnerId, Owner.Name, Status
+        FROM Task
+        WHERE What.Type = 'Opportunity'""",
     "leads": """
-        SELECT Id, CreatedDate, ConvertedDate, ConvertedOpportunityId, OwnerId, Owner.Name
-        FROM Lead WHERE IsConverted = true AND ConvertedOpportunityId != null""",
+        SELECT Id, CreatedDate, ConvertedDate, ConvertedOpportunityId,
+               OwnerId, Owner.Name
+        FROM Lead
+        WHERE IsConverted = true
+          AND ConvertedOpportunityId != null""",
 }
 
 
