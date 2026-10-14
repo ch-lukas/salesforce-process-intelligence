@@ -375,6 +375,26 @@ const headline = I.value_drivers.reduce((s, d) => s + d.annual_value * d.default
   });
   s.addNotes("These are the things that would trip up a customer's first technical session; each one is solved in the repo and written up in the README.");
 
+  // ---------- Tech setup: evidence from the org ----------
+  const shot = (slide, file, x, y, h, ratio, caption, name) => {
+    const w = h * ratio;
+    slide.addShape(pres.shapes.RECTANGLE, { x: x - 0.04, y: y - 0.04, w: w + 0.08, h: h + 0.08, fill: { color: C.background1 }, line: { color: C.accent3, width: 1 }, objectName: `${name} frame` });
+    slide.addImage({ path: path.join(ROOT, "docs/img/org", file), x, y, w, h, objectName: name, altText: caption });
+    text(slide, caption, { x, y: y + h + 0.2, w, h: 0.75, fontSize: 14, color: C.text2, objectName: `${name} caption` });
+    return w;
+  };
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
+  s.addText("Evidence: the seeded deals live in Salesforce", { placeholder: "title" });
+  const accW = shot(s, "accounts.jpg", 0.6, 1.5, 3.65, 1438 / 840, `${LIVE.kpis.cases} [Demo] accounts created through the Composite API, each with an industry and country.`, "Accounts list");
+  shot(s, "opportunities.jpg", 0.6 + accW + 0.3, 1.5, 3.65, 1200 / 807, `${LIVE.kpis.cases} opportunities walked through the org's own sales stages.`, "Opportunities list");
+  s.addNotes("Screenshots from the trial org. Every record is tagged [Demo] and can be removed with seed.py --cleanup.");
+
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Tech setup" });
+  s.addText("Evidence: what the extract reads", { placeholder: "title" });
+  const histW = shot(s, "stage-history.png", 0.6, 1.5, 3.4, 1512 / 807, "OpportunityHistory for one deal: Propose → Negotiate twice before Closed Won. This is the re-quote loop the dashboard measures.", "Stage history");
+  shot(s, "connected-apps.png", 0.6 + histW + 0.3, 1.5, 3.4, 1340 / 896, "Setup: Salesforce CLI installed and allowed, which unblocked API access on the new org.", "Connected apps");
+  s.addNotes("The stage history is the raw material for the event log: each row becomes an event. The setup screen is the one-click fix for new orgs that block uninstalled connected apps.");
+
   await pres.writeFile({ fileName: OUT });
   await applyTheme(OUT, THEME);
   console.log(`Wrote ${OUT}${hasLogo ? " (with logo)" : ""}`);
